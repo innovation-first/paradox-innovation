@@ -1,0 +1,25 @@
+baseURL: 'https://example.org/'
+languageCode: 'en-us'
+title: 'My New Hugo Site'
+theme: 'hugo-PaperMod'
+
+params:
+    fancyTitle: "Blog de l'innovation"
+    description: "ceci est le blog de l'innovation"
+    body_is_markdown: true
+
+params.menu.main:
+    url: "/"
+    title: "home"
+
+params.menu.main:
+    url: "/posts"
+    title: "posts"
+
+taxonomies:
+    tag: "tags"
+
+menu.shortcuts:
+    name: "<i class='fas fa-tags'></i> Tags"
+    url: "/tags"
+    weight: 30

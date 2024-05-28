@@ -1,25 +1,25 @@
-baseURL: 'https://example.org/'
-languageCode: 'en-us'
-title: 'My New Hugo Site'
-theme: 'hugo-PaperMod'
+baseURL: "https://example.org/"
+languageCode: "fr-fr"
+title: "Blog de l'innovation"
+theme: "hugo-PaperMod"
 
-params:
-    fancyTitle: "Blog de l'innovation"
-    description: "ceci est le blog de l'innovation"
-    body_is_markdown: true
-
-params.menu.main:
-    url: "/"
-    title: "home"
-
-params.menu.main:
-    url: "/posts"
-    title: "posts"
-
-taxonomies:
-    tag: "tags"
-
-menu.shortcuts:
-    name: "<i class='fas fa-tags'></i> Tags"
-    url: "/tags"
-    weight: 30
+defaultContentLanguage: fr
+languages:
+  fr:
+    languageName: "Français"
+    weight: 1
+    taxonomies:
+      category: categories
+      tag: tags
+      series: series
+    menu:
+      main:
+        - name: Archive
+          url: archives
+          weight: 5
+        - name: Recherche
+          url: search/
+          weight: 10
+        - name: Tags
+          url: tags/
+          weight: 10

@@ -8,3 +8,6 @@ build-job:
     - ls
     - hugo
     - ls
+  artifacts:
+      paths:
+      - public/

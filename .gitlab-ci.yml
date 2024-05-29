@@ -12,7 +12,7 @@ build-job:
   image: alpine
   script:
     - apk add --no-cache --repository=https://dl-cdn.alpinelinux.org/alpine/edge/community hugo
-    - hugo
+    - hugo -d public
   artifacts:
       paths:
       - public/

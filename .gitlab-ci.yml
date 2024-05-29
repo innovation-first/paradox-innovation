@@ -13,6 +13,3 @@ build-job:
     - ls themes/hugo-PaperMod
     - hugo
     - ls
-  artifacts:
-      paths:
-      - public/

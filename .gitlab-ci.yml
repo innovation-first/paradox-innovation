@@ -1,0 +1,8 @@
+stages:          
+  - build
+
+build-job:
+  image: 0.111.3
+  stage: build
+  script:
+    - hugo

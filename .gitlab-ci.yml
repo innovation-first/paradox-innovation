@@ -7,10 +7,9 @@ stages:
   - build
 
 build-job:
-  image: klakegg/hugo:0.111.3
   stage: build
   script:
-    - ls themes/hugo-PaperMod
+    - apt install hugo -y
     - hugo
     - ls
   artifacts:

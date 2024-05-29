@@ -1,8 +1,8 @@
-+++
-title = 'Test Post'
-date = 2024-05-28T10:08:14+02:00
-tags = ["dog"]
-+++
+---
+title: 'Test Post'
+date: 2024-05-28T10:08:14+02:00
+tags: ["dog"]
+---
 
 ## Hello Hugo !
 

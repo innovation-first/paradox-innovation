@@ -5,4 +5,6 @@ build-job:
   image: klakegg/hugo:0.111.3
   stage: build
   script:
+    - ls
     - hugo
+    - ls

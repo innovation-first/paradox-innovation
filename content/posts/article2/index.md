@@ -4,8 +4,6 @@ date: 2024-05-28T10:58:14+02:00
 tags: ["cat"]
 cover:
   image: "cat.jpg"
-  # can also paste direct link from external site
-  # ex. https://i.ibb.co/K0HVPBd/paper-mod-profilemode.png
   alt: "2 cat"
   caption: "2 cat"
   relative: false 

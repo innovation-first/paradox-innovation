@@ -8,8 +8,9 @@ stages:
 
 build-job:
   stage: build
+  image: alpine
   script:
-    - apt install hugo -y
+    - doas apk add --no-cache --repository=https://dl-cdn.alpinelinux.org/alpine/edge/community hugo
     - hugo
     - ls
   artifacts:

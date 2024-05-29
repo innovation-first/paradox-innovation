@@ -1,2 +1,3 @@
-public/
+output/
 .hugo_build.lock
+.idea/

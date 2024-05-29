@@ -2,7 +2,7 @@ baseURL: "https://example.org/"
 languageCode: "fr-fr"
 title: "Blog de l'innovation"
 theme: "hugo-PaperMod"
-
+publishDir: output/public/blog/
 defaultContentLanguage: fr
 languages:
   fr:

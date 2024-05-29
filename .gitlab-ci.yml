@@ -1,3 +1,8 @@
+.git_vars:
+  variables:
+    GIT_SUBMODULE_STRATEGY: recursive
+    GIT_SUBMODULE_DEPTH: 1
+
 stages:          
   - build
 

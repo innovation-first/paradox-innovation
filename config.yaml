@@ -18,7 +18,9 @@ languages:
         - name: Tags
           url: tags/
           weight: 10
-
+        - name: Archives
+          url: archives/
+          weight: 10
 outputs:
   home:
     - HTML

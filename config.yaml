@@ -1,18 +1,18 @@
 baseURL: "https://example.org/"
-languageCode: "fr-fr"
-title: "Blog de l'innovation"
+languageCode: "en-us"
+title: "Innovation Blog"
 theme: "hugo-PaperMod"
 publishDir: output/public/blog/
-defaultContentLanguage: fr
+defaultContentLanguage: en
 languages:
-  fr:
-    languageName: "Français"
+  en:
+    languageName: "English"
     weight: 1
     taxonomies:
       tag: tags
     menu:
       main:
-        - name: Recherche
+        - name: Search
           url: search/
           weight: 10
         - name: Tags

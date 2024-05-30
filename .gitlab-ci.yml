@@ -13,9 +13,9 @@ build-job:
   script:
     - apk add --no-cache --repository=https://dl-cdn.alpinelinux.org/alpine/edge/community hugo
     - hugo -d public/blog/
-  artifacts:
-      paths:
-      - public/
+  rules:
+    - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
 push-back-to-remote:
   stage: deploy
   image: alpine
@@ -28,3 +28,5 @@ push-back-to-remote:
     - git add public/
     - git commit -m "push back from pipeline" --allow-empty
     - git push gitlab_origin HEAD:main -o ci.skip
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH

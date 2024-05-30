@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Innovation Blog</title>
+    <link>https://example.org/</link>
+    <description>Recent content on Innovation Blog</description>
+    <generator>Hugo -- 0.125.4</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 30 May 2024 13:48:14 +0200</lastBuildDate>
+    <atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Innovate and Create</title>
+      <link>https://example.org/posts/architecture/innovate-and-create/</link>
+      <pubDate>Thu, 30 May 2024 13:48:14 +0200</pubDate>
+      <guid>https://example.org/posts/architecture/innovate-and-create/</guid>
+      <description>The journey to data valorisation.</description>
+    </item>
+    <item>
+      <title>On Azure Thales Digital Platform</title>
+      <link>https://example.org/posts/architecture/on-azure-thales-digital-platform/</link>
+      <pubDate>Thu, 30 May 2024 13:48:14 +0200</pubDate>
+      <guid>https://example.org/posts/architecture/on-azure-thales-digital-platform/</guid>
+      <description>Benefit from TDP C2-secured environment.</description>
+    </item>
+    <item>
+      <title>Our Development Process</title>
+      <link>https://example.org/posts/architecture/our-development-process/</link>
+      <pubDate>Thu, 30 May 2024 13:48:14 +0200</pubDate>
+      <guid>https://example.org/posts/architecture/our-development-process/</guid>
+      <description>We use it both for our customers and for ourselves.</description>
+    </item>
+    <item>
+      <title>Pragmatic Security</title>
+      <link>https://example.org/posts/architecture/pragmatic-security/</link>
+      <pubDate>Thu, 30 May 2024 13:48:14 +0200</pubDate>
+      <guid>https://example.org/posts/architecture/pragmatic-security/</guid>
+      <description>A simple and innovative zero trust security architecture.</description>
+    </item>
+    <item>
+      <title>Serverless and FaaS</title>
+      <link>https://example.org/posts/architecture/serverless-and-faas/</link>
+      <pubDate>Thu, 30 May 2024 13:48:14 +0200</pubDate>
+      <guid>https://example.org/posts/architecture/serverless-and-faas/</guid>
+      <description>A rock solid and secured serverless solution</description>
+    </item>
+    <item>
+      <title>Simple to understand, simple to use</title>
+      <link>https://example.org/posts/architecture/simple-to-understand-simple-to-use/</link>
+      <pubDate>Thu, 30 May 2024 13:48:14 +0200</pubDate>
+      <guid>https://example.org/posts/architecture/simple-to-understand-simple-to-use/</guid>
+      <description>Here is how it works.</description>
+    </item>
+    <item>
+      <title>wbxcvnxcnxnte</title>
+      <link>https://example.org/posts/architecture/article/</link>
+      <pubDate>Thu, 30 May 2024 13:48:14 +0200</pubDate>
+      <guid>https://example.org/posts/architecture/article/</guid>
+      <description>The journey to data valorisation.</description>
+    </item>
+    <item>
+      <title>Why Kast ?</title>
+      <link>https://example.org/posts/architecture/why-kast/</link>
+      <pubDate>Thu, 30 May 2024 13:48:14 +0200</pubDate>
+      <guid>https://example.org/posts/architecture/why-kast/</guid>
+      <description>The power of clouds without vendor locking</description>
+    </item>
+  </channel>
+</rss>

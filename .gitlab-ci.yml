@@ -26,7 +26,7 @@ push-back-to-remote:
     - git config user.name "ci-bot"
     - git remote add gitlab_origin https://gitlab-ci-token:$ACCESS_TOKEN@gitlab.thalesdigital.io/tsn/innovation/projects/blog.git
     - git add public/
-    - git commit -m "push back from pipeline"
+    - git commit -m "push back from pipeline" --allow-empty
     - git push gitlab_origin HEAD:main -o ci.skip
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH

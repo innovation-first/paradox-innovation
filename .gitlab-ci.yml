@@ -20,10 +20,11 @@ push-back-to-remote:
   stage: deploy
   image: alpine
   script:
+    - ls
     - apk add git
     - git config user.email "ci-bot@example.xyz"
     - git config user.name "ci-bot"
-    - git remote add gitlab_origin https://gitlab-ci-token:$CI_JOB_TOKEN@gitlab.thalesdigital.io/tsn/innovation/projects/blog.git
+    - git remote add gitlab_origin https://gitlab-ci-token:$ACCESS_TOKEN@gitlab.thalesdigital.io/tsn/innovation/projects/blog.git
     - git add public/
     - git commit -m "push back from pipeline"
     - git push gitlab_origin HEAD:main -o ci.skip

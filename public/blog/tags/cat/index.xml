@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Cat on Blog de l&#39;innovation</title>
+    <link>https://example.org/tags/cat/</link>
+    <description>Recent content in Cat on Blog de l&#39;innovation</description>
+    <generator>Hugo -- 0.125.4</generator>
+    <language>fr</language>
+    <lastBuildDate>Tue, 28 May 2024 10:58:14 +0200</lastBuildDate>
+    <atom:link href="https://example.org/tags/cat/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>article 2</title>
+      <link>https://example.org/posts/article2/</link>
+      <pubDate>Tue, 28 May 2024 10:58:14 +0200</pubDate>
+      <guid>https://example.org/posts/article2/</guid>
+      <description>Hello Hugo ! 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie, urna id sagittis ultricies, nulla turpis tempor enim, vitae accumsan tellus mi sit amet ipsum. Fusce ornare libero quis quam auctor fringilla. Nunc et elementum augue. Donec tincidunt placerat posuere. Pellentesque finibus ipsum et est rhoncus, in ultricies nisl semper. Curabitur orci risus, pulvinar quis dignissim eget, placerat vitae nibh. Etiam ultricies aliquet dolor semper sodales. Morbi dignissim nulla et tortor vulputate, eu lacinia libero viverra.</description>
+    </item>
+  </channel>
+</rss>

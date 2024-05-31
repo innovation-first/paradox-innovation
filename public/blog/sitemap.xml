@@ -5,7 +5,19 @@
     <loc>https://example.org/tags/architecture/</loc>
     <lastmod>2024-05-30T13:48:14+02:00</lastmod>
   </url><url>
+    <loc>https://example.org/categories/architecture/</loc>
+    <lastmod>2024-05-30T13:48:14+02:00</lastmod>
+  </url><url>
+    <loc>https://example.org/tags/azure/</loc>
+    <lastmod>2024-05-30T13:48:14+02:00</lastmod>
+  </url><url>
+    <loc>https://example.org/categories/</loc>
+    <lastmod>2024-05-30T13:48:14+02:00</lastmod>
+  </url><url>
     <loc>https://example.org/posts/architecture/innovate-and-create/</loc>
+    <lastmod>2024-05-30T13:48:14+02:00</lastmod>
+  </url><url>
+    <loc>https://example.org/tags/innovation/</loc>
     <lastmod>2024-05-30T13:48:14+02:00</lastmod>
   </url><url>
     <loc>https://example.org/</loc>
@@ -34,6 +46,8 @@
   </url><url>
     <loc>https://example.org/posts/architecture/why-kast/</loc>
     <lastmod>2024-05-30T13:48:14+02:00</lastmod>
+  </url><url>
+    <loc>https://example.org/archives/</loc>
   </url><url>
     <loc>https://example.org/search/</loc>
   </url>

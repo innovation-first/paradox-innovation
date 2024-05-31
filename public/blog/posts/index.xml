@@ -14,6 +14,20 @@
       <pubDate>Thu, 30 May 2024 13:48:14 +0200</pubDate>
       <guid>https://example.org/posts/architecture/innovate-and-create/</guid>
       <description>The journey to data valorisation.</description>
+      <content:encoded><![CDATA[<h2 id="go-experiment">Go experiment</h2>
+<p>With The Hub, designing smart data applications becomes astonishingly straightforward and rapid.
+In just a few hours, you can move from concept to creation, thanks to our streamlined deployment
+process that eliminates traditional complexities.</p>
+<h2 id="you-have-containers--ready-to-go">You have containers ? Ready to go</h2>
+<p>Deploying standard containerized applications is simplicity itself. Forget the
+convolutions of Helm charts and the intricacies of DevOps workflows. All it takes is designing
+your application, adding a descriptor file to GitLab, and crafting an intuitive user interface.</p>
+<h2 id="think-forward">Think forward</h2>
+<p>This approach not only accelerates the development cycle but also democratizes application design,
+enabling you to focus on innovation and user experience without being bogged down by backend logistics.
+The Hub is your gateway to deploying smart data applications with ease, speed, and reliability,
+transforming the way applications are developed and launched.</p>
+]]></content:encoded>
     </item>
     <item>
       <title>On Azure Thales Digital Platform</title>
@@ -21,6 +35,23 @@
       <pubDate>Thu, 30 May 2024 13:48:14 +0200</pubDate>
       <guid>https://example.org/posts/architecture/on-azure-thales-digital-platform/</guid>
       <description>Benefit from TDP C2-secured environment.</description>
+      <content:encoded><![CDATA[<h2 id="security-matters">Security Matters</h2>
+<p>The Hub runs on any cloud or on your laptop.
+This said we need robust and secured environments to explore innovative
+use cases with customers, in particular to deal with sensitive datasets.</p>
+<h2 id="the-best-of-thales-group">The best of Thales Group</h2>
+<p>Thales Digital Platform on Azure provides a secure and scalable managed kubernetes.
+Not only the data is protected, the TDP offers many essential data services
+such as storage, queues, or ML studio.</p>
+<h2 id="the-hub-on-tdp">The Hub on TDP</h2>
+<p>On top of it we deploy only the lightweight Punch layer to benefit from
+the simple and straightforward configuration and deployment management.</p>
+<h2 id="vendor-locking-">Vendor Locking ?</h2>
+<p>The TDP is powered by Azure. This said once your MVP is achieved,
+moving to an on on-premise environment is possible using
+Thales Kubernetes analytics stack. It all depends on what you use
+from Azure.</p>
+]]></content:encoded>
     </item>
     <item>
       <title>Our Development Process</title>
@@ -28,6 +59,23 @@
       <pubDate>Thu, 30 May 2024 13:48:14 +0200</pubDate>
       <guid>https://example.org/posts/architecture/our-development-process/</guid>
       <description>We use it both for our customers and for ourselves.</description>
+      <content:encoded><![CDATA[<h2 id="tsn-development-process">Tsn Development Process</h2>
+<p>What you see on the hub is representative of our overall development process.</p>
+<h2 id="powered-by">Powered by</h2>
+<ul>
+<li>our expertise in cloud native development</li>
+<li>our involvement in designing Thales on-premise data containerized platforms.</li>
+<li>our Kast and Punch assets</li>
+<li>our secured-by-design approach</li>
+<li>our pragmatic approach</li>
+</ul>
+<h2 id="resulting-in">Resulting in</h2>
+<ul>
+<li>Competitive offerings</li>
+<li>On time delivery</li>
+<li>Simple and effective to operate and maintain</li>
+</ul>
+]]></content:encoded>
     </item>
     <item>
       <title>Pragmatic Security</title>
@@ -35,6 +83,22 @@
       <pubDate>Thu, 30 May 2024 13:48:14 +0200</pubDate>
       <guid>https://example.org/posts/architecture/pragmatic-security/</guid>
       <description>A simple and innovative zero trust security architecture.</description>
+      <content:encoded><![CDATA[<h2 id="keep-it-simple-sir">Keep It Simple Sir</h2>
+<p>The Hub adopts a uniquely pragmatic approach to security, centered around a single-domain
+strategy that eschews the complexity of OAuth protocols. Instead, we employ single-site domain
+cookies, a method that not only simplifies user authentication but also seamlessly integrates
+with our robust security framework.</p>
+<h2 id="zero-trust-is-not-complex">Zero trust is not complex</h2>
+<p>Our zero-trust architecture is underpinned by a combination of static and context-aware
+security policies, offering a dynamic defense mechanism that adapts to evolving threats.
+This blend of simplicity and innovation allows us to meet and exceed the most stringent security
+requirements, embodying what we refer to as &lsquo;pragmatic security.&rsquo;</p>
+<p>This security design, developed in collaboration with the cybersecurity experts at Thales Services
+Numériques, is both straightforward and groundbreaking. It exemplifies our commitment to providing
+a secure, user-friendly platform that doesn&rsquo;t compromise on protection or performance.
+Through this approach, The Hub sets a new standard for security in the digital age,
+ensuring that simplicity and innovation go hand in hand.</p>
+]]></content:encoded>
     </item>
     <item>
       <title>Serverless and FaaS</title>
@@ -42,6 +106,34 @@
       <pubDate>Thu, 30 May 2024 13:48:14 +0200</pubDate>
       <guid>https://example.org/posts/architecture/serverless-and-faas/</guid>
       <description>A rock solid and secured serverless solution</description>
+      <content:encoded><![CDATA[<h1 id="compare-it-to-others">Compare it to others</h1>
+<p>Our platform stands out in the cloud-native ecosystem by providing real serverless capabilities
+far beyond the scope of many open-source alternatives.</p>
+<p>Our solution integrates a comprehensive
+suite of execution engines, including PySpark, Spark, Java, Flink, Rust, and WebAssembly.
+This diverse range of technologies empowers users to build sophisticated data applications
+tailored to both stream and batch processing needs.</p>
+<h2 id="key-features">Key Features</h2>
+<ul>
+<li>
+<p><em>Versatile Execution Engines</em>: With support for multiple programming languages and frameworks, our platform offers great flexibility in developing serverless applications. Whether you&rsquo;re working with big data processing, real-time analytics, or building complex ETL pipelines, there&rsquo;s an engine perfectly suited to your requirements.</p>
+</li>
+<li>
+<p><em>Streaming and Batch Processing</em>: Our engines are optimized for high performance in both streaming and batch scenarios. Users can expect reliable processing capabilities with features tailored to each use case, ensuring that your data pipelines run smoothly and efficiently.</p>
+</li>
+<li>
+<p><em>End-to-End Acknowledgment</em>: Guaranteeing data integrity, our platform implements end-to-end acknowledgment mechanisms. This ensures that every piece of data is accounted for throughout the processing pipeline, providing peace of mind for critical applications that require precise data handling.</p>
+</li>
+<li>
+<p><em>Simplicity of Use</em>: Leveraging Kubernetes operators, our platform simplifies the orchestration of complex data workflows, making it effortlessly easy to use compared to solutions like KNative, KubeFlow, or a combination of multiple open-source technologies. This ease of use, combined with powerful capabilities, allows teams to focus on innovation rather than infrastructure management.</p>
+</li>
+</ul>
+<h2 id="empowering-diverse-data-applications">Empowering Diverse Data Applications</h2>
+<p>The versatility of our platform opens up a world of possibilities for developers and
+data engineers alike. From real-time analytics and machine learning models to complex
+event processing and data transformation, our serverless solution equips you with the tools
+to innovate and scale your applications without the overhead of managing infrastructure.</p>
+]]></content:encoded>
     </item>
     <item>
       <title>Simple to understand, simple to use</title>
@@ -49,6 +141,23 @@
       <pubDate>Thu, 30 May 2024 13:48:14 +0200</pubDate>
       <guid>https://example.org/posts/architecture/simple-to-understand-simple-to-use/</guid>
       <description>Here is how it works.</description>
+      <content:encoded><![CDATA[<h2 id="stay-focus-on-applications-not-platforms">Stay focus on applications, not platforms</h2>
+<p>The Hub redefines Kubernetes-native application development by focusing squarely on applications,
+not the underlying complexity of services like databases or security services.
+With preinstalled services at your disposal,
+we&rsquo;ve simplified the development process to its core essentials.</p>
+<p>All you need is an application image. A dedicated Kubernetes operator takes care of managing your app,
+streamlining deployment and operations. To deploy, simply define your application configuration within
+a straightforward YAML Custom Resource Definition (CRD) file. Once your CRD is prepared,
+push it to your git repository, or push it directly to the Hub and you&rsquo;re set.
+That&rsquo;s it—no dealing with secrets, bypassing the hassle of Helm charts, and avoiding complex templating systems</p>
+<h2 id="where-comes-the-magic-">Where comes the magic ?</h2>
+<p>Because at Thales Services Numériques we deliver on-premise data platforms
+for critical and secured applications. Simplifying the costs of ownership, maintainance
+and operations is of paramount importance. Tha is why we designed kubernetes operators, artifactory
+servers, low-code serverless engines. You see them in action for the Hub website itself. Think
+of what you can do for you own apps.</p>
+]]></content:encoded>
     </item>
     <item>
       <title>Why Kast ?</title>
@@ -56,6 +165,26 @@
       <pubDate>Thu, 30 May 2024 13:48:14 +0200</pubDate>
       <guid>https://example.org/posts/architecture/why-kast/</guid>
       <description>The power of clouds without vendor locking</description>
+      <content:encoded><![CDATA[<h2 id="universal-and-free-from-vendor-locking">Universal and free from Vendor Locking</h2>
+<p>The Hub is designed to revolutionize the way you create Kubernetes-native applications.
+With the flexibility to deploy on any cloud platform, including private clouds, or even on
+lightweight Kubernetes clusters in remote locations or vehicles, the Hub ensures your applications
+are universally compatible and free from vendor lock-in.</p>
+<h2 id="powered-by-kast">Powered by Kast</h2>
+<p>We empower this versatility through Kast, a comprehensive solution that enhances managed
+Kubernetes services across any cloud provider. Kast enriches your Kubernetes environment
+with essential tools and services such as advanced logging, robust security measures,
+seamless single sign-on capabilities, and versatile data storage solutions.</p>
+<p>Looking for specialized tools like ClickHouse, Cassandra, Iceberg, NiFi, StreamSets,
+or Dataiku? Kast has you covered, offering these and more to ensure you have all
+the resources you need to build, deploy, and manage your applications efficiently
+and securely, regardless of the environment.</p>
+<h2 id="simplified-by-punch">Simplified by Punch</h2>
+<p>Kast is a powerful toolbox. Punch makes is simple to use with a user and developer-centric
+design.</p>
+<p>Choose The Hub and Kast for an open, flexible, and powerful approach to
+Kubernetes-native application development</p>
+]]></content:encoded>
     </item>
   </channel>
 </rss>

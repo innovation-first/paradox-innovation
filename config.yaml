@@ -10,6 +10,7 @@ languages:
     weight: 1
     taxonomies:
       tag: tags
+      category: categories
     menu:
       main:
         - name: Search
@@ -20,6 +21,9 @@ languages:
           weight: 10
         - name: Archives
           url: archives/
+          weight: 10
+        - name: Categories
+          url: categories/
           weight: 10
 outputs:
   home:
@@ -34,4 +38,14 @@ Params:
     appendFilePath: true # to append file path to Edit link
   DateFormat: "2 Jan 2006"
   ShowShareButtons: true
-  ShowRssButtonInSectionTermList : true
+  ShowRssButtonInSectionTermList: true
+  ShowFullTextinRSS: true
+  homeInfoParams:
+    Title: "Welcome, this is the official blog of Thales Innovation team!"
+    Content: "description to be added here" # to update
+  socialIcons:
+    - name: "gitlab"
+      url: "https://gitlab.thalesdigital.io/tsn/innovation/projects/blog"
+      title: "gitlab"
+    - name: "Innovation HUB"
+      url: "https://innovation.forthales.com/innovation/overview"

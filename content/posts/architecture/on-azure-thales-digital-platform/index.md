@@ -4,6 +4,9 @@ date: 2024-05-30T13:48:14+02:00
 summary: 'Benefit from TDP C2-secured environment.'
 tags:
 - architecture
+- Azure
+categories:
+- Architecture
 cover:
   image: 'HubOnAzureTdp.png'
 ---

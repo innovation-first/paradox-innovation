@@ -33,3 +33,4 @@ Params:
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
   DateFormat: "2 Jan 2006"
+  ShowShareButtons: true

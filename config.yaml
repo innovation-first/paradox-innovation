@@ -49,3 +49,4 @@ Params:
       title: "gitlab"
     - name: "Innovation HUB"
       url: "https://innovation.forthales.com/innovation/overview"
+  ShowPostNavLinks: true

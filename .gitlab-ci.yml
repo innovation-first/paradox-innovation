@@ -12,6 +12,9 @@ build-job:
   image: alpine
   script:
     - apk add --no-cache --repository=https://dl-cdn.alpinelinux.org/alpine/edge/community hugo
+    - apk add git
+    - rm -rf public/blog/
+    - git clone -b blog https://gitlab-ci-token:${CI_JOB_TOKEN}@gitlab.thalesdigital.io/tsn/innovation/projects/blog.git public/blog/
     - hugo -d public/blog/
   rules:
     - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
@@ -19,17 +22,22 @@ build-job:
   artifacts:
     paths:
     - public/blog/
+
 push-back-to-remote:
   stage: deploy
   image: alpine
   script:
     - ls
     - apk add git
+    - cd public/blog/
+    - git remote set-url origin https://gitlab-ci-token:$ACCESS_TOKEN@gitlab.thalesdigital.io/tsn/innovation/projects/blog.git
+    - git branch --set-upstream-to=origin/blog
     - git config user.email "ci-bot@example.xyz"
     - git config user.name "ci-bot"
-    - git remote add gitlab_origin https://gitlab-ci-token:$ACCESS_TOKEN@gitlab.thalesdigital.io/tsn/innovation/projects/blog.git
-    - git add public/
+    - git add *
     - git commit -m "push back from pipeline" --allow-empty
-    - git push gitlab_origin HEAD:main -o ci.skip
+    - git push -o ci.skip
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
+

@@ -7,8 +7,7 @@ tags:
 - innovation
 categories: 
 - Architecture
-cover:
-  image: 'HubApplicationDesignJourney.png'
+image: 'HubApplicationDesignJourney.png'
 ---
 
 ## Go experiment

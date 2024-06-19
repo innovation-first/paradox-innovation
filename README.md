@@ -1,77 +1,79 @@
+# Lightbi 
 
-# Blog
+Lightbi is a minimal and clean blog theme for Hugo.
 
-## Description 
+🌍 [Demo site](https://lightbi-hugo-theme.netlify.app/)  
+📁 [Demo repo](https://github.com/binokochumolvarghese/lightbi-hugo-demo)  
+🐛 [Bug reports & Issues](https://github.com/binokochumolvarghese/lightbi-hugo/issues)  
+💡 [Questions & feature requests](https://github.com/binokochumolvarghese/lightbi-hugo/discussions)  
+📄 [Lightbi wiki](https://github.com/binokochumolvarghese/lightbi-hugo/wiki)  
+🕸️ [Websites built with Lightbi](https://github.com/binokochumolvarghese/lightbi-hugo/wiki/Websites-built-with-Lightbi)
 
-This project allows the speedy creation of blog articles using markdown for the innovation hub
+![LightBi Hugo Theme Screenshot](https://raw.githubusercontent.com/binokochumolvarghese/lightbi-hugo/master/images/screenshot.png)
 
-## Prerequisites
+## Features
 
-- Git
+### General
+- Three sections for content:
+    - Blog
+    - Notes
+    - Collections (Newsletter)
+- Responsive, mobile-first design.
+- Card based theme.
+- Menu location indicator.
+- Multilingual support. (with language selector)
+- Taxonomies.
+- Search option.
+- Light/Dark theme (automatic theme switch a/c to browser theme and theme-switch button).
+- Google Analytics.
+- SEO Friendly.
+- Commit SHA on the footer.
+- Self Hosted assets for GDPR / EU-DSGVO compliance.
+- Beautiful icons with Bootstrap Icons.
+
+
+### Page
+- Other Posts suggestion below a post
+- Social-Media Share buttons on posts.
+- Syntax highlighting.
+- Cover image for each post (with Responsive image support).
 
 ## Installation
 
-Use the [installation guide from GoHugo](https://gohugo.io/installation/)
-
-Clone the repo:
-```
-git clone https://gitlab.thalesdigital.io/tsn/innovation/projects/blog.git
-```
-
-
-## Create an article
-
-In [posts](./content/posts), create a folder. Rename it with your article name in lowercase. (replace spaces with '-')
-
-Create a file named 'index.md', copypaste the following metadatas and fill them.
+Install Hugo and create a new site. See [the Hugo documentation](https://gohugo.io/getting-started/quick-start/) for details.
 
 ```
-title: 'My title'
-date: 2000-01-01T00:00:00+02:00
-summary: 'My summary'
-tags:
-- mytag
-- mytagtwo
-cover:
-  image: 'MyCoverImage.png'
----
-
-My markdown article goes here
+hugo new site <name of site>
+cd <name of site>
+git init
+git submodule add https://github.com/binokochumolvarghese/lightbi-hugo themes/lightbi-hugo
+echo "theme = 'lightbi-hugo'" >> config.toml
+hugo server
 ```
 
-After the '---' of seperation, write your article using the [markdown format](https://www.markdownguide.org/basic-syntax/)
+After the above copy the contents of `exampleSite` to the `content` folder in your website.
 
+## Wiki
 
+Checkout the [wiki](https://github.com/binokochumolvarghese/lightbi-hugo/wiki) page for detailed documentation of the theme features.
 
-You can add images in the article using the following: ``` ![IMAGE ALTERNATIVE TEXT](image-name.png) ```
+## Support & Contribution
+- Star 🌟 this repository.
+- Help to spread the word about Hugo Lightbi by sharing it on social media and recommending it to your friends.
+- Bug reports & issues: [Use GitHub Issues](https://github.com/binokochumolvarghese/lightbi-hugo/issues/new).
+- Ideas for new features: Open a discussion on [GitHub Discussions](https://github.com/binokochumolvarghese/lightbi-hugo/discussions).
+- General questions: Head to [GitHub Discussions](https://github.com/binokochumolvarghese/lightbi-hugo/discussions).
 
-You can center image by adding '#center' after the image path such as ``` ![IMAGE ALTERNATIVE TEXT](image-name.png#center) ```
+## Credits
 
-Note: Any images (including the cover image) used in the article must be placed in the same folder as index.md
+- [Beautiful Hugo](https://github.com/halogenica/beautifulhugo) from which Lightbi was forked.
+- [Unsplash](https://unsplash.com/) for Images.
 
- ## Preview your article
+## About
 
- If you want to preview your article, place yourself in the main folder of the repo and run the command ``` hugo server ```.
- The blog will now be accessible to preview your article at [http://localhost:1313/](http://localhost:1313/)
+This is an adaptation of the [Beautiful Hugo](https://github.com/halogenica/beautifulhugo) by [Michael Romero](https://github.com/halogenica). It supports most of the features of the original theme, and many new features. It has diverged from the original theme over time, with several updates.
 
- ## Publish the article
+## License
 
-Place yourself within the main repo folder and execute the following commands:
+MIT Licensed, see [LICENSE](https://github.com/binokochumolvarghese/lightbi-hugo/blob/master/LICENSE).
 
-```
-git checkout -b [ARTICLE NAME]
-git add *
-git commit -m "Added [ARTICLE NAME]"
-git push
-```
-
-Open the branch you just created on GitLab and create a merge request. The article will be published once it is accepted.
-
- ## Repo maintenance
-
- The repo uses a worker for its CI/CD. This worker needs a Token to acces the repo which must be renewed regularly. 
- To do this:
- Access the [project access token page](https://gitlab.thalesdigital.io/tsn/innovation/projects/blog/-/settings/access_tokens) and create a new token.
- Then, access the [CI/CD Settings page](https://gitlab.thalesdigital.io/tsn/innovation/projects/blog/-/settings/ci_cd), expand the __"Variables"__ section and put your newly created token in __'ACCESS_TOKEN'__. Update the date below!
-
- NEXT EXPIRATION DATE: March 31, 2025

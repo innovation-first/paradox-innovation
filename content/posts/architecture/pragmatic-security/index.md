@@ -4,8 +4,7 @@ date: 2024-05-30T13:48:14+02:00
 summary: 'A simple and innovative zero trust security architecture.'
 tags:
 - architecture
-cover:
-  image: 'HubSingleDomain.png'
+image: 'HubSingleDomain.png'
 ---
 
 ## Keep It Simple Sir

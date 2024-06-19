@@ -4,8 +4,7 @@ date: 2024-05-30T13:48:14+02:00
 summary: 'Here is how it works.'
 tags:
 - architecture
-cover:
-  image: 'HubExplained.png'
+image: 'HubExplained.png'
 ---
 
 ## Stay focus on applications, not platforms

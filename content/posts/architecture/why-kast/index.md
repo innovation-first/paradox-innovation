@@ -4,8 +4,7 @@ date: 2024-05-30T13:48:14+02:00
 summary: 'The power of clouds without vendor locking'
 tags:
 - architecture
-cover:
-  image: 'HubOnAllClouds.png'
+image: 'HubOnAllClouds.png'
 ---
 ## Universal and free from Vendor Locking
 The Hub is designed to revolutionize the way you create Kubernetes-native applications. 

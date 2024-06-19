@@ -7,8 +7,7 @@ tags:
 - Azure
 categories:
 - Architecture
-cover:
-  image: 'HubOnAzureTdp.png'
+image: 'HubOnAzureTdp.png'
 ---
 
 ## Security Matters

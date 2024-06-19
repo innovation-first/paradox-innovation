@@ -4,8 +4,7 @@ date: 2024-05-30T13:48:14+02:00
 summary: 'We use it both for our customers and for ourselves.'
 tags:
 - architecture
-cover:
-  image: 'TsnDevelopmentProcess.png'
+image: 'TsnDevelopmentProcess.png'
 ---
 ## Tsn Development Process
 What you see on the hub is representative of our overall development process.

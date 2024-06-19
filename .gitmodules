@@ -1,6 +1,0 @@
-[submodule "themes/spectral"]
-	path = themes/spectral
-	url = https://github.com/sbruder/spectral
-[submodule "themes/hugo-PaperMod"]
-	path = themes/hugo-PaperMod
-	url = https://github.com/adityatelange/hugo-PaperMod.git

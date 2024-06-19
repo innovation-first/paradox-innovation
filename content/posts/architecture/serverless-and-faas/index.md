@@ -4,8 +4,7 @@ date: 2024-05-30T13:48:14+02:00
 summary: 'A rock solid and secured serverless solution'
 tags:
 - architecture
-cover:
-  image: 'HubServerless.png'
+image: 'HubServerless.png'
 ---
 # Compare it to others
 Our platform stands out in the cloud-native ecosystem by providing real serverless capabilities 

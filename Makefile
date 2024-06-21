@@ -31,10 +31,6 @@ deploy: ## Deploy to kubernetes cluster
 	helm repo update blog
 	helm upgrade --install blog blog/blog
 
-.PHONY: undeploy
-undeploy:  ## Undeploy from kubernetes cluster
-	$(HELM) uninstall punch-board
-
 ##@ Help
 
 .PHONY: help

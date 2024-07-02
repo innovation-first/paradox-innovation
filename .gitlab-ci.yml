@@ -1,0 +1,44 @@
+stages:
+  - build
+  - deploy
+  
+build-docker:
+  image: docker:cli
+  stage: build
+  before_script:
+    - docker login -u "ci-bot" -p "$CI_JOB_TOKEN" $CI_REGISTRY_IMAGE
+
+  script:
+    - docker build --pull -t "$CI_REGISTRY_IMAGE/blog:latest" .
+    - docker push "$CI_REGISTRY_IMAGE/blog:latest"
+#   rules:
+#     # Trigger of CI when there is a push event on the main branch
+#     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
+helm-build:
+  stage: build
+  image: alpine/helm
+  script:
+  - helm package helm/blog
+  - mv blog-*.tgz blog.tgz
+  - curl --fail-with-body --request POST
+      --form "chart=@blog.tgz"
+      --user ci-bot:$CI_JOB_TOKEN
+      https://gitlab.thalesdigital.io/api/v4/projects/56500/packages/helm/api/dev/charts
+#   rules:
+#     # Trigger of CI when there is a push event on the main branch
+#     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+deploy:
+  stage: deploy
+  image: registry.thalesdigital.io/tsn/innovation/projects/blog/builder:latest
+  script: 
+  - gcloud auth activate-service-account --key-file $GOOGLE_APPLICATION_CREDENTIALS
+  - gcloud container clusters get-credentials inno-cluster --region europe-west9 --project prj-dil-sfrd-punch-sbx-4811
+  - gcloud compute ssh ci-bot-blog@inno-cluster-bastion --zone=europe-west9-a --tunnel-through-iap --ssh-flag="-4 -L8888:localhost:8888 -N -q -f"
+  - export HTTPS_PROXY=http://127.0.0.1:8888
+  - helm repo add blog https://gitlab.thalesdigital.io/api/v4/projects/56500/packages/helm/dev/ --username ci-bot --password $CI_JOB_TOKEN
+  - helm repo update 
+  - helm upgrade --install -n blog blog 
+#   rules:
+#     # Trigger of CI when there is a push event on the main branch
+#     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH

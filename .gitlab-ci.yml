@@ -1,6 +1,7 @@
-stage:
-    build
-
+stages:
+  - build
+  - deploy
+  
 build-docker:
   image: docker:cli
   stage: build

@@ -3,10 +3,12 @@ kind: Ingress
 metadata:
   name: blog-ingress
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+    cert-manager.io/cluster-issuer: acme-cluster-issuer
+    nginx.ingress.kubernetes.io/proxy-buffer-size: 64K
 spec:
+  ingressClassName : nginx
   rules:
-    - host: blog-innovation.com
+    - host: blog.innovation.forthales.com
       http:
         paths:
           - path: /

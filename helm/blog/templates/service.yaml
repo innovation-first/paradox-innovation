@@ -4,7 +4,7 @@ metadata:
   name: blog-service
 spec:
   selector:
-    app.kubernetes.io/name: blog
+    app: nginx-blog
   ports:
     - protocol: TCP
       port: 80

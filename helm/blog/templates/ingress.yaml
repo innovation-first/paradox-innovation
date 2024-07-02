@@ -18,3 +18,7 @@ spec:
                 name: blog-service
                 port:
                   number: 80
+  tls:
+    - hosts:
+        - blog.innovation.forthales.com
+      secretName: blog-tls

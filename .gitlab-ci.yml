@@ -30,7 +30,7 @@ helm-build:
 #     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
 deploy:
   stage: deploy
-  image: registry.thalesdigital.io/tsn/innovation/projects/blog/builder:latest
+  image: registry.thalesdigital.io/tsn/innovation/projects/blog/deployer:latest
   script: 
   - gcloud auth activate-service-account --key-file $GOOGLE_APPLICATION_CREDENTIALS
   - gcloud container clusters get-credentials inno-cluster --region europe-west9 --project prj-dil-sfrd-punch-sbx-4811

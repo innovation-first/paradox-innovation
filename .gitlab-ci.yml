@@ -11,9 +11,8 @@ build-docker:
   services:
     - registry.thalesdigital.io/tsn/innovation/projects/blog/docker:24.0.5-dind
   stage: build
-  before_script:
-    - echo "$CI_JOB_TOKEN" | docker login $CI_REGISTRY -u $CI_REGISTRY_USER --password-stdin
   script:
+    - echo "$CI_JOB_TOKEN" | docker login $CI_REGISTRY -u $CI_REGISTRY_USER --password-stdin
     - docker build --pull -t "$CI_REGISTRY_IMAGE/blog:latest" .
     - docker push "$CI_REGISTRY_IMAGE/blog:latest"
 #   rules:

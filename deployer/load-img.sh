@@ -9,9 +9,13 @@ docker pull hugomods/hugo:nginx
 docker tag hugomods/hugo:nginx registry.thalesdigital.io/tsn/innovation/projects/blog/hugo:nginx
 docker push registry.thalesdigital.io/tsn/innovation/projects/blog/hugo:nginx
 
-docker pull docker:cli
-docker tag docker:cli registry.thalesdigital.io/tsn/innovation/projects/blog/docker:cli
-docker push registry.thalesdigital.io/tsn/innovation/projects/blog/docker:cli
+docker pull docker:24.0.5
+docker tag docker:24.0.5 registry.thalesdigital.io/tsn/innovation/projects/blog/docker:24.0.5
+docker push registry.thalesdigital.io/tsn/innovation/projects/blog/docker:24.0.5
+
+docker pull docker:24.0.5-dind
+docker tag docker:24.0.5-dind registry.thalesdigital.io/tsn/innovation/projects/blog/docker:24.0.5-dind
+docker push registry.thalesdigital.io/tsn/innovation/projects/blog/docker:24.0.5-dind
 
 docker pull alpine/helm:latest
 docker tag alpine/helm registry.thalesdigital.io/tsn/innovation/projects/blog/helm:latest

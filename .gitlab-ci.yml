@@ -3,11 +3,16 @@ stages:
   - deploy
   
 build-docker:
-  image: registry.thalesdigital.io/tsn/innovation/projects/blog/docker:cli
+  variables:
+    DOCKER_HOST: tcp://docker:2375
+    # This instructs Docker not to start over TLS.
+    DOCKER_TLS_CERTDIR: ""
+  image: registry.thalesdigital.io/tsn/innovation/projects/blog/docker:24.0.5
+  services:
+    - registry.thalesdigital.io/tsn/innovation/projects/blog/docker:24.0.5-dind
   stage: build
   before_script:
     - echo "$CI_JOB_TOKEN" | docker login $CI_REGISTRY -u $CI_REGISTRY_USER --password-stdin
-
   script:
     - docker build --pull -t "$CI_REGISTRY_IMAGE/blog:latest" .
     - docker push "$CI_REGISTRY_IMAGE/blog:latest"

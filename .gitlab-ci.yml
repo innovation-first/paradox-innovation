@@ -32,6 +32,7 @@ deploy:
   image: registry.thalesdigital.io/tsn/innovation/projects/blog/deployer:latest
   script: 
   - gcloud auth activate-service-account --key-file $GOOGLE_APPLICATION_CREDENTIALS
+  - gcloud config set project prj-dil-sfrd-punch-sbx-4811
   - gcloud container clusters get-credentials inno-cluster --region europe-west9 --project prj-dil-sfrd-punch-sbx-4811
   - gcloud compute ssh ci-bot-blog@inno-cluster-bastion --zone=europe-west9-a --tunnel-through-iap --ssh-flag="-4 -L8888:localhost:8888 -N -q -f"
   - export HTTPS_PROXY=http://127.0.0.1:8888

@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-RUN apk add kubectl helm curl python3
+RUN apk add kubectl helm curl python3 openssh-client
 
 ENV PATH="${PATH}:/google-cloud-sdk/bin"
 # Google Cloud Platform

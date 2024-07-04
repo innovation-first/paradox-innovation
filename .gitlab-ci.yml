@@ -3,7 +3,7 @@ stages:
   - deploy
   
 build-docker:
-  image: docker:cli
+  image: registry.thalesdigital.io/tsn/innovation/projects/blog/docker:cli
   stage: build
   before_script:
     - docker login -u "ci-bot" -p "$CI_JOB_TOKEN" $CI_REGISTRY_IMAGE
@@ -17,7 +17,7 @@ build-docker:
 
 helm-build:
   stage: build
-  image: alpine/helm
+  image: registry.thalesdigital.io/tsn/innovation/projects/blog/helm
   script:
   - helm package helm/blog
   - mv blog-*.tgz blog.tgz

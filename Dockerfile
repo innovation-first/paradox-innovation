@@ -1,7 +1,7 @@
 #####################################################################
 #                            Build Stage                            #
 #####################################################################
-FROM hugomods/hugo:exts as builder
+FROM registry.thalesdigital.io/tsn/innovation/projects/blog/hugo:exts as builder
 # Base URL
 ARG HUGO_BASEURL=https://blog.innovation.forthales.com
 ENV HUGO_BASEURL=${HUGO_BASEURL}
@@ -16,6 +16,6 @@ RUN hugo --minify --enableGitInfo
 #####################################################################
 #                            Final Stage                            #
 #####################################################################
-FROM hugomods/hugo:nginx
+FROM registry.thalesdigital.io/tsn/innovation/projects/blog/hugo:nginx
 # Copy the generated files to keep the image as small as possible.
 COPY --from=builder /src/public /site

@@ -3,18 +3,13 @@ stages:
   - deploy
   
 build-docker:
-  variables:
-    DOCKER_HOST: tcp://docker:2375
-    # This instructs Docker not to start over TLS.
-    DOCKER_TLS_CERTDIR: ""
-  image: registry.thalesdigital.io/tsn/innovation/projects/blog/docker:24.0.5
-  services:
-    - registry.thalesdigital.io/tsn/innovation/projects/blog/docker:24.0.5-dind
+  image: gcr.io/kaniko-project/executor:v1.14.0-debug
   stage: build
   script:
-    - echo "$CI_JOB_TOKEN" | docker login $CI_REGISTRY -u $CI_REGISTRY_USER --password-stdin
-    - docker build --pull -t "$CI_REGISTRY_IMAGE/blog:latest" .
-    - docker push "$CI_REGISTRY_IMAGE/blog:latest"
+    - /kaniko/executor
+      --context "${CI_PROJECT_DIR}"
+      --dockerfile "${CI_PROJECT_DIR}/Dockerfile"
+      --destination "$CI_REGISTRY_IMAGE/blog:latest"
 #   rules:
 #     # Trigger of CI when there is a push event on the main branch
 #     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH

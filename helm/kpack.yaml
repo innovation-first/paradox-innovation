@@ -52,7 +52,7 @@ blog-iam-client:
     roles:
       - restricted
     client: &blog_oidc_client blog
-    clientSecret: "m7h1u5pQFgxwY55VoekBoMacO4DPguN3"
+    clientSecret: &clientSecret "m7h1u5pQFgxwY55VoekBoMacO4DPguN3"
     clientRoles:
       - {role: 'sysadmin', clientRole: 'admin'}
     clientScope: "openid"
@@ -62,7 +62,7 @@ blog-auth-proxy:
   webAppUrl: 'https://blog.innovation.forthales.com'
   webAppInternalUrl: !concat ["http://blog-service.", *ns_blog, ":80"]
   clientID: *blog_oidc_client
-  clientSecret: "{{ kget .blog.keycloak-client.blog-iam-client.clientSecret }}"
+  clientSecret: *clientSecret
   oidc:
     internalIssuerUrl: !concat [ *internalissuer, *issuerpath ]
     externalIssuerUrl: !concat [ *externalissuer, *issuerpath ]

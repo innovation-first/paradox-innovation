@@ -4,9 +4,6 @@ date: 2024-07-05T13:48:14+02:00
 summary: 'Lorem ipsum'
 tags:
 - demo
-- innovation
-- quantum
-- algorithm
 categories: 
 - Architecture
 - Quantum

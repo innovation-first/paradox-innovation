@@ -20,3 +20,15 @@ docker push registry.thalesdigital.io/tsn/innovation/projects/blog/docker:24.0.5
 docker pull alpine/helm:latest
 docker tag alpine/helm registry.thalesdigital.io/tsn/innovation/projects/blog/helm:latest
 docker push registry.thalesdigital.io/tsn/innovation/projects/blog/helm:latest
+
+helm pull private-helm-kast/sso-proxy
+curl --fail-with-body --request POST \
+  --form "chart=@sso-proxy-1.1.2+4.1.4.tgz" \
+  --user $USERNAME:$ACCESS_TOKEN \
+  https://gitlab.thalesdigital.io/api/v4/projects/56500/packages/helm/api/dev/charts
+
+helm pull private-helm-kast/keycloak-client
+  curl --fail-with-body --request POST \
+    --form "chart=@keycloak-client-2.0.0.tgz" \
+    --user $USERNAME:$ACCESS_TOKEN \
+    https://gitlab.thalesdigital.io/api/v4/projects/56500/packages/helm/api/dev/charts

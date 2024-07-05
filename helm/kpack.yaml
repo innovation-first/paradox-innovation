@@ -1,0 +1,71 @@
+manifest:
+  name: blog kpack
+  description: Contains blog app.
+  version: 0.1.0
+  keywords:
+    - blog
+  annotations:
+    kastctl: 2.11.1
+
+components:
+  - alias: blog-iam-client
+    name: keycloak-client
+    version: 1.7.1
+    namespace: &ns_blog blog
+
+  - alias: blog-auth-proxy
+    name: sso-proxy
+    version: 1.1.0+4.1.4
+    namespace: *ns_blog
+
+  - alias: blog-app
+    name: blog
+    version: 0.1.0
+    namespace: *ns_blog
+
+global:
+  domain: &domain innovation.forthales.com
+  pullPolicy: IfNotPresent
+  storageClassName: standard-rwo
+  ingress:
+    defaultClass: nginx
+  sso:
+    enabled: true
+    domain: &ssodomain !concat ["auth.", *domain]
+    issuer:
+      _1: &realm kast
+      path: &issuerpath !concat [ '/auth/realms/', *realm ]
+      external: &externalissuer !concat [ "https://", *ssodomain ]
+      internal: &internalissuer "http://keycloak-http.authentication"
+  _1: &wait
+    _install:
+      flags:
+        wait: true
+        wait-for-jobs: true
+
+blog-iam-client:
+  <<: *wait
+  serverNamespace: authentication
+  _values:
+    description: "ai4med Services"
+    roles:
+      - restricted
+    client: &ai4med_oidc_client ai4med
+    clientSecret: "{{ genPwd }}"
+    clientRoles:
+      - {role: 'sysadmin', clientRole: 'admin'}
+    clientScope: "openid"
+
+blog-auth-proxy:
+  <<: *wait
+  webAppUrl: 'https://blog.innovation.forthales.com'
+  webAppInternalUrl: !concat ["http://blog-service.", *ns_blog, ":80"]
+  clientID: *ai4med_oidc_client
+  clientSecret: "{{ kget .blog.keycloak-client.blog-iam-client.clientSecret }}"
+  oidc:
+    internalIssuerUrl: !concat [ *internalissuer, *issuerpath ]
+    externalIssuerUrl: !concat [ *externalissuer, *issuerpath ]
+    issuerPath: /protocol/openid-connect
+
+blog-app:
+  <<: *wait

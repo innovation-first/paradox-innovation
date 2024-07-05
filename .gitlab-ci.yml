@@ -18,8 +18,6 @@ helm-build:
   stage: build
   image: registry.thalesdigital.io/tsn/innovation/projects/blog/helm
   script:
-  - helm repo add kast https://artifactory.thalesdigital.io/artifactory/private-helm-kast --username ci-bot --password $CI_JOB_TOKEN
-  - helm repo update
   - helm package helm/blog
   - mv blog-*.tgz blog.tgz
   - curl --fail-with-body --request POST

@@ -15,7 +15,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name:
+                name: blog-auth-oauth2-proxy
                 port:
                   number: 80
   tls:

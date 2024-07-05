@@ -27,8 +27,8 @@ curl --fail-with-body --request POST \
   --user $USERNAME:$ACCESS_TOKEN \
   https://gitlab.thalesdigital.io/api/v4/projects/56500/packages/helm/api/dev/charts
 
-helm pull private-helm-kast/keycloak-client
+helm pull private-helm-kast/keycloak-client --version=1.7.1
   curl --fail-with-body --request POST \
-    --form "chart=@keycloak-client-2.0.0.tgz" \
+    --form "chart=@keycloak-client-1.7.1.tgz" \
     --user $USERNAME:$ACCESS_TOKEN \
     https://gitlab.thalesdigital.io/api/v4/projects/56500/packages/helm/api/dev/charts

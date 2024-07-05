@@ -1,5 +1,5 @@
 manifest:
-  name: blog kpack
+  name: blog
   description: Contains blog app.
   version: 0.1.0
   keywords:
@@ -48,11 +48,11 @@ blog-iam-client:
   <<: *wait
   serverNamespace: authentication
   _values:
-    description: "ai4med Services"
+    description: "blog Services"
     roles:
       - restricted
-    client: &ai4med_oidc_client ai4med
-    clientSecret: "{{ genPwd }}"
+    client: &blog_oidc_client blog
+    clientSecret: "m7h1u5pQFgxwY55VoekBoMacO4DPguN3"
     clientRoles:
       - {role: 'sysadmin', clientRole: 'admin'}
     clientScope: "openid"
@@ -61,7 +61,7 @@ blog-auth-proxy:
   <<: *wait
   webAppUrl: 'https://blog.innovation.forthales.com'
   webAppInternalUrl: !concat ["http://blog-service.", *ns_blog, ":80"]
-  clientID: *ai4med_oidc_client
+  clientID: *blog_oidc_client
   clientSecret: "{{ kget .blog.keycloak-client.blog-iam-client.clientSecret }}"
   oidc:
     internalIssuerUrl: !concat [ *internalissuer, *issuerpath ]

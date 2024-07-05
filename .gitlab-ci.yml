@@ -38,7 +38,7 @@ deploy:
   - export HTTPS_PROXY=http://127.0.0.1:8888
   - helm repo add blog https://gitlab.thalesdigital.io/api/v4/projects/56500/packages/helm/dev/ --username ci-bot --password $CI_JOB_TOKEN
   - helm repo update
-  - kastctl install --kpack-path=helm/ --kpack=kpack.yaml --repo-alias blog -n blog
+  - kastctl install --kpack-path=helm/ --kpack=kpack.yaml --repo-alias blog
   # - helm upgrade --install -n blog blog blog/blog
 #   rules:
 #     # Trigger of CI when there is a push event on the main branch

@@ -7,6 +7,7 @@ manifest:
   annotations:
     kastctl: 2.11.1
 
+
 components:
   - alias: blog-iam-client
     name: keycloak-client

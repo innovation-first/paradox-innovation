@@ -14,6 +14,7 @@ spec:
       labels:
         app: nginx-blog
     spec:
+      imagePullPolicy: Always
       containers:
         - name: nginx
           image: registry.thalesdigital.io/tsn/innovation/projects/blog/blog:latest

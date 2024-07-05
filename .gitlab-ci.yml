@@ -10,9 +10,9 @@ build-docker:
       --context "${CI_PROJECT_DIR}"
       --dockerfile "${CI_PROJECT_DIR}/Dockerfile"
       --destination "$CI_REGISTRY_IMAGE/blog:latest"
-#   rules:
-#     # Trigger of CI when there is a push event on the main branch
-#     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+  rules:
+    # Trigger of CI when there is a push event on the main branch
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
 
 helm-build:
   stage: build
@@ -24,9 +24,9 @@ helm-build:
       --form "chart=@blog.tgz"
       --user ci-bot:$CI_JOB_TOKEN
       https://gitlab.thalesdigital.io/api/v4/projects/56500/packages/helm/api/dev/charts
-#   rules:
-#     # Trigger of CI when there is a push event on the main branch
-#     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+  rules:
+    # Trigger of CI when there is a push event on the main branch
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
 deploy:
   stage: deploy
   image: registry.thalesdigital.io/tsn/innovation/projects/blog/deployer:latest
@@ -40,6 +40,6 @@ deploy:
   - helm repo update
   - kastctl install --kpack-path=helm/ --kpack=kpack.yaml --repo-alias blog
   # - helm upgrade --install -n blog blog blog/blog
-#   rules:
-#     # Trigger of CI when there is a push event on the main branch
-#     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+  rules:
+   # Trigger of CI when there is a push event on the main branch
+   - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH

@@ -3,36 +3,34 @@
 
 ## Description
 
-This project allows the speedy creation of blog articles using markdown for the innovation hub
+This project allows the speedy creation of blog articles using markdown for the innovation hub.
 
-## Prerequisites
+The blog is publicly exposed here: https://blog.innovation.forthales.com, and is visible to
+thales employees only.
 
-- Git
-- Gcc
-- Docker
-- Helm
-- Kubectl
+In the rest of this guide we explain how to submit a new post. As you will see
+it is crystal simple.
 
-## Installation
+## Authors Guide
+
+Say you only want to publish a new post. As of today you need Git and docker.
+We will provide soon a much easier author tooling.
+
+## Writing a new post
 
 Clone the repo:
-```
+
+```sh
 git clone https://gitlab.thalesdigital.io/tsn/innovation/projects/blog.git
 ```
 
-Go into the repo and type:
-```
-make docker-build
-make docker-run
-```
+Blog posts are delivered as markdown files. Images can be provided as well.
+The simplest method is to start from the welcome example. Here are some explicit explanations.
 
-Access the blog at [http://localhost:8087/](http://localhost:8087/)
+In [content/posts](./content/posts), create a new folder. Name it with your article name in lowercase. 
+And please replace spaces with '-'.
 
-## Create an article
-
-In [posts](./content/posts), create a folder. Rename it with your article name in lowercase. (replace spaces with '-')
-
-Create a file named 'index.md', copy-paste the following metadatas and fill them.
+In there create a file named 'index.md', copy-paste the following metadatas and fill them.
 
 ```
 title: 'My title'
@@ -48,16 +46,34 @@ cover:
 My markdown article goes here
 ```
 
-After the '---' of seperation, write your article using the [markdown format](https://www.markdownguide.org/basic-syntax/)
-
-
-
+After the '---' of separation, write your article using the [markdown format](https://www.markdownguide.org/basic-syntax/).
 You can add images in the article using the following: ``` ![IMAGE ALTERNATIVE TEXT](image-name.png) ```
 
 You can center image by adding '#center' after the image path such as ``` ![IMAGE ALTERNATIVE TEXT](image-name.png#center) ```
 
-Note: Any images (including the cover image) used in the article must be placed in the same folder as index.md
+Note: Any images (including the cover image) used in the article must be placed in the same folder as your index.md file.
 
-## Preview your article
+## Locally preview your post
 
-If you have fully followed the installation process the blog will now be accessible to preview your article at [http://localhost:8087/](http://localhost:8087/)
+For this to work you need docker.
+
+From the blog root folder simply type in:
+```
+make docker-build
+make docker-run
+```
+Access the blog at [http://localhost:8087/](http://localhost:8087/).
+
+## Publish it to the world
+
+Simply submit a merge request. Whetever is merged into the main branch is
+automatically published. 
+
+## Admin Guide
+
+The CI/CD is in charge of building the updated blog image, in turn pushed to the Gitlab registry.
+Helm charts are provided.
+
+The CI/CD ends with executing kastctl (a lightweight variant of helm provided by the Kast team) to update 
+the public blog exposed on our google cloud platform.
+

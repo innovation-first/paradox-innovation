@@ -17,7 +17,7 @@ spec:
               service:
                 name: blog-auth-oauth2-proxy
                 port:
-                  number: 80
+                  number: 4180
   tls:
     - hosts:
         - blog.innovation.forthales.com

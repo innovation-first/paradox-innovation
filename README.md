@@ -77,3 +77,9 @@ Helm charts are provided.
 The CI/CD ends with executing kastctl (a lightweight variant of helm provided by the Kast team) to update 
 the public blog exposed on our google cloud platform.
 
+
+## Style
+
+Custom partials and layouts override of the Lightbi theme can be found in [layouts](./layouts)
+
+In a similar manner, custom styling can be found in [static/css](./static/css)

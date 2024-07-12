@@ -59,6 +59,12 @@ name = "Categories"
 url = "/categories/"
 weight = 3
 
+[[menu.main]]
+name = "Archives"
+url = "/archives/"
+weight = 3
+
+
 
 
 

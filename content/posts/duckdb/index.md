@@ -8,10 +8,10 @@ tags:
 categories: 
 - data
 image: 'duckDB2.webp'
-author: Dorian Finel
+author: 'Dorian Finel'
 ---
 
-There are dozens and dozens of data analysis engines, each claiming to be the fastest, the lightest, or the most flexible. But in this ocean of contenders, where some turn out to be ugly ducklings, lies a hidden gem: DuckDB. Still young and growing, this little duck has, in my opinion, a particularly interesting place in the vast pond of data analysis.
+There are dozens and dozens of data analysis engines, each claiming to be the fastest, the lightest, or the most flexible. But in this ocean of contenders, where some turn out to be ugly ducklings, lies a hidden gem: **DuckDB**. Still young and growing, this little duck has, in my opinion, a particularly interesting place in the vast pond of data analysis.
   
 ## Quack is DuckDB ?
 
@@ -55,7 +55,7 @@ Well, for several reasons:
 
 What encapsulates the principle of what we often call the "modern data stack" is the concept of replacing complicated code with SQL. SQL is code that everyone understands, easy to produce, easy to maintain, and therefore significantly less expensive.
 
-You've probably already grasped my opinion on this topic, but I'll reiterate: SQL is, in my view, vital in data analysis, especially for projects of reasonable scale.
+You've probably already grasped my opinion on this topic, but I'll reiterate: **SQL is, in my view, vital in data analysis**, especially for projects of reasonable scale.
 
 This leads to a question: who really works on data projects at an enormous scale?
 
@@ -71,12 +71,12 @@ There is a well-known conference and blog by Jordan Tigani, one of the founders 
 
 #### We want smaller ones
 
-We often see the big data curve showing the exponential growth of global world data volumes. Looking at this curve, one might quickly feel overwhelmed and think, "Ahhh, I need more compute power, always more!" But in reality, this curve doesn't concern most people.
+We often see the big data curve showing the exponential growth of global world data volumes. Looking at this curve, one might quickly feel overwhelmed and think, "Ahhh, I need more compute power, always more!" But in reality, **this curve doesn't concern most people**.
 
 To temper this daunting curve, let's play the curve game ourselves and introduce a few of our own. Note that these curves come from the above-mentioned conference and are based on feedback from BigQuery users.
 
 The first curve shows that MongoDB, the most popular NoSQL database, is actually on the decline and never really reached the popularity of MySQL/PostgreSQL databases.
-The second curve demonstrates that a large majority of users don't have massive amounts of data. To give you an idea, the vast majority of customers have less than 1TB of data, and the median is around 100GB.
+The second curve demonstrates that a large majority of users don't have massive amounts of data. To give you an idea, the vast majority of **customers have less than 1TB of data, and the median is around 100GB**.
 
 ![IMAGE ALTERNATIVE TEXT](smaller_ones.png#center)
 
@@ -88,13 +88,13 @@ This leads us to the next question: who really needs big querying?
 
 One of the major advancements in modern data architectures is the decoupling of storage and compute. Increasing storage capacity by tenfold rarely means you need to increase compute capacity by tenfold as well.
 
-Among BigQuery customers who paid more than $1,000 per year, 90% of queries were under 100MB, and 99% were under 10GB. Additionally, observations show that clients with moderate data sizes occasionally run large queries, whereas clients with enormous data volumes rarely perform large queries.
+Among BigQuery customers who paid more than $1,000 per year, **90% of queries were under 100MB, and 99% were under 10GB**. Additionally, observations show that clients with moderate data sizes occasionally run large queries, whereas clients with enormous data volumes rarely perform large queries.
 
 This indicates that with good analytical practices, there's almost never a need to query enormous volumes of data. Large queries often come from less data-driven organizations that panic and generate reports at the last minute, querying a week or even a month's worth of data.
 
 ![IMAGE ALTERNATIVE TEXT](big_querying.png#center)
 
-All these points are usage observations that suggest that, based on the experience of recent years, almost no one needs to query on the order of several terabytes. However, there are also technical reasons why big data is dead.
+All these points are usage observations that suggest that, based on the experience of recent years, **almost no one needs to query on the order of several terabytes**. However, there are also technical reasons why big data is dead.
 
 #### Yesterday big data is no longer big data
 
@@ -102,7 +102,7 @@ In 2006, at the beginning of AWS EC2, the only available instance was a single c
 
 ![IMAGE ALTERNATIVE TEXT](yesterday_data.png#center)
 
-One of the definitions of big data is "data processing that cannot fit on a single machine." So yes, in 2006, big data meant handling just a few gigabytes of data. But today, with the advancement of hardware, the threshold for big data has significantly moved. Who really needs multiple machines for computation today?
+One of the definitions of big data is "data processing that cannot fit on a single machine." So yes, in 2006, big data meant handling just a few gigabytes of data. But today, with the advancement of hardware, **the threshold for big data has significantly moved**. Who really needs multiple machines for computation today?
 
 So, why would we still use multiple machines?
 
@@ -110,13 +110,13 @@ So, why would we still use multiple machines?
 
 For this section, I was inspired by a blog [4] that compares the performance of Dremel (the distributed engine that is the ancestor of BigQuery) and a single instance.
 
-The result is that in 2008, with Dremel, it took 3,000 standard nodes to handle an 87TB dataset. Today, 15 years later, it is possible to achieve similar performance without the magic of distributed computing on a single instance costing $11 per hour.
+The result is that in 2008, with Dremel, it took 3,000 standard nodes to handle an 87TB dataset. Today, 16 years later, it is possible to achieve similar performance without the magic of distributed computing on a single instance costing **$11 per hour**.
 
 ![IMAGE ALTERNATIVE TEXT](dremel.png#center)
 
 Of course, this may be less applicable for on-premises setups where you need to manage resilience yourself, but the overall point remains clear.
 
-However, the data ecosystem still faces the prejudice that if you don't know how to do distributed computing, you're a clown. So now you will be able to respond "no, my friend, I am a duck" because the fact is, it is becoming unnecessary to complicate things with distributed systems. Just because it's more complex doesn't mean it's better.
+However, the data ecosystem still faces the prejudice that if you don't know how to do distributed computing, you're a clown. So now you will be able to respond "no, my friend, I am a duck" because the fact is, **it is becoming unnecessary to complicate things with distributed black magic**. Just because it's more complex doesn't mean it's better.
 
 I would add an authoritative argument I read online from Joshua Patterson, the CEO of Voltron Data, a very active company in the data ecosystem and one of the main contributors to Apache Arrow [5]:
 ![IMAGE ALTERNATIVE TEXT](joshua.png#center)
@@ -125,7 +125,7 @@ Given these insights, it becomes evident that we no longer need to rely on distr
 
 ### You have the power
 
-With the diminishing necessity for distributed computing, it's important to realize that the machines we work on today are already powerhouses. They can meet the majority of compute requirements effectively and efficiently.
+With the diminishing necessity for distributed computing, it's important to realize that **the machines we work on today are already powerhouses**. They can meet the majority of compute requirements effectively and efficiently.
 
 To support my point, I'll refer to a blog post by George Fraser, the CEO of Fivetran, who compares the performance of DuckDB on his local machine with a standard cloud provider data warehouse [6].
 
@@ -139,7 +139,7 @@ I find this cool because it reverses the traditional big data paradigm of "move 
 
 ### Are You in the 1%?
 
-So finally, the only real question that remains is: are you in the 1% dealing with big data?
+So finally, the only real question that remains is: **are you in the 1% dealing with big data?**
 
 If not, I invite you to consider adopting a promising little duck.
 
@@ -157,9 +157,9 @@ So, you can execute the DuckDB engine directly in your browser. This means you c
 
 For front-end developers, this means a significant shift in how dashboards and data-driven applications are built. You can develop more responsive and efficient applications without the overhead of constant server communication for data processing. This can lead to quicker load times and a better user experience.
 
-A new term is emerging with this technology: Distributed Dashboarding. Instead of relying on a central, expensive instance to handle all your data processing, you can now perform these tasks locally on your machine. Imagine running your data aggregations for your dashboard directly in the browser. This approach not only reduces costs but also improves performance by leveraging the power of modern workstations.
+A new term is emerging with this technology: **Distributed Dashboarding**. Instead of relying on a central, expensive instance to handle all your data processing, you can now perform these tasks locally on your machine. Imagine running your data aggregations for your dashboard directly in the browser. This approach not only reduces costs but also improves performance by leveraging the power of modern workstations.
 
-I've already touched on this in the previous section, but this new principle seems simply revolutionary because it transforms our way of thinking about data. It could transform how we think about client-side processing and data management. The potential for creating powerful, more efficient, cost-effective decentralized applications is immense.
+I've already touched on this in the previous section, but this new principle seems simply revolutionary because **it transforms our way of thinking about data**. It could transform how we think about client-side processing and data management. The potential for creating powerful, more efficient, cost-effective decentralized applications is immense.
 So, get ready to embrace the power of Mozilla FireDuck and revolutionize your front-end development workflow!
 
 #### Building a Quack-tastic Low-Cost Data Stack
@@ -170,14 +170,14 @@ Following the theme of utilizing powerful yet cost-effective solutions, I explor
 
 This stack uses well-known free-to-use tools:
 
-- dbt (Data Build Tool): Integrates with DuckDB and facilitates data transformations by offering a kind of SQL workflow orchestrator.
-- DuckDB: Our favorite in-process SQL OLAP database management system that provides high-performance analytics.
-- MinIO: An object storage service that will serve as our only database in this setup.
-- Apache Iceberg: A storage layer that enhances and simplifies the management of large volumes of data.
-- Apache Superset: An open-source data visualization tool, which is also the most popular Apache project and a very relevant alternative to Tableau, for example.
-This stack is easy to understand, maintain, and scale, and it is already capable of addressing many use cases at a low cost.
+- **dbt** (Data Build Tool): Integrates with DuckDB and facilitates data transformations by offering a kind of SQL workflow orchestrator.
+- **DuckDB**: Our favorite in-process SQL OLAP database management system that provides high-performance analytics.
+- **MinIO**: An object storage service that will serve as our only database in this setup.
+- **Apache Iceberg**: A storage layer that enhances and simplifies the management of large volumes of data.
+- **Apache Superset**: An open-source data visualization tool, which is also the most popular Apache project and a very relevant alternative to Tableau, for example.
+This stack is **easy to understand, maintain, and scale**, and it is already capable of addressing many use cases at a low cost.
 
-To illustrate the real-world benefits, consider how Okta managed to save hundreds of thousands of dollars by incorporating DuckDB into their data processing workflow. For more details on their success story, you can watch their presentation here.
+To illustrate the real-world benefits, consider how Okta **managed to save hundreds of thousands of dollars** by incorporating DuckDB into their data processing workflow. For more details on their success story, you can watch their presentation here.
 
 {{< youtube TrmJilG4GXk >}}
 
@@ -191,10 +191,10 @@ Throughout this blog, we’ve explored the impressive capabilities of DuckDB and
 
 In summary, DuckDB stands out for its:
 
-- Simplicity and Portability: A lightweight yet powerful SQL OLAP database that can run anywhere.
-- Performance: High-speed data processing and aggregations, even on large datasets.
-- Flexibility: Integrates seamlessly with other open-source tools to create robust data stacks.
-- Cost-effectiveness: Reduces the need for expensive infrastructure by leveraging local compute power.
+- **Simplicity** and Portability: A lightweight yet powerful SQL OLAP database that can run anywhere.
+- **Performance**: High-speed data processing and aggregations, even on large datasets.
+- **Flexibility**: Integrates seamlessly with other open-source tools to create robust data stacks.
+- **Cost-effectiveness**: Reduces the need for expensive infrastructure by leveraging local compute power.
 
 Whether you’re a data scientist, a front-end developer, or an engineer, DuckDB offers tools and features that can simplify your workflow and enhance your data analysis capabilities. By embracing this “little duck,” you can navigate the modern data landscape with ease and efficiency.
 

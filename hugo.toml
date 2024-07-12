@@ -64,6 +64,13 @@ name = "Archives"
 url = "/archives/"
 weight = 3
 
+[[menu.main]]
+name = "Hub"
+url = "https://innovation.forthales.com/"
+weight = 1
+
+
+
 
 
 

@@ -38,6 +38,8 @@ deploy: ## Deploy to kubernetes cluster
 .PHONY: clean
 clean: ## Clean all the generated files. This helps before committing.
 	rm -rf public
+	rm -rf .hugo_build.lock
+	rm -rf resources
 
 ##@ Help
 

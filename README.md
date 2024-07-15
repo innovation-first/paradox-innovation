@@ -25,7 +25,7 @@ git clone https://gitlab.thalesdigital.io/tsn/innovation/projects/blog.git
 ```
 
 Blog posts are delivered as markdown files. Images can be provided as well.
-The simplest method is to start from the welcome example. Here are some explicit explanations.
+The simplest method is to start from one of the existing post. Here are some explicit explanations.
 
 In [content/posts](./content/posts), create a new folder. Name it with your article name in lowercase. 
 And please replace spaces with '-'.
@@ -83,3 +83,28 @@ the public blog exposed on our google cloud platform.
 Custom partials and layouts override of the Lightbi theme can be found in [layouts](./layouts)
 
 In a similar manner, custom styling can be found in [static/css](./static/css)
+
+
+## Style and Customisation
+
+### Style
+
+If you need to adapt the style, check the [./assets/scss/custom.scss] file.
+If you need to refer to the original (defaults) style elements checkout 
+the original site: https://github.com/CaiJimmy/hugo-theme-stack.
+
+### Content
+
+To adapt the content, like redefining the footer or other elements, check the
+[./layouts/partials] folder. Ther you can overload the default templates.
+
+An example is the [./layouts/partials/footer/footer.html] template that has been redefined. 
+
+## Icons and Images
+
+The hugo toml configuration file point to some favicon or image. These are:
+
+. in the static folder
+. in the assets/icons folder
+. in the assets/img folder
+

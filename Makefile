@@ -1,5 +1,9 @@
 BASEURL :=  "http://localhost:8087/"
 
+.PHONY: serve
+serve: ## serve the blog locally
+	hugo serve
+
 ##@ Docker
 
 .PHONY: docker-build
@@ -30,6 +34,10 @@ deploy: ## Deploy to kubernetes cluster
 	helm repo add blog https://gitlab.thalesdigital.io/api/v4/projects/56500/packages/helm/dev/ --username $(USERNAME) --password $(TOKEN)
 	helm repo update blog
 	helm upgrade --install blog blog/blog
+
+.PHONY: clean
+clean: ## Clean all the generated files. This helps before committing.
+	rm -rf public
 
 ##@ Help
 

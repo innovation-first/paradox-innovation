@@ -26,8 +26,8 @@ build: ## Build and push
 	docker login registry.thalesdigital.io -u $(USERNAME) -p $(TOKEN)
 	docker push registry.thalesdigital.io/tsn/innovation/projects/blog/blog:latest
 
-	helm package helm/blog
-	curl --fail-with-body --request POST       --form "chart=@blog-0.1.0.tgz"       --user $(USERNAME):$(TOKEN)       https://gitlab.thalesdigital.io/api/v4/projects/56500/packages/helm/api/dev/charts
+	helm package deployment/helm-charts/blog
+	curl --fail-with-body --request POST --form "chart=@blog-0.1.0.tgz" --user $(USERNAME):$(TOKEN) https://gitlab.thalesdigital.io/api/v4/projects/56500/packages/helm/api/dev/charts
 
 .PHONY: deploy
 deploy: ## Deploy to kubernetes cluster

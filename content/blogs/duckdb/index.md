@@ -1,6 +1,6 @@
 ---
 title: 'Quack Up Your Data Projects with DuckDB'
-date: 2024-07-12T13:15:14+02:00
+date: 2024-06-12T13:15:14+02:00
 summary: 'Flying Through Data with the Speed and Grace of a Mallard'
 tags:
 - analytics

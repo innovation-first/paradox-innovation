@@ -7,11 +7,14 @@
 #icon = "home"
 #newtab = true
 
-[[social]]
-identifier = "gitlab"
-name = "Gitlab"
-url = "https://gitlab.thalesdigital.io/tsn/innovation/projects/blog"
+[[main]]
+    name = "Gitlab"
+    url = "https://gitlab.thalesdigital.io/tsn/innovation/projects/blog"
+    weight = 10
+    identifier = "gitlab"
+[main.params]
+    icon = "gitlab"
+    newTab = true
 
-[social.params]
-icon = "gitlab-logo-500"
+
 

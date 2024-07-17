@@ -23,6 +23,7 @@ components:
     name: blog
     version: 0.1.0
     namespace: *ns_blog
+    repo: blog
 
 global:
   domain: &domain innovation.forthales.com
@@ -49,12 +50,12 @@ blog-iam-client:
   serverNamespace: authentication
   _values:
     description: "blog Services"
-    roles:
-      - restricted
     client: &blog_oidc_client blog
-    clientSecret: &clientSecret "m7h1u5pQFgxwY55VoekBoMacO4DPguN3"
-    clientRoles:
-      - {role: 'sysadmin', clientRole: 'admin'}
+    clientSecret: "{{ genPwd }}"
+    clientRolesList:
+      - admin
+      - editor
+      - viewer
     clientScope: "openid"
 
 blog-auth-proxy:
@@ -62,7 +63,7 @@ blog-auth-proxy:
   webAppUrl: 'https://blog.innovation.forthales.com'
   webAppInternalUrl: !concat ["http://blog-service.", *ns_blog, ":80"]
   clientID: *blog_oidc_client
-  clientSecret: *clientSecret
+  clientSecret: "{{ kget .blog.keycloak-client.blog-iam-client.clientSecret }}"
   oidc:
     internalIssuerUrl: !concat [ *internalissuer, *issuerpath ]
     externalIssuerUrl: !concat [ *externalissuer, *issuerpath ]
@@ -70,3 +71,8 @@ blog-auth-proxy:
 
 blog-app:
   <<: *wait
+  _values:
+    image:
+      registryCredentials:
+        username: !env GITLAB_PULL_REGISTRY_USER
+        password: !env GITLAB_PULL_REGISTRY_TOKEN

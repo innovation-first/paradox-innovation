@@ -4,6 +4,7 @@ date: 2024-07-16T13:48:14+02:00
 summary: 'Next Interactive CObot A Multimodal LLM Demonstrator'
 categories:
 - Blog
+- Innovation Track
 tags:
 - llm
 - ai

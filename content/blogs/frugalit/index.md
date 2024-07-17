@@ -4,6 +4,7 @@ date: 2024-07-02T13:48:14+02:00
 summary: 'Reducing Energy Footprint of Cloud-Native Applications'
 categories:
 - Blog
+- Innovation Track
 tags:
 - kubernetes
 - greenops

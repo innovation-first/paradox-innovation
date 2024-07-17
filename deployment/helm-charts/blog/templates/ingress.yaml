@@ -8,7 +8,7 @@ metadata:
 spec:
   ingressClassName : nginx
   rules:
-    - host: blog.innovation.forthales.com
+    - host: innovation.forthales.com
       http:
         paths:
           - path: /
@@ -20,5 +20,5 @@ spec:
                   number: 4180
   tls:
     - hosts:
-        - blog.innovation.forthales.com
+        - innovation.forthales.com
       secretName: blog-tls

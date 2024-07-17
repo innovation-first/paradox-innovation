@@ -60,7 +60,7 @@ blog-iam-client:
 
 blog-auth-proxy:
   <<: *wait
-  webAppUrl: 'https://blog.innovation.forthales.com'
+  webAppUrl: 'https://innovation.forthales.com'
   webAppInternalUrl: !concat ["http://blog-service.", *ns_blog, ":80"]
   clientID: *blog_oidc_client
   clientSecret: "{{ kget .blog.keycloak-client.blog-iam-client.clientSecret }}"

@@ -12,7 +12,15 @@ image: 'rift.webp'
 author: 'Dimitri Tombroff'
 ---
 
-# Introduction
+## Abstract
+
+> This technical blog highlights our we tackle important challenge to address cost and energy reduction or cloud native solutions. In particular
+> - **Dynamic Resource Management**: Automated scaling of applications to optimize resource use.
+> - **Generative AI Tools**: Simplifying complex configurations for Kubernetes environments.
+> - **Intelligent Orchestration**: Planning resource usage based on renewable energy availability to minimize carbon footprint.
+
+
+## Introduction
 
 Reducing the energy footprint of cloud-native applications has become a critical issue. This is not only to reduce and control costs but also to contribute to essential efforts to reduce carbon energy consumption, which is leading humanity toward unprecedented climate change and environmental degradation.
 
@@ -76,13 +84,13 @@ Rift positions itself as a key player in reducing the energy footprint of cloud-
 
 Rift is part of an asset strategy complementing Thalc and Fmt innovation projects, aiming to significantly strengthen Thales Service Numériques' eco-design offering.
 
-### Contacts
+## Contacts
 
 - lorenzo.girardi@thalesgroup.com
 - reyyan.tekkin@thalesgroup.com
 - tanguy.jouannic@thalesgroup.com
 
-### References
+## References
 
 - 1 Keda: https://keda.sh/
 - 2 Karpenter: https://aws.amazon.com/blogs/containers/scalable-and-cost-effective-event-driven-workloads-with-keda-and-karpenter-on-amazon-eks

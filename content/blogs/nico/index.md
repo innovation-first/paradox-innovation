@@ -51,16 +51,7 @@ The value proposition of Nico is based on modularity; this list is not exhaustiv
 
 ### Contacts
 
-- lorenzo.girardi@thalesgroup.com
-- reyyan.tekkin@thalesgroup.com
-- tanguy.jouannic@thalesgroup.com
-
-### References
-
-- 1 Keda: https://keda.sh/
-- 2 Karpenter: https://aws.amazon.com/blogs/containers/scalable-and-cost-effective-event-driven-workloads-with-keda-and-karpenter-on-amazon-eks
-- 3 https://www.theregister.com/2024/03/01/kubernetes_cluster_overprovisioning/
-- 4 https://www.nextplatform.com/2024/03/04/kubernetes-clusters-have-massive-overprovisioning-of-compute-and-memory/
-- 5 Thalc: Thales Carbon calculator
+- geoffrey.portelli@thalesgroup.com
+- mehdi.jendoubi@thalesgroup.com
 
 

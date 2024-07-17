@@ -1,6 +1,6 @@
 ---
 title: 'Next-Gen Automation: How Generative AI Empowers Cobots'
-date: 2024-07-02T13:48:14+02:00
+date: 2024-07-16T13:48:14+02:00
 summary: 'Next Interactive CObot A Multimodal LLM Demonstrator'
 categories:
 - Blog
@@ -8,6 +8,7 @@ tags:
 - llm
 - ai
 author: 'Geoffrey Portelli'
+image: 'Robos-colaborativos-cobots-1.webp'
 ---
 
 # Introduction

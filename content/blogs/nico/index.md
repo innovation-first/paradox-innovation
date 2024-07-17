@@ -1,0 +1,66 @@
+---
+title: 'Next-Gen Automation: How Generative AI Empowers Cobots'
+date: 2024-07-02T13:48:14+02:00
+summary: 'Next Interactive CObot A Multimodal LLM Demonstrator'
+categories:
+- Blog
+tags:
+- llm
+- ai
+author: 'Geoffrey Portelli'
+---
+
+# Introduction
+
+In an increasingly complex and demanding world, human-machine interactions will need to be more efficient and fluid to take advantage of constant technological advancements in embedded systems and robotics. To this end, the SFRD NICO project aims to develop an autonomous brain that enables a robotic platform to interact multimodally with its environment to solve complex tasks.
+
+This brain will utilize the latest large language models and will be developed on embedded hardware targets, such as the NVIDIA Jetson, to demonstrate the feasibility of using these new technologies completely autonomously. Managing energy consumption is indeed one of the key differentiators of this project, enabling the deployment of AI models in the field, close to the needs.
+
+![Nvidia Jetson Orin AGX](nico_jetson.jpg)
+
+
+LLMs have made it possible to process textual data with unmatched performance. Recently, this capability has extended to other domains such as images, sound, videos, or other sensors, in an integrated manner. These are called multimodal LLMs, highlighted on the international research scene (PALM-e, Next-GPT, AnyMAL, GPT-4Vision, LLaVa, etc.).
+
+![Multimodal LLM architecture](nico_llm.png)
+
+Thanks to multimodal integration, intelligent agents can interact with the environment more comprehensively and informatively, allowing them to solve complex tasks more efficiently. 
+
+Nico objectives are to develop the tools and software modules for implementing and using these multimodal LLMs in an intelligent assistant application.
+
+## Conceptual Diagram of NiCO
+
+The potential applications of such an integrated system are numerous, both in the public, defense, and space domains, such as the emergence of numerous initiatives around assistant robots, demonstrating real industrial and business interest:
+
+* Medical personal assistant robots
+* Assistant robots in hospitals
+* Soldier assistant robots on the battlefield (with a perspective of participating in the COHOMA challenge organized by the DGA (Human-Machine Collaboration) with Thales-PRS in 2025).
+
+Nico will be demonstrated  on top of the DTV Shredder motorized platform, provided to Thales Services Numériques through a partnership with DTV Motor.
+
+![DTV Shredder](nico_dtv.png)
+
+Human-machine interactions as well as environmental data collection by the system will be carried out via standard sensors such as:
+
+* An RGBD camera system enabling scene analysis and autonomous navigation (obstacle avoidance).
+* A microphone and speakers allowing communication with the system in natural language.
+* GNSS positioning capabilities and/or based on the use of inertial units to offer resilience in electronic warfare situations (communication jamming).
+
+![RGBD camera](nico_camera.jpg)
+
+The value proposition of Nico is based on modularity; this list is not exhaustive and may evolve depending on the use case and integration with other mobile platforms.
+
+### Contacts
+
+- lorenzo.girardi@thalesgroup.com
+- reyyan.tekkin@thalesgroup.com
+- tanguy.jouannic@thalesgroup.com
+
+### References
+
+- 1 Keda: https://keda.sh/
+- 2 Karpenter: https://aws.amazon.com/blogs/containers/scalable-and-cost-effective-event-driven-workloads-with-keda-and-karpenter-on-amazon-eks
+- 3 https://www.theregister.com/2024/03/01/kubernetes_cluster_overprovisioning/
+- 4 https://www.nextplatform.com/2024/03/04/kubernetes-clusters-have-massive-overprovisioning-of-compute-and-memory/
+- 5 Thalc: Thales Carbon calculator
+
+

@@ -43,12 +43,13 @@ deploy:
     - gcloud container clusters get-credentials $GCP_CLUSTER_NAME --region $GCP_REGION
     - gcloud compute ssh ${GCP_SA_NAME}@${GCP_BASTION_NAME} --tunnel-through-iap --ssh-flag="-4 -L8888:localhost:8888 -N -q -f"
     - export HTTPS_PROXY=localhost:8888
+    # Reset default namespace modified by gitlab
     - kubectl config set-context --current --namespace=default
     # Remove gitlab incluster access
     - unset KUBERNETES_SERVICE_HOST
     # Add help repos
-    - helm repo add blog ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/helm/dev/ --username gitlab-ci-token --password $CI_JOB_TOKEN
-    - helm repo add kast $KAST_HELM_REPO_URL --username $ARTIFACTORY_USER --password $ARTIFACTORY_TOKEN
+    - helm repo add blog ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/helm/dev/ --username $CI_REGISTRY_USER --password $CI_REGISTRY_PASSWORD
+    - helm repo add kast $KAST_REGISTRY_HELM_URL --username $KAST_REGISTRY_USER --password $KAST_REGISTRY_TOKEN
     - helm repo update
     # Deploy on kube cluster
     - kastctl install --kpack deployment/kpack.yaml --token $KAST_KEYSTORE_PASS

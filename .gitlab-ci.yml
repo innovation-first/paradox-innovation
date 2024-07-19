@@ -24,7 +24,7 @@ helm-build:
   - mv blog-*.tgz blog.tgz
   - curl --fail-with-body --request POST
       --form "chart=@blog.tgz"
-      --user $CI_REGISTRY_USER:$CI_REGISTRY_PASSWORD
+      --user gitlab-ci-token:${CI_JOB_TOKEN}
     ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/helm/api/dev/charts
   rules:
     # Trigger of CI when there is a push event on the main branch
@@ -48,10 +48,12 @@ deploy:
     # Remove gitlab incluster access
     - unset KUBERNETES_SERVICE_HOST
     # Add help repos
-    - helm repo add blog ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/helm/dev/ --username $CI_REGISTRY_USER --password $CI_REGISTRY_PASSWORD
+    - helm repo add --username gitlab-ci-token --password $CI_JOB_TOKEN blog ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/helm/dev
     - helm repo add kast $KAST_REGISTRY_HELM_URL --username $KAST_REGISTRY_USER --password $KAST_REGISTRY_TOKEN
     - helm repo update
     # Deploy on kube cluster
+    - export GITLAB_PULL_REGISTRY_USER=$CI_DEPLOY_USER
+    - export GITLAB_PULL_REGISTRY_TOKEN=$CI_DEPLOY_PASSWORD
     - kastctl install --kpack deployment/kpack.yaml --token $KAST_KEYSTORE_PASS
     - kubectl rollout restart --namespace blog deployment/blog
   rules:

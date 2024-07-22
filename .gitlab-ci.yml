@@ -49,7 +49,7 @@ deploy:
     - unset KUBERNETES_SERVICE_HOST
     # Add help repos
 #    - helm repo add --username gitlab-ci-token --password $CI_JOB_TOKEN blog ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/helm/dev
-    - helm repo add blog ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/helm/dev --username kevin.denis --password 6wj6Cxsztsrim6BumYLg
+    - helm repo add blog https://gitlab.thalesdigital.io/api/v4/projects/56500/packages/helm/dev --username kevin.denis --password 6wj6Cxsztsrim6BumYLg
     - helm repo add kast $KAST_REGISTRY_HELM_URL --username $KAST_REGISTRY_USER --password $KAST_REGISTRY_TOKEN
     - helm repo update
     # Deploy on kube cluster

@@ -10,7 +10,8 @@ tags:
 categories: 
 - Blog
 image: 'duckDB2.webp'
-author: 'Dorian Finel'
+authors: 
+- Dorian Finel
 ---
 
 There are dozens and dozens of data analysis engines, each claiming to be the fastest, the lightest, or the most flexible. But in this ocean of contenders, where some turn out to be ugly ducklings, lies a hidden gem: **DuckDB**. Still young and growing, this little duck has, in my opinion, a particularly interesting place in the vast pond of data analysis.

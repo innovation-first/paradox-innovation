@@ -15,23 +15,33 @@ author: 'Dimitri Tombroff'
 
 ## Abstract
 
-> This technical blog highlights our we tackle important challenge to address cost and energy reduction or cloud native solutions. In particular
+> This technical blog highlights our we tackle important challenges to address cost and energy reduction or cloud native solutions. In particular
 > - **Dynamic Resource Management**: Automated scaling of applications to optimize resource use.
 > - **Generative AI Tools**: Simplifying complex configurations for Kubernetes environments.
 > - **Intelligent Orchestration**: Planning resource usage based on renewable energy availability to minimize carbon footprint.
 
-
 ## Introduction
 
-Reducing the energy footprint of cloud-native applications has become a critical issue. This is not only to reduce and control costs but also to contribute to essential efforts to reduce carbon energy consumption, which is leading humanity toward unprecedented climate change and environmental degradation.
+Reducing the energy footprint of cloud-native applications has become a critical issue. 
+This is not only to reduce and control costs but also to contribute to essential efforts to reduce carbon energy consumption, 
+which is leading humanity toward unprecedented climate change and environmental degradation.
 
-For over a decade, cloud platforms and Kubernetes have provided various ways to adjust an application's load based on demand. This is called Scaling, which is divided into two categories: horizontal and vertical scaling.
+For over a decade, cloud platforms and Kubernetes have provided various ways to adjust an application's load based on demand. 
+This is called Scaling, which is divided into two categories: horizontal and vertical scaling.
 
 Horizontal scaling refers to adding or reducing application replicas to distribute a varying load across more or fewer application instances.
 Vertical scaling refers to adding capacity to an existing infrastructure.
-Many technologies (like [1] and [2]) enable these principles. Yet, most Kubernetes resources in public clouds are largely underutilized. In Kubernetes clusters with 50 CPUs or more, only 13% of the provisioned CPUs and 20% of the memory are used on average ([3]). This overprovisioning is due to a cautious approach by DevOps teams to avoid service interruptions and the complexity of accurately predicting resource needs from the start. This caution is often seen as essential for critical services.
+Many technologies (like [1] and [2]) enable these principles. Yet, most Kubernetes resources in public clouds are largely underutilized. 
+In Kubernetes clusters with 50 CPUs or more, only 13% of the provisioned CPUs and 20% of the memory are used on average ([3]). 
+This overprovisioning is due to a cautious approach by DevOps teams to avoid service interruptions and the complexity of accurately 
+predicting resource needs from the start. This caution is often seen as essential for critical services.
 
-Moreover, detailed analysis shows that even in large clusters with 1,000 CPUs or more, the average CPU usage is only 17%. This overprovisioning trend is similar on major cloud platforms like AWS, Azure, and Google Cloud, with CPU utilization rates of 11%, 11%, and 17%, respectively ([4]). These data highlight the major challenge of resource optimization in Kubernetes environments, leading to a vast amount of unused but electrically powered resources.
+Moreover, detailed analysis shows that even in large clusters with 1,000 CPUs or more, the average CPU usage is only 17%. This overprovisioning trend is similar on major cloud platforms like AWS, Azure, and Google Cloud, with CPU utilization rates of 11%, 11%, and 17%, respectively ([4]). 
+These data highlight the major challenge of resource optimization in Kubernetes environments, leading to a vast amount of unused but electrically powered resources.
+
+## Frugal IT suite
+
+
 
 ## An Original and Innovative Project
 

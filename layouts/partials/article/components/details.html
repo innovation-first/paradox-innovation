@@ -46,11 +46,15 @@
         </div>
         {{ end }}
 
-        {{ if .Params.Author }}
+        {{ if .Params.Authors }}
         <div>
             {{ partial "helper/icon" "user" }}
-            <time class="article-time--author">
-                {{- .Params.Author -}}
+            <time class="article-time article-author">
+                {{ range (.GetTerms "authors") }}
+                <a href="{{ .RelPermalink }}">
+                    {{ .LinkTitle }}
+                </a>
+                {{ end }}
             </time>
         </div>
         {{ end }}

@@ -32,7 +32,9 @@ mkdir -p content/blogs/yourblog
    categories:
    - Blog
    image: 'example-image.webp'
-   author: 'Your Name'
+   authors:
+   - 'Your Name'
+   - 'A colleague'
    ---
 ```
 

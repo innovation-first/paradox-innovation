@@ -130,6 +130,11 @@
     flex-wrap: wrap;
 }
 
+.article-author{
+    text-decoration: underline;
+    gap: 5px;
+}
+
 .article-translations {
     & > div {
         flex-wrap: wrap;

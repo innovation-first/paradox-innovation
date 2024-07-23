@@ -9,7 +9,8 @@ tags:
 - kubernetes
 - finops
 image: 'rift.webp'
-author: 'Dimitri Tombroff'
+authors: 
+- Dimitri Tombroff
 ---
 
 # Frugal IT Software Suite

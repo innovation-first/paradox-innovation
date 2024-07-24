@@ -9,7 +9,8 @@ tags:
 - architecture
 - kubernetes
 image: 'kast_lakehouse.png'
-author: 'Gilles Meignan'
+authors:
+- Gilles Meignan
 ---
 
   ## Thales Development Accelerator for Containerized Projects

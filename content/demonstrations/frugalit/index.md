@@ -9,7 +9,8 @@ tags:
 - finops
 - generative AI
 image: 'rift.webp'
-author: 'Dimitri Tombroff'
+authors: 
+- Dimitri Tombroff
 ---
 
 ## Frugal IT Live Preview

@@ -10,7 +10,8 @@ tags:
 - greenops
 - finops
 image: 'rift.webp'
-author: 'Dimitri Tombroff'
+authors: 
+- Dimitri Tombroff
 ---
 
 ## Abstract

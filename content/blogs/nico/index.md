@@ -8,7 +8,8 @@ categories:
 tags:
 - llm
 - ai
-author: 'Geoffrey Portelli'
+authors: 
+- Geoffrey Portelli
 image: 'Robos-colaborativos-cobots-1.webp'
 ---
 

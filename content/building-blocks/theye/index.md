@@ -10,7 +10,8 @@ tags:
 - 3D
 - Virtual Reality
 image: 'theye.jpeg'
-author: 'Guillaume Blaise'
+author: 
+- Guillaume Blaise
 ---
 
 ## ThEye 

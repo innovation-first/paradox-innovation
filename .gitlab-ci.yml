@@ -54,6 +54,9 @@ deploy:
     # Set kpack environment variables
     - export GITLAB_PULL_REGISTRY_USER=$CI_DEPLOY_USER
     - export GITLAB_PULL_REGISTRY_TOKEN=$CI_DEPLOY_PASSWORD
+    # Debug
+    - kubectl config get-contexts
+    - kubectl get secrets
     # Deploy on kube cluster
     - kastctl install --kpack deployment/kpack.yaml --token $KAST_KEYSTORE_PASS
     # Update deployment image thanks to pull policy always

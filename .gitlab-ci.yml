@@ -1,34 +1,34 @@
 stages:
-#  - build
+  - build
   - deploy
 
-#build-docker:
-#  stage: build
-#  image: gcr.io/kaniko-project/executor:v1.14.0-debug
-#  script:
-#    - echo $DOCKER_AUTH_CONFIG > /kaniko/.docker/config.json
-#    - /kaniko/executor
-#      --context $CI_PROJECT_DIR
-#      --dockerfile ${CI_PROJECT_DIR}/Dockerfile
-#      --build-arg base_image_registry=artifactory.thalesdigital.io/docker
-#      --destination ${CI_REGISTRY_IMAGE}/blog:latest
-#  rules:
-#    # Trigger of CI when there is a push event on the main branch
-#    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
-#
-#helm-build:
-#  stage: build
-#  image: artifactory.thalesdigital.io/docker/alpine/helm:latest
-#  script:
-#  - helm package deployment/helm-charts/blog
-#  - mv blog-*.tgz blog.tgz
-#  - curl --fail-with-body --request POST
-#      --form "chart=@blog.tgz"
-#      --user gitlab-ci-token:${CI_JOB_TOKEN}
-#    ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/helm/api/dev/charts
-#  rules:
-#    # Trigger of CI when there is a push event on the main branch
-#    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+build-docker:
+  stage: build
+  image: gcr.io/kaniko-project/executor:v1.14.0-debug
+  script:
+    - echo $DOCKER_AUTH_CONFIG > /kaniko/.docker/config.json
+    - /kaniko/executor
+      --context $CI_PROJECT_DIR
+      --dockerfile ${CI_PROJECT_DIR}/Dockerfile
+      --build-arg base_image_registry=artifactory.thalesdigital.io/docker
+      --destination ${CI_REGISTRY_IMAGE}/blog:latest
+  rules:
+    # Trigger of CI when there is a push event on the main branch
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
+helm-build:
+  stage: build
+  image: artifactory.thalesdigital.io/docker/alpine/helm:latest
+  script:
+  - helm package deployment/helm-charts/blog
+  - mv blog-*.tgz blog.tgz
+  - curl --fail-with-body --request POST
+      --form "chart=@blog.tgz"
+      --user gitlab-ci-token:${CI_JOB_TOKEN}
+    ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/helm/api/dev/charts
+  rules:
+    # Trigger of CI when there is a push event on the main branch
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
 
 deploy:
   stage: deploy
@@ -45,18 +45,14 @@ deploy:
     - gcloud config set compute/zone $GCP_ZONE
     # Setup cluster access
     - gcloud container clusters get-credentials $GCP_CLUSTER_NAME --region $GCP_REGION
+    - kubectl config set-context --current --namespace=default
     - gcloud compute ssh ${GCP_SA_NAME}@${GCP_BASTION_NAME} --tunnel-through-iap --ssh-flag="-4 -L8888:localhost:8888 -N -q -f"
     - export HTTPS_PROXY=localhost:8888
-    # Reset default namespace modified by gitlab
-    - kubectl config set-context --current --namespace=default
     # Remove gitlab incluster access
     - unset KUBERNETES_SERVICE_HOST
     # Set kpack environment variables
     - export GITLAB_PULL_REGISTRY_USER=$CI_DEPLOY_USER
     - export GITLAB_PULL_REGISTRY_TOKEN=$CI_DEPLOY_PASSWORD
-    # Debug
-    - kubectl config get-contexts
-    - kubectl get secrets
     # Deploy on kube cluster
     - kastctl install --kpack deployment/kpack.yaml --token $KAST_KEYSTORE_PASS
     # Update deployment image thanks to pull policy always

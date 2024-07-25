@@ -1,10 +1,9 @@
 ---
-title: 'ThEye'
+title: 'The Eye'
 date: 2023-06-10T13:48:14+02:00
 summary: 'Augmented Reality for mobile workers'
 categories: 
 - Building Block
-- Blog
 tags:
 - architecture
 - 3D
@@ -12,28 +11,30 @@ tags:
 image: 'theye.jpeg'
 author: 
 - Guillaume Blaise
+- Aude Chesnay
 ---
 
-## ThEye 
+## The Eye 
 
-Augmented reality has serious applications. ThEye provide sreal-time help to mobile technicians via augmented reality devices. 
+The Eye provides real-time help to mobile technicians via augmented reality devices. 
 
 ## The disruption challenge
 
-Railway equipment is designed to be reliable and complete failure is relatively rare. But when things do go wrong, delays rapidly escalate.
+Industrial equipments are designed to be reliable and complete failure is relatively rare. 
+But when things do go wrong, delays rapidly escalate.
 
-One of the problems facing industrial or military systems maintenance teams is dealing with equipment from different suppliers: tracking down the right information to make repairs is not always easy.
+One of the problems facing industrial or military systems maintenance teams is dealing 
+with equipment from different suppliers: tracking down the right information to make repairs is not always easy.
 
 Equipment suppliers also struggle to help. Unless they can completely understand a problem on site, providing reliable advice to maintenance teams can be difficult. Fixing legacy systems can be even harder, with only a handful of experts available to offer help. Getting the right people on site can add hours to delays.
 
 ## Knowledge sharing
 
-ThEye is designed to tackle these problems. It works by using augmented reality to provide a two-way link between maintenance staff in the field and expert back office advisors. Valuable knowhow is shared, shrinking repair times and improving the quality of maintenance.
+The Eye is designed to tackle these problems. It works by using augmented reality to provide a two-way link between maintenance staff in the field and expert back office advisors. Valuable knowhow is shared, shrinking repair times and improving the quality of maintenance.
 
 “The maintainer wears augmented reality glasses which automatically stream live video and audio to the back office” explains Dr Amine Arezki, Product Line Manager, Thales. “The advisor in the back office can see exactly what’s happening in the field on a PC screen. They can then positively identify the equipment involved and provide advice about any maintenance or repair work that may be needed.”
 
 As well as being able to see the equipment in the field via video link, the expert can ‘show’ the maintainer precisely which components need attention and what action is required.
-
 
 The advisor can highlight components using virtual ‘objects’ which are directly superimposed over the maintainer’s real-world view as seen through the glasses.
 

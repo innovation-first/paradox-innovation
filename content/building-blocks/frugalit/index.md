@@ -15,23 +15,24 @@ authors:
 
 # Frugal IT Software Suite
 
-In today's fast-paced digital landscape, managing cloud costs effectively is a significant challenge, often leading to expenses far exceeding initial projections. As we move towards a future where environmental sustainability and legislative compliance are paramount, designing frugal and efficient cloud solutions becomes essential.
+In today's fast-paced digital landscape, managing cloud native applications is a significant challenge, often leading to expenses far exceeding initial projections. As we move towards a future where environmental sustainability and legislative compliance are paramount, designing frugal and efficient cloud solutions becomes essential.
 
-Frugal IT is an innovative software suite designed to optimize Kubernetes applications initially, with a roadmap to extend support across all cloud-native architectures. 
+Frugal IT is an innovative software suite designed to optimize Kubernetes applications, with a roadmap to extend support across all cloud-native architectures. 
 
-Our goal is to empower platform administrators with the tools they need to manage costs, optimize resource utilization, and ensure sustainable operations.
+Our goal is to empower solution architects and platform administrators with the tools they need to manage costs, optimize resource utilization, and ensure sustainable operations.
 
 ## Key Features
 
-Frugal IT proposes three main functions: the **inspector**, the **optimizer** a,d the **adviser**.
+Frugal IT proposes three main functions: the **inspector**, the **optimizer** and the **adviser**.
 
+![Frugal It Overview](frugal-it.png)
 
 ### Inspector : Understand your Costs
 
+The inspector monitors your application in real-time and report finops and greenops indicators: 
 
-Gain clear visibility into your cloud expenditures with intuitive monitoring dashboards.
-
-Deploy advanced probes to track and analyze cost drivers in real-time.
+* Gain clear visibility into your cloud expenditures with intuitive monitoring dashboards.
+* Deploy advanced probes to track and analyze cost drivers in real-time.
 
 ### Optimizer : Reduce your Costs
 
@@ -47,7 +48,24 @@ Obtain a "frugality score" to benchmark and improve your infrastructure’s effi
 
 ## Value Proposition
 
-Frugal IT is your partner in navigating the complexities of FinOps and GreenOps. By providing deep insights, actionable optimizations, and robust reporting, we help you build cost-effective, sustainable, and compliant cloud solutions.
+Frugal IT is your partner in navigating the complexities of FinOps and GreenOps. By providing deep insights, actionable optimizations, and robust reporting, it helps you build cost-effective, sustainable, and compliant cloud solutions.
+
+![User experience and vertuous cycle](frugal-it-cycle.png)
+
+## How it works
+
+Frugal-It works using simple but innnovative principles. 
+
+1. Your architecture is first discovered and understood by the frugal It AI-powewered assistant. You immediately benefit from a solid description and understanding of your architecture. This alleviates the need to rely on separate design and implementation 
+documents. What Frugal It describes is what has been deployed and run. 
+2. Frugal-It lets you provide additional information to describe timportant functional, contextual orthe expected service level agreements expected by the application. 
+3. Frugal-It collect real-time monitoring KPIs: costs, energy, carbon consumption estimations, and performance.
+4. That global knowledge is finally used to provide you with optimisation recommandation. 
+
+Ultimately Frugal-It helps you leveraging the best of cloud native elasticity, scaling on demand andpossibly up to completely shutting down parts or all your application  to stick to the expected usage. As you can expect, the costs and carbon footprint 
+can be dramatically reduced.  
+
+Refer to [frugal-it](/blogs/frugalit) for a deeper technological overview. 
 
 
 ## Contacts

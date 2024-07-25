@@ -1,9 +1,8 @@
 ---
-title: 'The Frugal IT initiative'
+title: 'The Frugal IT suite: a look at the Optimiser'
 date: 2024-07-02T13:48:14+02:00
 summary: 'Reducing Energy Footprint of Cloud-Native Applications'
 categories:
-- Blog
 - Innovation Track
 tags:
 - kubernetes
@@ -12,9 +11,16 @@ tags:
 image: 'rift.webp'
 authors: 
 - Dimitri Tombroff
+- Tanguy Jounnic
+- Lorenzo Girardi
 ---
 
 ## Abstract
+
+Frugal-It is a suite of greenops building blocks and innovative tracks that alltogether provide
+tools to monitor, understand and optimise software projects. 
+
+This blog describes the component called **Optimizer** that is developped as part of the Rift innovation track.
 
 > This technical blog highlights our we tackle important challenges to address cost and energy reduction or cloud native solutions. In particular
 > - **Dynamic Resource Management**: Automated scaling of applications to optimize resource use.

@@ -1,7 +1,7 @@
 stages:
   - build
   - deploy
-  
+
 build-docker:
   stage: build
   image: gcr.io/kaniko-project/executor:v1.14.0-debug
@@ -34,6 +34,10 @@ deploy:
   stage: deploy
   image: $KAST_DEPLOYER_IMAGE
   script:
+    # Add help repos
+    - helm repo add blog ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/helm/dev --username gitlab-ci-token --password $CI_JOB_TOKEN
+    - helm repo add kast $KAST_REGISTRY_HELM_URL --username $KAST_REGISTRY_USER --password $KAST_REGISTRY_TOKEN
+    - helm repo update
     # Setup gcloud
     - gcloud auth activate-service-account --key-file $GCP_SA_KEY
     - gcloud config set project $GCP_PROJECT
@@ -41,21 +45,17 @@ deploy:
     - gcloud config set compute/zone $GCP_ZONE
     # Setup cluster access
     - gcloud container clusters get-credentials $GCP_CLUSTER_NAME --region $GCP_REGION
+    - kubectl config set-context --current --namespace=default
     - gcloud compute ssh ${GCP_SA_NAME}@${GCP_BASTION_NAME} --tunnel-through-iap --ssh-flag="-4 -L8888:localhost:8888 -N -q -f"
     - export HTTPS_PROXY=localhost:8888
-    # Reset default namespace modified by gitlab
-    - kubectl config set-context --current --namespace=default
     # Remove gitlab incluster access
     - unset KUBERNETES_SERVICE_HOST
-    # Add help repos
-#    - helm repo add --username gitlab-ci-token --password $CI_JOB_TOKEN blog ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/helm/dev
-    - helm repo add blog https://gitlab.thalesdigital.io/api/v4/projects/56500/packages/helm/dev --username kevin.denis --password 6wj6Cxsztsrim6BumYLg
-    - helm repo add kast $KAST_REGISTRY_HELM_URL --username $KAST_REGISTRY_USER --password $KAST_REGISTRY_TOKEN
-    - helm repo update
-    # Deploy on kube cluster
+    # Set kpack environment variables
     - export GITLAB_PULL_REGISTRY_USER=$CI_DEPLOY_USER
     - export GITLAB_PULL_REGISTRY_TOKEN=$CI_DEPLOY_PASSWORD
+    # Deploy on kube cluster
     - kastctl install --kpack deployment/kpack.yaml --token $KAST_KEYSTORE_PASS
+    # Update deployment image thanks to pull policy always
     - kubectl rollout restart --namespace blog deployment/blog
   rules:
    # Trigger of CI when there is a push event on the main branch

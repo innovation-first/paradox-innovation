@@ -1,27 +1,26 @@
 ---
 title: 'Understanding Generative AI maturity levels'
-date: 2024-07-22T13:48:14+02:00
+date: 2024-05-22T13:48:14+02:00
 summary: ''
 categories:
 - Blog
 tags:
 - llm
-- ai
+- generative ai
 authors: 
 - 'Dimitri Tombroff'
-- 'Thomas Delavallade'
+- 'Julien Meynard'
+image: 'shared/abstract-white-2.jpg'
 ---
 
-## Overview
+{{< quote>}}
+*Among the many promising generative AI use cases, helping users to evaluate the compliancy of their 
+solution  with complex regulation is a particularly important one. This blog provides a quick overview of these
+use cases, and briefly provides a simple methodology and common vocabulary to help you grasp the risks
+to consider and the corresponding maturity level of your AI solution you should plan to implement.*
+{{< /quote >}}
 
-This short blog provides a synthesis of the promises and challenges of using generative AI for common use cases.
-It provides a first simple methodology and common vocabulary to help us categorize the maturity level we should 
-plan to put in place before thinking of using generative AI in innovation tracks, building blocks or in our internal
-tools. 
-
-## Opportunities
-
-### Compliancy and Regulations
+## Compliancy and Regulations
 
 The regulatory landscape, including the [US Executive Order](https://www.whitehouse.gov/briefing-room/presidential-actions/2023/10/30/executive-order-on-the-safe-secure-and-trustworthy-development-and-use-of-artificial-intelligence/), the [Bletchley Park Declaration](https://www.gov.uk/government/publications/ai-safety-summit-2023-the-bletchley-declaration/the-bletchley-declaration-by-countries-attending-the-ai-safety-summit-1-2-november-2023) or the [EU`s AI Act](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai) is ever increasing. 
 The task to evaluate how compliant a software architecture or its implementation is is costly and error prone. 
@@ -35,10 +34,6 @@ Generative AI is a possible  solution ([1], [2]):
 Generative AI facilitates real-time monitoring of transactions and activities, automatically generating reports that highlight potential compliance issues. This proactive approach allows businesses to address concerns promptly, reducing the risk of regulatory penalties.
 
 The expected benefits are *enhanced efficiency*, *improved accuracy* and *consistency*, an easier adaptability to regulatory changes, and of course cost reduction by automating repetitive compliance tasks and avoiding penalties for non-compliance.
-
-### Technical Assistance
-
-This category encompasses the generative AI usage to help technicians to retrieve the right information efficienlty. 
 
 
 ## Risks

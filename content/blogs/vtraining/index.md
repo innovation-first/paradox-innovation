@@ -1,9 +1,8 @@
 ---
-title: 'VR-as-a-Service with vTraining'
+title: 'vTraining: Virtyal Reality as a Service'
 date: 2024-07-16T13:48:14+02:00
 summary: 'Virtual Reality as a new immersive training tool within Thales Group'
 categories:
-- Blog
 - Innovation Track
 tags:
 - 3d
@@ -13,7 +12,7 @@ authors:
 image: 'vtr_background_army.jpg'
 ---
 
-# Introduction
+## Introduction
 
 ## Augmented or Virtual Reality?
 
@@ -26,7 +25,7 @@ Augmented Reality and Virtual Reality are two 3D use cases that place the user a
 | For remote assistance, site preparation or helping with design | For training in critical or dangerous situations |
 | With a smartphone, tablet or glasses to “see through” | With a standalone headset or connected to a computer |
 
-# Why vTraining?
+## Why vTraining?
 
 Let's get back to our subject, vTraining... Many initiatives are being deployed with Virtual Reality and are pushing these new generation simulators into our customers' support contracts.
 
@@ -40,7 +39,7 @@ Despite the innovative aspect and the acceptance of end users, today, Virtual Re
 
 ![](vtr_thalesla.png)
 
-## Respond to the challenges of scaling immersive training applications with a VR-as-a-Service platform
+### Respond to the challenges of scaling immersive training applications with a VR-as-a-Service platform
 
 Therefore, the objective for TSN is to develop a platform to make our clients autonomous in the creation of Virtual Reality training.
 Engineers can now imagine and create Virtual Reality training on their own; directly from a Web application and without any special knowledge in development or 3D.
@@ -53,7 +52,7 @@ This project is part of the 3D-as-a-Service ambition supported by the TSN teams.
 
 ![Solution overview](vtr_overview.png)
 
-### Contacts
+## Contacts
 
 - guillaume.blaise@thalesgroup.com
 - aude.chenet@thalesgroup.com

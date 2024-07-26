@@ -25,7 +25,7 @@ Our goal is to empower solution architects and platform administrators with the 
 
 Frugal IT proposes three main functions: the **inspector**, the **optimizer** and the **adviser**.
 
-![Frugal It Overview](frugal-it.png)
+![Frugal It Overview](frugalit.png)
 
 ### Inspector : Understand your Costs
 

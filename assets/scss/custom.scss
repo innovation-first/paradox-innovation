@@ -4,7 +4,7 @@
 
 /* Global image size limits */
 img {
-    max-width: 80%;
+    max-width: 100%;
     height: auto;
     max-height: 400px; /* Adjust the max-height as needed */
     object-fit: contain; /* Ensures the entire image fits within the container */
@@ -50,7 +50,7 @@ img {
             }
 
             img {
-                width: 100%;
+                width: 200px;
                 height: 100px;
                 object-fit: cover;
                 vertical-align:middle;

@@ -3,7 +3,8 @@ title: 'Harnessing Generative AI to Optimize Kubernetes: A Multi-Agent Experimen
 date: 2024-07-16T13:48:14+02:00
 summary: 'An experimental methodology to significantly reduce costs and energy footprints of Kubernetes applications'
 categories:
-- Work In Progress
+- Blog
+- Draft
 tags:
 - llm
 - generative ai

@@ -4,6 +4,7 @@ date: 2024-07-02T13:48:14+02:00
 summary: 'This real live demonstration illustrates the Finops and Greenops monitoring of a sample AWS kubernetes application.'
 categories: 
 - Demonstration
+- Draft
 tags:
 - greenops
 - finops

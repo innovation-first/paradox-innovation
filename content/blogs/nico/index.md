@@ -5,8 +5,8 @@ summary: 'Next Interactive CObot A Multimodal LLM Demonstrator'
 categories:
 - Innovation Track
 tags:
-- llm
-- ai
+- generative ai
+- robotics
 authors: 
 - Geoffrey Portelli
 image: 'Robos-colaborativos-cobots-1.webp'

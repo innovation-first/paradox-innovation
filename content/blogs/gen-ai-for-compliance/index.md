@@ -6,8 +6,8 @@ categories:
 - Blog
 - Draft
 tags:
-- llm
 - generative ai
+- compliancy
 authors: 
 - 'Dimitri Tombroff'
 - 'Julien Meynard'

@@ -6,7 +6,7 @@ categories:
 - Innovation Track
 - Draft
 tags:
-- ai
+- generative ai
 - compliancy
 authors: 
 - Julien Meynard

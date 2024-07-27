@@ -1,12 +1,11 @@
 ---
 title: 'Swish : a digital twin framework to evaluate sensor IOT architecture'
 date: 2024-07-16T13:48:14+02:00
-summary: 'Swish is an embedded sensor hub to power a digital twin of mobile systems. Siwsh is easy to install and maintain, silent (does not disrupt the missionà, and has a low carbon footprint.'
+summary: 'Swish is an embedded sensor hub to power a digital twin of mobile systems. Siwsh is easy to install and maintain, silent (does not disrupt the mission), and has a low carbon footprint.'
 categories:
 - Innovation Track
 tags:
-- llm
-- ai
+- edge ai
 image: 'shared/abstract-yellow-boxes.jpg'
 authors: 
 - 'Quentin Gasparrotto'

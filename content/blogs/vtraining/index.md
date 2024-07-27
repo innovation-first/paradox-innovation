@@ -7,7 +7,7 @@ categories:
 - Draft
 tags:
 - 3d
-- vr
+- virtual reality
 authors: 
 - Guillaume Blaise
 image: 'vtr_background_army.jpg'

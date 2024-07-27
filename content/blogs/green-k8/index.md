@@ -6,9 +6,9 @@ categories:
 - Blog
 - Draft
 tags:
-- llm
 - generative ai
 - kubernetes
+- architecture
 authors: 
 - 'Dimitri Tombroff'
 - 'Lorenzo Girardi'

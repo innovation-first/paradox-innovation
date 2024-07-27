@@ -4,6 +4,7 @@ date: 2024-07-16T13:48:14+02:00
 summary: 'Virtual Reality as a new immersive training tool within Thales Group'
 categories:
 - Innovation Track
+- Draft
 tags:
 - 3d
 - vr

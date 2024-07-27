@@ -4,6 +4,7 @@ date: 2024-05-22T13:48:14+02:00
 summary: ''
 categories:
 - Blog
+- Work In Progress
 tags:
 - llm
 - generative ai

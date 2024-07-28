@@ -9,6 +9,7 @@ tags:
 - generative ai
 - kubernetes
 - architecture
+- greenops
 authors: 
 - 'Dimitri Tombroff'
 - 'Lorenzo Girardi'
@@ -25,7 +26,7 @@ image: 'shared/abstract3.jpg'
 {{< /quote >}}
 
 This paper explains our strategy to design the [frugal-it](/blogs/frugalit) innovative greenops solution.
-The goal of this paper is to challenged and helped bu you, the readers.
+The goal of this paper is to be challenged and helped by you, the readers.
 
 ### Problem Statement
 
@@ -43,26 +44,23 @@ to reduce significantly the resources usage of their Kubernetes solutions. We pl
 * the technologies to scale down (i.e. reduce automatically) kubernetes applications exist but require a high expertise.
 * frugality and cost optimisation are secondary concern, the first concern is robustess and continuous service.
 
-## Sample Use Case
-
-For the sake of clarity we will assume that 
-
-* The user is a software architect that designed a complete Kubernetes solution. 
-* that solution is an Iot end-to-end solution where remote probes and captors collect and ship some data to a central 
-Kubernetes solution where that data is processed, saved and displayed.
-* The user selected a number of components such as Queuing systems (Kafka), document stores (Elasticsearch), storage components (Minio, Cloud storage), and
-dashboarding (Kibana, Superset, Grafana) to ultimately present the data products to the customers. 
-
-Such popular architectural pattern is interesting because is is commonly used in various cybersecurity, IoT, Scada (civilian or milutary) solution. These are typicallt the applications we deal with in Thales. 
-Besides, it is particularly easy to implement on top of the [Kast](/building-blocks/kast) distribution. 
+#
 
 ## Work Hypothesis and Methodology
 
-First, note that to succeed in exploring machine learning or generative AI, a continuous delivery process is helpful.
+First, note that to succeed in exploring machine learning or generative AI, a continuous delivery process ([1]) is helpful.
 
-![continuous delivery for machine learning](ar_inline_benefits_of_cd4ml.jpg)
+![continuous delivery for machine learning](ai-process.png)
 
-It speaks for itself, as the iterations to a successful attempts require many confrontations with real users and use cases. 
+It speaks for itself, as the iterations to a successful attempts require many confrontations with real users and use cases. To initiate concrete exploration while quickly initating such a cycle, we defined and put in place a concrete use case:
+
+* The user is a software architect that designed a realistic end to end IoT Kubernetes solution. 
+    * remote probes and captors collect and ship some data to a central Kubernetes solution where that data is processed, saved and displayed.    
+* A number of technical components such as Queuing systems (i.e. [Kafka](https://kafka.apache.org/)), document stores (i.e. [Elasticsearch](https://www.elastic.co/)), storage components ([Minio]((https://min.io/), [Cloud storage](https://aws.amazon.com/s3/)), and
+dashboarding ([Kibana](https://www.elastic.co/kibana), [Grafana](https://grafana.com/), [Superset](https://superset.apache.org/)) to ultimately present the data products to the customers. 
+
+Such popular architecture is interesting because is is commonly used in various cybersecurity, IoT, Scada (civilian or military) solution. These are typically the applications we deal with in Thales. 
+Besides, it is particularly easy to implement on top of the [Kast](/building-blocks/kast) distribution. 
 
 ### Input Data Selection
 
@@ -70,13 +68,13 @@ The input data is the description of the target Kubernetes application. This can
 
 * Architecture and design documents
 * Implementation documents, often grouped in some Wiki or equivalent internal tool
-* The system itself assuming one can observe and/or guess its architecture dynamically
-* Real-time KPIs, typically avaliable from prometheus or equivalent monitoring stacks
+* The system itself assuming one can observe and/or guess its architectural structure dynamically
+* Real-time KPIs, typically available from prometheus or equivalent monitoring stacks
 * Logs, typically available from the solution monitoring plane (loki, elk etc ..)
 * External data, for example meteolorogical data
 * other informations that could be provided through separate human interactions
 
-To scope our work we decided to work with three precise input dataset: 
+To scope our work we decided to work with three precise input datasets: 
 
 1. The target solution dynamic configuration: this is called **config maps** in Kubernetes vocabulary. APIs make it possible to collect these, and they provide a fair and rather complete description of the structure and resources of the application.
 2. Additional user provided inputs to enrich the input dataset with functional information: service level agreements, external devices properties that can have important impacts on the optimisation strategies, etc..
@@ -108,12 +106,18 @@ To capture the user provided input, we propose a prompt like UI that is directly
 This strategy can be considered as labelizing the architectural elements with additional contextual data. It will be precious to ultimately help users
 to evaluate possible optimisations.
 
-### Multi Agent Llm at play
+### Multi-Agent Llm at play
 
 Once the optimisation actions have been identified, and some of them implemented on our test platform, we can envision
 a multi-agent pattern that will ultimatley select the possible actions depending on the input dataset and the user interactive requests. 
 
-A dedicated blog is in progress explaining the technological component used here.
+{{< quote author="langGraph blog" source="LangGraph: Multi-Agent Workflows" url="https://blog.langchain.dev/langgraph-multi-agent-workflows/">}}
+*multi agents are multiple independent actors powered by language models connected in a specific way..*
+{{< /quote >}}
+
+The multi-agent state machines allows for more controlled and flexible flows in a LLM applications. This approach introduces cycles into the runtime, enabling agents to reason about what to do next and handle more ambiguous inputs effectively. By capturing the user's intent from the prompt, such as **"I want to optimize my solution"** or **"Can you explain my solution architecture"**, the agent graph routes these queries to dedicated agents. Each then follows a loop: determining actions or responses, executing those actions, and repeating the process until a final response is generated. This method enhances the system's ability to manage complex tasks and provide tailored assistance.
+
+A dedicated blog is in progress explaining the [technological component](https://blog.langchain.dev/langgraph/) used here.
 
 ## Business Value 
 
@@ -123,16 +127,32 @@ these values with potential users and stakeholders.
 
 The identified business values are the following:
 
-* Having an assistant that describes a kubernetes running application has some immediate value as it alleviates the complexity of dealing with separate documentation to describe the solution and its implementations:
-    * it can be out of date
-    * it can be difficult to humanly process
-    * having immediate description without any other action that installing a probe renders the maintainance of complex solutions significantly simpler.
-* Without AI assistance, having the well-known optimisation strategies at hand significantly reduce the expertise level required to design elastic solutions at hand.
-    * our solutions provides API endpoints to do the complex work of applying a (Keda, Karpenter) configuration to automatically scale up or down the application.
-* With the AI assistant, this work is further simplified.
-    * we also assume that users will be happy to provide useful information. Interactive prompts are way more intuitive and easyy to use that providing inputs into complex documentations or tools. This is a win-win effect.
-* Optimisation is one of our target, but once the input dataset is solid, one can immediately work on **compliancy** use cases:
-    * green IT rules sets
-    * security regulation and recommandations
-    * privacy regulations
-    * best architectural pattern
+### Simplifying Documentation with AI
+
+Having an assistant that describes a kubernetes running application has some immediate value as it alleviates the complexity of dealing with separate documentation to describe the solution and its implementations:
+
+* it can be out of date
+* it can be difficult to humanly process
+* having immediate description without any other action that installing a probe renders the maintainance of complex solutions significantly simpler.
+
+### Reducing Expertise Required for Elastic Solutions
+
+Without AI assistance, having the well-known optimisation strategies at hand significantly reduce the expertise level required to design elastic solutions at hand. Our solutions provides API endpoints to do the complex work of applying a (Keda, Karpenter) configuration to automatically scale up or down the application.
+
+### Enhancing User Interaction through AI Assistance
+
+With the AI assistant, this work is further simplified. We also assume that users will be happy to provide useful information. Interactive prompts are way more intuitive and easy to use that providing inputs into separate complex documentations or tools. This is a win-win effect.
+
+### An effective tool for compliancy 
+
+Optimisation is one of our target, but once the input dataset is solid, one can immediately work on **compliancy** use cases:
+
+* green IT rules sets
+* security regulation and recommandations
+* privacy regulations
+* best practice architectural pattern
+
+## References
+
+- [1] [Build an AI strategy that survives first contact with reality](https://www.thoughtworks.com/insights/articles/build-an-ai-strategy-that-survives-first-contact-with-reality) 
+- [2] [LangGraph](https://blog.langchain.dev/langgraph-multi-agent-workflows)

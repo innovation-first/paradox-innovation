@@ -17,7 +17,7 @@ authors:
 - Dimitri Tombroff
 ---
 
-> This technical blog describes one of the [Frugal IT](/building-blocks/frugalit) component called **Optimiser**. It highlights our we tackle important challenges to address cost and energy reduction or cloud native solutions. In particular
+> This technical blog describes one of the [Frugal IT](/building-blocks/frugal-it) component called **Optimiser**. It highlights our we tackle important challenges to address cost and energy reduction or cloud native solutions. In particular
 > - **Dynamic Resource Management**: Automated scaling of applications to optimize resource use.
 > - **Generative AI Tools**: Simplifying complex configurations for Kubernetes environments.
 > - **Intelligent Orchestration**: Planning resource usage based on renewable energy availability to minimize carbon footprint.

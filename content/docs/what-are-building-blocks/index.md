@@ -1,5 +1,5 @@
 ---
-title: "What are building blocks"
+title: "What are building blocks ?"
 description: "Understanding the building block rationale and strategy."
 date: 2024-06-09T13:15:14+02:00
 summary: ''
@@ -27,7 +27,7 @@ products.
  
 It may also happen however that we implement and support building blocks on demand for Thales group units. Kast is the typical example. It is very close to be a product, it has a product owner, a reviewed roadmap, and a licensing strategy. 
 
-### Enablers
+### Software Enablers
 
 The word *enabler* (or *accelelerator*) best describes components that may not be associated with a 
 long lifetime, or even be supported at all, but that provide an effective and valuable 
@@ -47,14 +47,15 @@ Why only enablers then ? Simply because it would be counter-productive and at th
 Last, some building block may be associated with our expertise more than in specific software assets. 
 Examples are: 
 
-* Our internal best practice security, architecture, greenops rulesets.
-* Well dentified referential
-* Tools and practices associated to specific consulting offerings  
+* Our internal best practice security, architecture, greenops recommandations.
+* Well-identified referentials: the ones we master and use.
+* Tools and practices associated with specific consulting offerings  .
 
 ## What you will find on the Hub
 
-The hub only provide very general information about the building blocks. FOr each, refer to the contact to get the
-details such as maturity levels, licensing, terms of use, etc..
+The hub only provides very general and high level information about the building blocks. 
+For each, refer to the documented contact to get more
+details such as maturity levels, licensing, terms of use, etc.
 
 ## Contact
 

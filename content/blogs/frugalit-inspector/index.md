@@ -15,7 +15,7 @@ authors:
 - Kevin Denis 
 ---
 
-> This blog describes one of the [Frugal IT](/building-blocks/frugalit) component called **Inspector**, the Thales carbon monitoring and assement tool.
+> This blog describes one of the [Frugal IT](/building-blocks/frugal-it) component called **Inspector**, the Thales carbon monitoring and assement tool.
 
 ## Introduction
 

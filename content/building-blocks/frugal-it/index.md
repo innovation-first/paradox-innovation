@@ -65,7 +65,7 @@ documents. What Frugal It describes is what has been deployed and run.
 Ultimately Frugal-It helps you leveraging the best of cloud native elasticity, scaling on demand andpossibly up to completely shutting down parts or all your application  to stick to the expected usage. As you can expect, the costs and carbon footprint 
 can be dramatically reduced.  
 
-Refer to [frugal-it](/blogs/frugalit) for a deeper technological overview. 
+Refer to the [frugal-it inspector](/blogs/frugalit-inspector) and [frugal-it optimiser](/blogs/frugalit-optimiser) for a deeper technological overview. 
 
 
 ## Contacts

@@ -1,23 +1,24 @@
 ---
-title: "Hub Technical Overview"
+title: "Overview"
 description: "Understanding the Hub architecture and value propostion."
-date: 2024-06-09T13:15:14+02:00
+date: 2024-07-20T13:15:14+02:00
 summary: 'The hub is both a simple portal and a sandboxed demonstration and working platform. This doc explains its architecture, and service level agreements'
 authors:
 - 'Olivier Jobert'
 - 'Kevin Denis'
 - 'Dimitri Tombroff'
+- 'Mahmoud.chilali'
 ---
 
-## Rationale
+## Benefits
 
 The hub is an online platform that provides two main features. The first is to expose a simple portal (you are reading it now)
-to help us all (including customers) to easily and quicly understand our innovation, expertise and offerings. 
+to help us all (including customers) to easily and quickly understand our innovation, expertise and offerings. 
 
 Second it provides thales developpers and architects with a sandboxed, ready-to-use platform to prototype and deploy
 new projects. 
 
-All in all, such a hub has several benefits.
+This has several benefits.
 
 ### What you see is what you get
 
@@ -52,11 +53,11 @@ transforming the way applications are developed and launched.
 
 ## Architecture
 
-The hub architecture is quite simple:
+The hub architecture is quite simple. The following schema highlight the essential parts. 
 
 ![Architecture Overview](HubArchitecture.png)
 
-### The fundation 
+### Fundations 
 
 - It runs on [google cloud platform](https://cloud.google.com) (GCP). It uses the cloud storage and cloud SQL managed services.
 - In there we deployed a [managed kubernetes engine](https://cloud.google.com/kubernetes-engine) (GKE), 
@@ -71,13 +72,13 @@ demonstrate GCP and GKE usages. The other platforms are excellent too, but our s
 
 ### Your Apps
 
-A simple multi-tenant architecture provides you (Bob or Alice) with the ressource you need to deploy and run your project. 
+A simple multi-tenant architecture provides you (Bob or Alice in the previous schema) with the ressource you need to deploy and run your project. 
 
 ## Is there a Roadmap ?
 
 Yes. We are working on three main streams.
 
-1. Securing the Hub to C2 to C3* security levels. This is joint worg with out technical direction cybersecurity team.
+1. Securing the Hub to C2 to C3* security levels. This is joint work with out technical direction cybersecurity team.
 2. Improving the multi-tenancy without sacrificing a shared kubernetes instance. 
 3. Finops and GreenOps. The Hub is meant to be extremally frugal and cheap. In fact it helps us developping our innovative tracks 
 
@@ -85,16 +86,20 @@ Many finer grain improvements issues are defined in the Hub issue backlog.
 
 ## Who will Pay ?
 
-Our goal is to quickly end up with a pay what you consume model. As of now it is still free to use. 
+Our goal is to quickly end up with a pay what you use model. As of now it is still free to use. 
 So why not joining ? 
 
 ## Contact
 
-- dimitri.tombroff@thlesgroup.com
-- olivier.jobert@thalesgroup.com
-- kevin.denis@thalesgroup.com
+- olivier.jobert@thalesgroup.com: hub contributor
+- kevin.denis@thalesgroup.com: hub contributor
+- hadrien.leclerc@thalesgroup.com: hub (cybersecurity) contributor
+- mahmoud.chilali@thalesgroup.com: cybersecurity authority
+- dimitri.tombroff@thlesgroup.com: hub contributor
 
+References:
 
+- [Everything is on the Gitlab](https://gitlab.thalesdigital.io/tsn/innovation)
 
 
 

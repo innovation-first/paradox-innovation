@@ -6,6 +6,7 @@ categories:
 - Innovation Track
 tags:
 - edge ai
+- digital twin
 image: 'shared/abstract-yellow-boxes.jpg'
 authors: 
 - 'Quentin Gasparrotto'

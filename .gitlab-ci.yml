@@ -45,9 +45,9 @@ deploy:
     - gcloud config set compute/zone $GCP_ZONE
     # Setup cluster access
     - gcloud container clusters get-credentials $GCP_CLUSTER_NAME --region $GCP_REGION
+    - kubectl config set clusters.gke_${GCP_PROJECT}_${GCP_REGION}_${GCP_CLUSTER_NAME}.proxy-url http://localhost:8888
     - kubectl config set-context --current --namespace=default
     - gcloud compute ssh ${GCP_SA_NAME}@${GCP_BASTION_NAME} --tunnel-through-iap --ssh-flag="-4 -L8888:localhost:8888 -N -q -f"
-    - export HTTPS_PROXY=localhost:8888
     # Remove gitlab incluster access
     - unset KUBERNETES_SERVICE_HOST
     # Set kpack environment variables

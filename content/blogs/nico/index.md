@@ -1,26 +1,24 @@
 ---
-title: 'Next-Gen Automation: How Generative AI Empowers Cobots'
+title: 'Nico: Next-Gen Automation: How Generative AI Empowers Cobots'
 date: 2024-07-16T13:48:14+02:00
 summary: 'Next Interactive CObot A Multimodal LLM Demonstrator'
 categories:
-- Blog
 - Innovation Track
 tags:
-- llm
-- ai
+- generative ai
+- robotics
 authors: 
 - Geoffrey Portelli
 image: 'Robos-colaborativos-cobots-1.webp'
 ---
 
-# Introduction
+## Introduction
 
-In an increasingly complex and demanding world, human-machine interactions will need to be more efficient and fluid to take advantage of constant technological advancements in embedded systems and robotics. To this end, the SFRD NICO project aims to develop an autonomous brain that enables a robotic platform to interact multimodally with its environment to solve complex tasks.
+In an increasingly complex and demanding world, human-machine interactions will need to be more efficient and fluid to take advantage of constant technological advancements in embedded systems and robotics. To this end, the NICO innovation track aims to develop an autonomous assistant that enables a robotic platform to interact multimodally with its environment to solve complex tasks.
 
-This brain will utilize the latest large language models and will be developed on embedded hardware targets, such as the NVIDIA Jetson, to demonstrate the feasibility of using these new technologies completely autonomously. Managing energy consumption is indeed one of the key differentiators of this project, enabling the deployment of AI models in the field, close to the needs.
+This assistant leverages the latest large language models and is developed on embedded hardware targets, such as the NVIDIA Jetson, to demonstrate the feasibility of using these new technologies completely autonomously. Managing energy consumption is indeed one of the key differentiators of this project, enabling the deployment of AI models in the field, close to the needs.
 
 ![Nvidia Jetson Orin AGX](nico_jetson.jpg)
-
 
 LLMs have made it possible to process textual data with unmatched performance. Recently, this capability has extended to other domains such as images, sound, videos, or other sensors, in an integrated manner. These are called multimodal LLMs, highlighted on the international research scene (PALM-e, Next-GPT, AnyMAL, GPT-4Vision, LLaVa, etc.).
 
@@ -30,13 +28,15 @@ Thanks to multimodal integration, intelligent agents can interact with the envir
 
 Nico objectives are to develop the tools and software modules for implementing and using these multimodal LLMs in an intelligent assistant application.
 
-## Conceptual Diagram of NiCO
+## Value Proposition
 
 The potential applications of such an integrated system are numerous, both in the public, defense, and space domains, such as the emergence of numerous initiatives around assistant robots, demonstrating real industrial and business interest:
 
 * Medical personal assistant robots
 * Assistant robots in hospitals
 * Soldier assistant robots on the battlefield (with a perspective of participating in the COHOMA challenge organized by the DGA (Human-Machine Collaboration) with Thales-PRS in 2025).
+
+## Demonstrator 
 
 Nico will be demonstrated  on top of the DTV Shredder motorized platform, provided to Thales Services Numériques through a partnership with DTV Motor.
 
@@ -50,9 +50,7 @@ Human-machine interactions as well as environmental data collection by the syste
 
 ![RGBD camera](nico_camera.jpg)
 
-The value proposition of Nico is based on modularity; this list is not exhaustive and may evolve depending on the use case and integration with other mobile platforms.
-
-### Contacts
+## Contacts
 
 - geoffrey.portelli@thalesgroup.com
 - mehdi.jendoubi@thalesgroup.com

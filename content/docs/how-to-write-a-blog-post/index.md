@@ -1,7 +1,7 @@
 ---
-title: "How to Write a Blog Post"
+title: "How to Write a Blog Post ?"
 description: "Step-by-step guide on writing a blog post."
-date: 2024-07-01T13:15:14+02:00
+date: 2024-07-18T13:15:14+02:00
 summary: 'This real live demonstration illustrates the Finops and Greenops monitoring of a sample AWS kubernetes application.'
 ---
 

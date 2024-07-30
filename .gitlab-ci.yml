@@ -58,6 +58,7 @@ deploy:
     # Update deployment image thanks to pull policy always
     - kubectl -n blog rollout restart deployment/blog
     # Fix oauth2-proxy cookie issue
+    - sudo apk add jq
     - current_args=$(kubectl -n blog get deployment/blog-auth-oauth2-proxy -o jsonpath='{.spec.template.spec.containers[0].args}')
     - updated_args=$(echo $current_args | jq -r 'map(if . == "--cookie-samesite=strict" then "--cookie-samesite=lax" else . end)')
     - "kubectl -n blog patch deployment/blog-auth-oauth2-proxy --type='json' -p=\"[{'op': 'replace', 'path': '/spec/template/spec/containers/0/args', 'value': $updated_args}]\""

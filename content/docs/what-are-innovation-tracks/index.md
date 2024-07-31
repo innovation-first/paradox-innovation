@@ -54,9 +54,9 @@ During the course of innovation, it is very useful to share progresses, for exam
 
 - ines.khoudour@thalesgroup.com: innovation first
 - dimitri.tombroff@thlesgroup.com: innovation first
-- ocean.audrea@thalesgroup.com: innovation booster
+- oceane.audrain@thalesgroup.com: innovation booster
 - jean-felix.berthiau@thalsgroup.com: innovation booster
-- nicola.mortier@thalesgroup.com: technical policy
+- nicolas.mortier@thalesgroup.com: technical policy
 
 
 

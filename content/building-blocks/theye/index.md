@@ -1,85 +1,110 @@
 ---
-title: 'The Eye'
-date: 2023-06-10T13:48:14+02:00
-summary: 'Augmented Reality for mobile workers'
+title: 'ThEye'
+date: 2024-07-25T13:48:14+02:00
+summary: 'Remote assistance in Augmented Reality'
 categories: 
 - Building Block
+- Blog
 tags:
-- architecture
-- 3D
-- Virtual Reality
-image: 'theye.jpeg'
+- 3d
+- ar
+image: 'the_background.eye.jpg'
 author: 
 - Guillaume Blaise
-- Aude Chesnay
+- Aude Chenet
 ---
 
-## The Eye 
+# ThEye
 
-The Eye provides real-time help to mobile technicians via augmented reality devices. 
+## Introduction and context
 
-## The disruption challenge
+### Augmented Reality in Remote Assistance
 
-Industrial equipments are designed to be reliable and complete failure is relatively rare. 
-But when things do go wrong, delays rapidly escalate.
+The effectiveness of condition monitoring & maintenance teams depends on qualified expert’s diagnosis; reactive, preventive and predictive maintenance skills.
 
-One of the problems facing industrial or military systems maintenance teams is dealing 
-with equipment from different suppliers: tracking down the right information to make repairs is not always easy.
+Thales provides considerable cost-savings involved in travel expenses by providing maintenance teams with mobile solutions which allow effective communication with remote experts.
 
-Equipment suppliers also struggle to help. Unless they can completely understand a problem on site, providing reliable advice to maintenance teams can be difficult. Fixing legacy systems can be even harder, with only a handful of experts available to offer help. Getting the right people on site can add hours to delays.
+![Usecases](the_usecases.png)
 
-## Knowledge sharing
+### Thales & Industry 4.0: the Human factor
 
-The Eye is designed to tackle these problems. It works by using augmented reality to provide a two-way link between maintenance staff in the field and expert back office advisors. Valuable knowhow is shared, shrinking repair times and improving the quality of maintenance.
+- As part of the digital manufacturing transformation of production systems, Thales takes the lead in helping companies through the Industry 4.0 transformation, increasing productivity and competitiveness, making respect for: **market, product, production** and considering the **human factor**. 
 
-“The maintainer wears augmented reality glasses which automatically stream live video and audio to the back office” explains Dr Amine Arezki, Product Line Manager, Thales. “The advisor in the back office can see exactly what’s happening in the field on a PC screen. They can then positively identify the equipment involved and provide advice about any maintenance or repair work that may be needed.”
+- Integrating the Industry 4.0 principles : augmented reality solutions to improve **efficiency** and **competiveness**.
 
-As well as being able to see the equipment in the field via video link, the expert can ‘show’ the maintainer precisely which components need attention and what action is required.
+- Thales designed an innovative augmented reality solution to assist its activities involving **machine condition monitoring** and **maintenance management systems**.
 
-The advisor can highlight components using virtual ‘objects’ which are directly superimposed over the maintainer’s real-world view as seen through the glasses.
+## ThEye: Remote Assistance solution
 
-“The advisor can highlight components using virtual ‘objects’ which are directly superimposed over the maintainer’s real-world view as seen through the glasses,” says Arezki. “For example, the advisor could select a virtual screwdriver and then point it to exactly where it’s needed.” 
+|       | ThEye |
+|:-----:|-------|
+| ![](the_icon_android.png) | Is a **mobile Application** (Android, UWP, Web) |
+| ![](the_icon_lock.png) | Establishes a **secured connection** between **onsite technicians** and **remote experts** |
+| ![](the_icon_speed.png) | Allows **realtime** sharing of **audio, video and augmented reality** components, to guide onsite maintainers by giving real-time instructions via **smartphones** or AR glasses. |
+| ![](the_icon_server.png) | **Cloud-based** solution, or **private network** mode (“on premise”). Up to french "Restricted" accreditation. |
+| ![](the_icon_user.png) | **User Friendly** (designed to be used in Critical and Emergency situations) |
 
-Images, drawings and written instructions can also be shared with maintainers via the glasses. Two-way audio communication is also provided.
+![Remote expertise](the_remote_expert.png)
 
+## Key Features
 
-As well as providing a link to the infrastructure owner’s in-house experts, ThEye could be used to connect maintenance staff directly with equipment suppliers.
+### ![](the_icon_cam.png) Audio & Video secured conference
+- Encrypted communications from end to end (HTTPS, SRTP, SCTP)
+- Multi users conferences
 
-The approach can be used with any type of field equipment. This includes everything from signalling apparatus – such as point machines, axle counters, signals and interlockings – to power supply systems and on board equipment on trains. Both current and legacy systems can be supported using ThEye.
+### ![](the_icon_cube.png) Augmented Reality
+- Real-time 3D annotations synchronization on the operator field of view, even in video mode
+- 3D Annotations: arrow, screw driver, geometric shapes...
 
-## Troubleshooting in real time
+![AR on video](the_ar_on_video.png)
 
-Live troubleshooting not only means faster fault identification, but also quicker repairs. “In addition, there is the assurance that an expert is there to oversee the job from start to finish,” says Arezki.
+### ![](the_icon_android.png) Multi platform: Android - UWP - Web application
+- **Live video stream, photo and whiteboard**
+- **Chat messaging**
+- **Documents transfert**
+- Screen sharing
+- Remote controls
+- Voice commands
+- Adaptive video quality (QoS)
+- Record and Replay
+- External cameras
 
-Better support boosts the confidence of maintenance workers. 
+## Hardware
 
-“Normally, if a maintainer is having a problem on site and can’t solve it, work has to stop until the supplier is contacted or extra help is called in,” notes Arezki. “This inevitably causes disruption. With ThEye, expert advice is easily available and traffic delays are minimised.”
+**Android smartphones and tablets**
+- Compliant with most **Android** devices (version 10 minimum)
+- No specific device. Works on smartphone and tablet.
 
+**Windows**
+- Compliant with UWP version
+- Works on Windows 10+ and Surface tablet
 
-With ThEye, expert advice is easily available and traffic delays are minimised.
-The solution improves productivity. Because key information is delivered via glasses, there’s no need for the maintainer to handle a tablet or smart phone, leaving both hands free to get on with the job.
+**Connected glasses**
+- Compliant with Realwear HMT-1 and HMT-1Z1
+- Best connected glasses for industrial environment. ATEX version available for explosive environment
 
-ThEye also helps on site operators to make the most of valuable skills. Centralising the most experienced staff means experts are able to share their knowhow widely and easily – without the time penalty of travelling to and from work sites. Remote supervision also increases the efficiency and assurance of maintainer training and refresher programmes.
+![Realwear HMT](the_rw.png)
 
-The solution meets other needs as well. There’s no language barrier, thanks to visual communication using icons that are universally understood. The ability to use visual cues – rather than spoken instructions – is also important in the trackside environment, where ambient noise levels can be high.
+**Web browsers**
+- Mozilla Firefox, Microsoft Edge Chromium and Google Chrome (recommended)
 
-ThEye could help operators to get the most out of investments in predictive maintenance, with faster interventions leading to reductions in mean time to repair (MTTR).
+## Technical overview
 
-## Safety in mind
+### High-level application architecture
 
-As with all Thales’ solutions, safety and security are key considerations. Unlike virtual reality headsets (which cover the entire field of vision), augmented reality glasses do not obscure the user’s overall view of the surrounding environment. Normal vision is maintained.
+![Application architecture](the_app_archi.png)
 
-The aim is to minimise visual distraction, only the relevant information is shared.
+- SecuredByDesign: SoC, WebRTC and strong frameworks
+- KISS principle: no labyrinth app, only usefull features
+- Continous innovation: evolutive conception (microservices architecture and K8S ; multi-platforms engine)
 
-By improving the efficiency of maintenance operations, ThEye could contribute to overall workforce safety by reducing the amount of time maintenance teams need to spend in the hazardous trackside environment.
+### Technologies
 
-Despite its game-changing potential, ThEye is remarkably intuitive and easy to use, with no special training required. “You just put on the glasses and get to work,” says Arezki.
-  
+![Front and Back technologies](the_technos.png)
+
+*State of the art technologies and assets. From the Microsoft .NET ecosystem to the Thales world.*
 
 ## Contacts
 
-- aude.cheney@thalesgroup.com
-- guillaume.blaise@thalesgroup.com
-
-
-
+- aude.chenet@thalesgroup.com
+- eric-e.lefevre@thalesgroup.com

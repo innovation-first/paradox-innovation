@@ -4,6 +4,7 @@ description: "Understanding our innovation projects and strategy."
 date: 2024-07-15T13:15:14+02:00
 summary: ''
 authors:
+- 'Ines Khoudour'
 - 'Dimitri Tombroff'
 ---
 
@@ -40,7 +41,7 @@ It is open to all Thales Services Numériques employee.
 
 ### Innovation booster tracks
 
-The innovation booster program lets you use your standby (if you have some) to join the team. Share your ideas or pick one.
+The [innovation booster](https://gitlab.thalesdigital.io/tsn/innovation) program lets you use your standby (if you have some) to join the team. Share your ideas or pick one.
 You will find on the Hub and around (on the innovation central gitlab organisation) topics we are interested in.
 The innovation booster is a great way to learn new technologies, and/or to contribute. 
 

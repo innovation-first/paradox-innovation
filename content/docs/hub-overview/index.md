@@ -1,13 +1,8 @@
 ---
-title: "Overview"
+title: "Hub Rationale"
 description: "Understanding the Hub architecture and value propostion."
 date: 2024-07-20T13:15:14+02:00
 summary: 'The hub is both a simple portal and a sandboxed demonstration and working platform. This doc explains its architecture, and service level agreements'
-authors:
-- 'Olivier Jobert'
-- 'Kevin Denis'
-- 'Dimitri Tombroff'
-- 'Mahmoud.chilali'
 ---
 
 ## Benefits

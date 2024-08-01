@@ -27,7 +27,7 @@ The Frugal IT SaaS is running on GCP/GKE and monitors the customer application r
 
 ## Contacts
 
-- lorenzo.girardi@thalesgroup.com
+- lorenzo.gerardi@thalesgroup.com
 - tanguy.jouannic@thalesgroup.com
 
 

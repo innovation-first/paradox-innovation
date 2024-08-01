@@ -12,7 +12,7 @@ tags:
 image: 'rift.webp'
 authors: 
 - Tanguy Jounnic
-- Lorenzo Girardi
+- Lorenzo Gerardi
 - Reyyan Tekin
 - Dimitri Tombroff
 ---
@@ -107,7 +107,7 @@ The frugal IT positions itself as a key player in reducing the energy footprint 
 
 ## Contacts
 
-- lorenzo.girardi@thalesgroup.com
+- lorenzo.gerardi@thalesgroup.com
 - reyyan.tekkin@thalesgroup.com
 - tanguy.jouannic@thalesgroup.com
 

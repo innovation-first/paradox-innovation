@@ -11,7 +11,7 @@ tags:
 - finops
 image: 'rift.webp'
 authors: 
-- Tanguy Jounnic
+- Tanguy Jouannic
 - Lorenzo Gerardi
 - Reyyan Tekin
 - Dimitri Tombroff

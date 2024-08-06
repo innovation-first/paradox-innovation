@@ -93,6 +93,44 @@ For example, in regions where wind or hydroelectric power is significant, the op
 
 This intelligent orchestration not only optimizes energy consumption but also maximizes the use of renewable energies, thereby reducing the overall carbon footprint of IT infrastructures.
 
+## How to Optimise ?
+
+{{< quote author="Eugene Yan" source="Patterns for Building LLM-based Systems & Products" url="https://eugeneyan.com/writing/llm-patterns/">}}
+*There is a large class of problems that are easy to imagine and build demos for, but extremely hard to make products out of. For example, self-driving: It’s easy to demo a car self-driving around a block, but making it into a product takes a decade.*
+{{< /quote >}}
+
+Our goal is to allow the user to optimise its application. We do that first *without* the help of an AI assistant, by defining simple but effective strategies. This is explained next. Second, we design an AI assistant to help him identifying such possible optimisations.
+
+### Defining Optimisation Strategies
+
+Let us first consider a sample
+application. It is depicted next.
+
+![Sample Application](frugalit-sample-app.png)
+
+This application, a well-known log management pipeline, contains stream processors (**ingestion**, **processing**, **indexing**). The incoming data (logs) are inserted in a first queue, then parsed enriched, inserted in turn in a second queue, and at the end indexed into an (elasticsearch) database. Is this application representative of many ? In fact yes, it contains a database (elasticsearch), a temporary queuing component (say Kafka), some visualisation tool (Kibana). Replace these by others and this architecture is indeed representative of many, orchestrating a mix of streaming and batch components. 
+
+Here is now the interesting part, for each stage of our architecture we express a basic optimisation strategy to scale up/down up to shutdown completely the specific component(s). 
+
+![Rules](frugalit-optimisation-rules.png)
+
+Here are the rules, expressed using human understandable terms.
+1. **Ingestion** : *because external probes have one day of local buffering autonomy, ingestion must start once a day, and last until all the probes traffic falls down to their nominal rate*.
+2. **Queuing** : *queuing components can be shutdown when they are no more active consumers and producers*
+3. **Processing** : *processing applications can stop when they consumed all the queued items, they should start if there are again some*
+4. **Indexing** : *same as processing*
+5. **Database** : *the elasticsearch database can be stop if there are no consumers nor producers. It should start if some user show up.*
+6. **UIs**: *Kibana can be stop at night and during the week-end, or if nobody uses it for more than 10 minutes. It should start on demand*
+
+ThSuche rules are, in fact, rather generic. They can be applied to countless applications. 
+The frugal-IT patented idea is twofolds: first a dedicated kubernetes agent will expose a REST API to implement such rules. The REST API will expose simple criterions such as start nd stop conditions on dates, schedules, period, or the presence or absence of input/output data, consumers, produces. The few verbs of this API are well-defined and associated to a precise semantics. 
+
+### Assist the user
+
+This provides the AI assistant with a small number of deterministic *functions*. Based on the architecture and business logic knowledge, the assistant is capable of suggesting the right rule(s) to the user. It becomes then easy to propose the user to apply such rule, and estimate the benefits. 
+
+A dedicated blog follows explainingf how we implement this part.
+
 ## SaaS or Air Gapped
 
 As required by Thales, the frugal-It components are naturally designed to work completely on-premise, alongside Kubernetes solutions deployed on offline and secure infrastructures. However, it will be deployed and demonstrated as an online cloud Service. Its multi-tenant design makes it possible 

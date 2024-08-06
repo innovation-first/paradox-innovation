@@ -1,4 +1,5 @@
 BASEURL :=  "http://localhost:8087/"
+GITLAB_TOKEN := "" ## token only need api, write_repository permissions
 
 .PHONY: serve
 serve: ## serve the blog locally
@@ -11,6 +12,7 @@ docker-build: ## Build the docker image
 	docker build \
     -t innov-blog:latest \
     --build-arg HUGO_BASEURL=$(BASEURL) \
+	--build-arg HUGO_PARAMS_GITLAB_TOKEN=$(GITLAB_TOKEN) \
     .
 
 .PHONY: docker-run

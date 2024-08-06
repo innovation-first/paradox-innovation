@@ -70,7 +70,7 @@ Refer to the [frugal-it inspector](/blogs/frugalit-inspector) and [frugal-it opt
 
 ## Contacts
 
-- lorenzo.girardi@thalesgroup.com
+- lorenzo.gerardi@thalesgroup.com
 - tanguy.jouannic@thalesgroup.com
 - jean-felix.berthiau@thalesgroup.com
 - gilles.poirot@thalesgroup.com

@@ -1,7 +1,7 @@
 ---
 title: "What are building blocks ?"
 description: "Understanding the building block rationale and strategy."
-date: 2024-06-09T13:15:14+02:00
+date: 2024-07-09T13:15:14+02:00
 summary: ''
 authors:
 - 'Claire Bazin'

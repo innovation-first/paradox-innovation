@@ -9,14 +9,14 @@ tags:
 - greenops
 image: '/blogs/frugalit-optimiser/rift.webp'
 authors: 
-- JGilles Poirot
+- Gilles Poirot
 ---
 
 > This blog describes one of the [Frugal IT](/building-blocks/frugal-it) component called **Adviser**.
 
 ## Introduction
 
-The adviser is Frufal IT's component in charge of assisting the user with compliancy and recommandations with respect to 
+The adviser is Frugal IT's component in charge of assisting the user with compliancy and recommandations with respect to 
 green IT considerations.
 Before reviewing its intent and features, let us review the basic eco conception terminology.
 

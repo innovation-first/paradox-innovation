@@ -1,7 +1,7 @@
 ---
 title: "How to Deploy your Application ?"
 description: "Step-by-step guide on deploying an application onto the Hub."
-date: 2024-07-15T13:15:14+02:00
+date: 2024-07-05T13:15:14+02:00
 summary: 'This real live demonstration illustrates the Finops and Greenops monitoring of a sample AWS kubernetes application.'
 ---
 

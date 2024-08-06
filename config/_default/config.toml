@@ -19,3 +19,8 @@ disqusShortname = "hugo-theme-stack"
     category = 'categories'
     author = 'authors'
     tag = 'tags'
+
+
+[security]
+    [security.funcs]
+        getenv = ['^HUGO_PARAMS_GITLAB_TOKEN$']

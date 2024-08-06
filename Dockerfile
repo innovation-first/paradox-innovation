@@ -6,6 +6,9 @@ FROM $base_image_registry/hugomods/hugo:exts as builder
 # Base URL
 ARG HUGO_BASEURL=https://innovation.forthales.com
 ENV HUGO_BASEURL=${HUGO_BASEURL}
+# GET GITLAB_TOKEN
+ARG HUGO_PARAMS_GITLAB_TOKEN=""
+ENV HUGO_PARAMS_GITLAB_TOKEN=${HUGO_PARAMS_GITLAB_TOKEN}
 # Build site
 COPY . /src
 # Replace below build command at will.

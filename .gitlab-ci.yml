@@ -11,10 +11,12 @@ build-docker:
       --context $CI_PROJECT_DIR
       --dockerfile ${CI_PROJECT_DIR}/Dockerfile
       --build-arg base_image_registry=artifactory.thalesdigital.io/docker
+      --build-arg HUGO_PARAMS_GITLAB_TOKEN=${GITLAB_TOKEN}
       --destination ${CI_REGISTRY_IMAGE}/blog:latest
   rules:
     # Trigger of CI when there is a push event on the main branch
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
 
 helm-build:
   stage: build

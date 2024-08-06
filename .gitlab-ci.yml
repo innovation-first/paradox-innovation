@@ -50,6 +50,8 @@ deploy:
     - gcloud compute ssh ${GCP_SA_NAME}@${GCP_BASTION_NAME} --tunnel-through-iap --ssh-flag="-4 -L8888:localhost:8888 -N -q -f"
     # Remove gitlab incluster access
     - unset KUBERNETES_SERVICE_HOST
+    # Test cluster access
+    - kubectl get nodes
     # Set kpack environment variables
     - export GITLAB_PULL_REGISTRY_USER=$CI_DEPLOY_USER
     - export GITLAB_PULL_REGISTRY_TOKEN=$CI_DEPLOY_PASSWORD

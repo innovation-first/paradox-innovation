@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Article Submission</title>
+</head>
+<body>
+  <section>
+    <form id="textForm" class="article-submission-form">
+      <div class="form-group mb-3">
+        <label for="titleInput" class="form-label">Title</label>
+        <textarea id="titleInput" name="title" rows="1" class="form-control" placeholder="Enter the title..." aria-label="Title"></textarea>
+      </div>
+      <div class="form-group mb-3">
+        <label for="textInput" class="form-label">Content</label>
+        <textarea id="textInput" name="text" rows="4" class="form-control" placeholder="Enter your text here..." aria-label="Content"></textarea>
+      </div>
+      <div class="form-group mb-3">
+        <label for="authorInput" class="form-label">Authors</label>
+        <textarea id="authorInput" name="author" rows="1" class="form-control" placeholder="Enter author names..." aria-label="Authors"></textarea>
+      </div>
+      <div class="form-group mb-3">
+        <label for="authorInput" class="form-label">Authors</label>
+        <input type="file" name="images" accept="image/*" multiple aria-label="Images">
+      </div>
+      <div class="form-group">
+        <button type="submit" class="submit-button">Send</button>
+      </div>
+    </form>
+    <div id="loadingIndicator" style="display: none;">Submitting...</div>
+    <article id="markdownOutput" class="form-group mb-3"></article>
+  </section>
+
+  <script type="module">
+    import { marked } from 'https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js';
+
+    document.getElementById('textInput').addEventListener('input', function () {
+      var textInput = document.getElementById('textInput').value;
+      var markdownOutput = document.getElementById('markdownOutput');
+      markdownOutput.innerHTML = marked(textInput);
+    });
+
+  </script>
+  <script>
+    const GITLAB_API_URL = 'https://gitlab.thalesdigital.io/api/v4';
+    const PROJECT_ID = 56500;
+    const TARGET_BRANCH = 'main';
+
+    const toBase64 = file => new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => resolve(reader.result.split(',')[1]);
+      reader.onerror = error => reject(error);
+    });
+
+    async function createBranchCommitAndMR(branchName, commitMessage, dirPath, pictures, fileContent, targetBranch) {
+      const privateToken = {{ getenv "HUGO_PARAMS_GITLAB_TOKEN" }};
+      const headers = {
+        'PRIVATE-TOKEN': privateToken,
+        'Content-Type': 'application/json'
+      };
+      const realBranchName = branchName;
+      branchName = 'content/' + branchName.replace(/ /g, '-').toLowerCase();
+      try {
+        const createBranchResponse = await fetch(`${GITLAB_API_URL}/projects/${PROJECT_ID}/repository/branches`, {
+          method: 'POST',
+          headers: headers,
+          body: JSON.stringify({
+            branch: branchName,
+            ref: targetBranch
+          })
+        });
+        if (!createBranchResponse.ok) throw new Error('Failed to create branch');
+        console.log(`Branch '${branchName}' created successfully`);
+
+        const createCommitResponse = await fetch(`${GITLAB_API_URL}/projects/${PROJECT_ID}/repository/commits`, {
+          method: 'POST',
+          headers: headers,
+          body: JSON.stringify({
+            branch: branchName,
+            commit_message: commitMessage,
+            actions: [
+              {
+                action: 'create',
+                file_path: `${dirPath}/index.md`,
+                content: fileContent
+              }
+            ]
+          })
+        });
+        if (!createCommitResponse.ok) throw new Error('Failed to create commit');
+        console.log(`Commit created successfully on branch '${branchName}'`);
+
+        for (let i = 0; i < pictures.length; i++) {
+          const picture = pictures[i];
+          const pictureBase64 = await toBase64(picture);
+          const pictureFileName = picture.name;
+          const createPictureCommitResponse = await fetch(`${GITLAB_API_URL}/projects/${PROJECT_ID}/repository/commits`, {
+            method: 'POST',
+            headers: headers,
+            body: JSON.stringify({
+              branch: branchName,
+              commit_message: commitMessage,
+              actions: [
+                {
+                  action: 'create',
+                  file_path: `${dirPath}/${pictureFileName}`,
+                  content: pictureBase64,
+                  encoding: 'base64'
+                }
+              ]
+            })
+          });
+          if (!createPictureCommitResponse.ok) throw new Error('Failed to create commit');
+          console.log(`Commit created successfully on branch '${branchName}' for picture ${i}`);
+        }
+
+        const createMRResponse = await fetch(`${GITLAB_API_URL}/projects/${PROJECT_ID}/merge_requests`, {
+          method: 'POST',
+          headers: headers,
+          body: JSON.stringify({
+            source_branch: branchName,
+            target_branch: targetBranch,
+            title: `New content: ${realBranchName}`,
+            description: 'Automatically created merge request'
+          })
+        });
+        if (!createMRResponse.ok) throw new Error('Failed to create merge request');
+        console.log('Merge request created successfully');
+
+        return createMRResponse.json();
+      } catch (error) {
+        console.error('Error:', error.message);
+        throw error;
+      }
+    }
+
+    document.getElementById('textForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      document.getElementById('loadingIndicator').style.display = 'block';
+      const text = document.getElementById('textInput').value;
+      const title = document.getElementById('titleInput').value;
+      const author = document.getElementById('authorInput').value;
+      const files = document.querySelector('input[type="file"]').files;
+
+      createBranchCommitAndMR(
+        title, // New branch name
+        `${title} by ${author}`, // Commit message
+        `content/blogs/${title}`, // dir path
+        files, // picture
+        `---\ntitle: "${title}"\nauthors: \n- ${author}\nsummary: ${title}\n---\n${text}`,
+        TARGET_BRANCH // Target branch
+      )
+        .then(mergeRequest => {
+          console.log('Merge Request:', mergeRequest);
+          document.getElementById('loadingIndicator').style.display = 'none';
+        })
+        .catch(error => {
+          console.error('Operation failed:', error);
+          alert('An error occurred: ' + error.message);
+          document.getElementById('loadingIndicator').style.display = 'none';
+        });
+    });
+  </script>
+</body>
+</html>

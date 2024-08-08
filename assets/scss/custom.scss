@@ -311,3 +311,74 @@ img {
         }
     }
 }
+
+.article-submission-form {
+    background-color: var(--card-background);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--shadow-l1);
+    max-width: 600px;
+    margin: 0 auto;
+
+    .form-group {
+        margin-bottom: 1.5rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .form-label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        color: var(--card-text-color-main);
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid var(--card-separator-color);
+        border-radius: 4px;
+        background-color: var(--card-background);
+        color: var(--card-text-color-main);
+        font-size: 1.6rem;
+        resize: vertical;
+        transition: border-color 0.3s ease;
+
+        &:focus {
+            outline: none;
+            border-color: var(--accent-color);
+        }
+    }
+
+    .submit-button {
+        background-color: var(--accent-color);
+        color: var(--accent-color-text);
+        padding: 10px 20px;
+        border: none;
+        border-radius: var(--tag-border-radius);
+        font-size: 1.6rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: var(--accent-color-darker);
+        }
+    }
+}
+
+// Responsive adjustments
+@include respond(md) {
+    .article-submission-form {
+        max-width: 700px;
+
+        .form-control {
+            font-size: 1.8rem;
+        }
+
+        .submit-button {
+            font-size: 1.8rem;
+        }
+    }
+}

@@ -4,7 +4,6 @@ date: 2024-05-16T13:48:14+02:00
 summary: 'Monitor you cloud native and IT applications energy and cabon impacts'
 categories:
 - Innovation Track
-- Draft
 tags:
 - kubernetes
 - greenops

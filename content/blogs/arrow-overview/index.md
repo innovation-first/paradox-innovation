@@ -12,7 +12,7 @@ authors:
 - Dominique De Vito 
 ---
 
-This document is a brief overview of the use of the Apache Arrow project in various open-source projects, some of which are quite well-known: Pandas, Polars, DuckDB, etc. In a way, this Arrow library, together with the use of multi-core machines, is changing the landscape of analytical processing tools and big data tools.
+This document is a brief overview of the use of the Apache Arrow project in various open-source projects, some of which are quite well-known from data engineers: Pandas, Polars, DuckDB, etc. The Arrow library, together with the use of multi-core machines, is changing the landscape of analytical processing tools and big data tools.
 
 ## What is Apache Arrow?
 
@@ -242,6 +242,18 @@ As of today, there are at least 5 different implementations of Spark, respecting
 * The open-source Spark project, used with Comet, an Apache plugin, Arrow-based accelerator.
 * And also the open-source Spark project, used in conjunction with the RAPIDS plugin which allows [executing Spark code on an NVIDIA GPU, without code changes](https://github.com/NVIDIA/spark-rapids)
 
+## Use cases
+
+Here is a selection of interesting use case videos:
+
+{{< youtube HNGm9rE3FCk >}}
+
+{{< youtube I1JPB36FBOo >}}
+
+{{< youtube TrmJilG4GXk >}}
+
+{{< youtube DOkzlDp00vo >}}
+
 ## Conclusions
 
 As Wes McKinney (creator of Pandas and co-creator of Arrow) pointed out, we are witnessing a defragmentation of the big data ecosystem. The Arrow project has played a significant role in this evolution and in fostering collaborations among open-source projects.
@@ -252,8 +264,6 @@ For those using Pandas v1, it is time to move to Pandas v2 or even consider usin
 
 Spark users are in a favorable position since improvements through new implementations will respect the Spark APIs, meaning existing Spark programs will be minimally impacted. However, the Comet accelerator is not yet ready for production for most users.
 As for DuckDB, it is already used in production by many companies. It is a "Swiss Army knife" (via its extensions), efficient, and its use cases ride the wave of a kind of retreat from big data and the return of SQL (as opposed to NoSQL) which has never really gone away. Its use is expected to grow.
-
-In a [separate blog](/blogs/arrow-use-cases), we explore some interesting use cases of Arrow and associated technologies.
 
 ## Contact
 

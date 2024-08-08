@@ -4,7 +4,6 @@ date: 2024-07-10T13:48:14+02:00
 summary: 'Swish is an embedded sensor hub to power a digital twin of mobile systems. Siwsh is easy to install and maintain, silent (does not disrupt the mission), and has a low carbon footprint.'
 categories:
 - Innovation Track
-- Draft
 tags:
 - health
 - generative ai

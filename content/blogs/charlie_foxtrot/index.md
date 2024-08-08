@@ -5,16 +5,15 @@ summary: 'How our corporate culture prevents us from communicating about our inn
 tags:
 - innovation
 - process
-- sfrd
 categories: 
-- Blog
+- Idea
 - Draft
 image: 'monkeys.png'
 authors: 
 - Nicolas Bonnet
 ---
 
-Here at TSN we are rather good at technical stuff : we are after all mainly a band of engineers. It reflects in our culture and ideas. Usually a bunch of technophiles will propose an experimentation on a technology applied to a use-case, with value proposition as an afterthought. This kind of bottom-up approach has its uses, but it has its snags and we are usually left with these questions :
+Here at TSN we are rather good at technical stuff : we are after all mainly a band of engineers. It reflects in our culture and ideas. Usually a bunch of technophiles will propose an experimentation on a technology applied to a use-case, with value proposition as an afterthought. This kind of bottom-up approach has its uses, but it has its snags and we are usually left with this question :
 
 > What can we say ?
 
@@ -30,4 +29,6 @@ The same problem is magnified outside TSN. Once again some guidelines and a lice
 
 > What now ?
 
-Once everything is said and done, there is the question of the finality of our work. Too many times, the goal of a SFRD is to generate another SFRD. There is work to be done to provide a view of the available paths.
+Once everything is said and done, there is the question of the finality of our work. 
+Too often, the goal of an innovation track is to generate another innovation track. 
+There is work to be done to provide a view of the available and alternative paths.

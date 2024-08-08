@@ -4,9 +4,10 @@ date: 2024-06-11T13:48:14+02:00
 summary: 'Monitor you cloud native and IT applications energy and cabon impacts'
 categories:
 - Innovation Track
-- Draft
 tags:
 - greenops
+- compliancy
+- kubernetes
 image: '/blogs/frugalit-optimiser/rift.webp'
 authors: 
 - Gilles Poirot

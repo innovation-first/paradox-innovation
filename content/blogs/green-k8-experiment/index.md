@@ -4,7 +4,6 @@ date: 2024-07-16T13:48:14+02:00
 summary: 'An experimental methodology to significantly reduce costs and energy footprints of Kubernetes applications'
 categories:
 - Blog
-- Draft
 tags:
 - generative ai
 - kubernetes

@@ -28,6 +28,7 @@ Arrow libraries implement the associated format and are available for various pr
 The Parquet and ORC formats are popular examples of columnar data formats but for disk storage, whereas Arrow is a format defined for in-memory data. The definition of Arrow involves different trade-offs compared to those behind Parquet and ORC. Most tools related to one of these formats include conversion features to switch between them.
 
 The Arrow library is increasingly used by notable projects, especially open-source projects. The following sections of this document present some of these projects.
+
 ## Use of Apache Arrow by DuckDB 
 
 ### DuckDB
@@ -60,9 +61,11 @@ Whether DuckDB was built around Arrow or simply adopted Arrow very early on is s
 
 ### Positioning of DuckDB
 
-The rationale behind DuckDB is that there are fewer, or far fewer, big data processing tasks than some might think. There is thus a place for a database like DuckDB. 
-2.3.2 A valid replacement for big data analytical tools
-Analyzing the big data landscape reveals, as mentioned earlier, that even most big data processing tasks do not involve big data volumes. Therefore, some see
+The rationale behind DuckDB is that there are fewer, or far fewer, big data processing tasks than some might think. There is thus a place for a database like DuckDB. This is explained in [Dorian's blog](/blogs/duckdb). In short: big data is
+
+* complex
+* not needed often
+* .. dead because it concerns only one percent of users
 
 ## Use of Apache Arrow by Pandas 2
 

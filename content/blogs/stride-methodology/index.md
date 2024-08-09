@@ -80,7 +80,7 @@ The Stride modeling lies at the intersection of two cutting processes:
 
 The benefits compared to other methods are the following: 
 
-* Comprehensive: Stride is simple, intuitive. No need to be an expert to engage the process. That some great value to involve all the parties in iterative process. 
+* Comprehensive: Stride is simple, intuitive. No need to be an expert to engage the process. This is of great value to involve all the parties in an iterative process. 
 * Proactive: Stride promotes a proactive stance by encouraging the identification and mitigation of potential threats early in the development process. Here also simplicity is key.
 * Agile and Devops friendly
 * Stride facilitates better communication and collaboration between security professionals and development teams, ensuring that security considerations are consistently addressed.

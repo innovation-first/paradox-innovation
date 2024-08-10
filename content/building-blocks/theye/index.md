@@ -4,7 +4,6 @@ date: 2024-07-25T13:48:14+02:00
 summary: 'Remote assistance in Augmented Reality'
 categories: 
 - Building Block
-- Blog
 tags:
 - 3d
 - ar

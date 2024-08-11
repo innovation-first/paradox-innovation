@@ -3,13 +3,20 @@ title: 'Introducing Nyx secure coding assistant'
 date: 2024-08-08T13:48:14+02:00
 summary: 'A collaborative and safe conversational agent'
 categories: 
-- Building block
+- Blog
 tags:
 - generative ai
 image: 'shared/abstract-blue-boxes.jpg'
 authors:
 - Hugues Deghorain
 ---
+
+
+{{< quote author="Jake Bengtson" source="Weighing the Open-Source, Hybrid Option for Adopting Generative AI, Harvard Business Review" url="https://www.cloudera.com/campaign/weighing-the-open-source-hybrid-option-for-adopting-generative-ai.html">}}
+Nearly 70% of the 11,700 professionals who
+responded to the survey on the Fishbowl app say they are
+using those AI tools without their boss’s knowledge.
+{{< /quote >}}
 
 
 A R&D team from Thales Services Numériques Nantes, (tanguy.jouannic@thalesgroup.com, pierre.doumenc@thalesgroup.com and olivier.jobert@thalesgroup.com) designed and deployed an effective coding assistant to demonstrate how even the most secured air gap development environment can benefit from a powerful and feature rich coding assistsant. 
@@ -30,7 +37,7 @@ The benefit of using such a tool is multiple. First, it saves time by preventing
 Second, coding assistants can help developers improve the quality of their code. It can spot common errors, syntax oversights, or bad practices and report them to developers. This helps reduce bugs and improve the reliability of the developed software.
 
 Finally, coding assistants can help train and guide less experienced developers. He can show them examples of code already written, explain key concepts and best practices, and help them progress in their career path.
-[Ogma](/building-block/ogma) is a collaborative conversational agent based on generative AI, 
+[Ogma](/blogs/ogma) is a collaborative conversational agent based on generative AI, 
 whose knowledge can be increased via proprietary data sources provided as pdf, docx, txt, confluence, etc.
 
 ### Benefits
@@ -59,7 +66,7 @@ Nyx relies, for the part assisting in the extension of IDEs, among other things,
 This also allows you to benefit from the functionality contributions of the community, which makes it robust over time.
 It should be noted that under no circumstances is the client blocked by any Intellectual Property of Thales since these are open-source components assembled and implemented by project teams.
 
-Nyx can be completed with the [Ogma](/building-blocks/ogma) module allowing access to a corpus of company documents. 
+Nyx can be completed with the [Ogma](/blogs/ogma) module allowing access to a corpus of company documents. 
 
 ### Features
 

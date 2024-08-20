@@ -8,6 +8,7 @@ tags:
 - rust
 authors: 
 - Eric Muellenbach
+image: 'shared/abstract-white-6.jpg'
 ---
 
 This page describes the approach we implemented to run the integration tests of the matching subsystem as part of our CI/CD pipeline. It also illustrates how we extract code coverage information from the running applications and how we transfer these results to SonarQube.

@@ -41,7 +41,7 @@ authors:
 {{< /quote >}}
 
 {{< quote author="Cedric Deveraux" source="Thales RCP" url="https://www.thalesgroup.com/en/activities/defence/radio-communications/electronic-warfare-communications">}}
-*Together with Thales Services Numériques, we implemented an innovative data lab, completly air gapped, 
+*Together with Thales Services Numériques, we implemented an innovative data lab, completely air gapped, 
 by redeploying our key business modules to a Kast platform. 
 Acceptance by our admin and support teams was smooth and quick, they rapidly improved our
 product capabilities by leveraging state-of-the art yet standard components integrated by Kast.* 

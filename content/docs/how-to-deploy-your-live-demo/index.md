@@ -13,14 +13,26 @@ For the sake of clarity, we will explain how you can deploy a sample [streamlit]
 
 ## The big picture
 
-The Hub is, in fact, a managed [Kast](https://kast-portal.dpsc-thales.fr/) platform. Taht is to say, a managed Kubernetes cluster that provides ready to use security and database services. 
+The Hub is, in fact, a managed [Kast](https://kast-portal.dpsc-thales.fr/) platform. That is to say, a managed Kubernetes cluster that provides ready to use security and database services. 
 
 To deploy an application, you first need to get in touch with the Hub admin team that will provide you with two starting point: 
 
-1. a dedicated Kubernetes namespace. This is where you will deploy your application
+1. a dedicated Kubernetes namespace. This is where you will deploy your application.
 2. Sample CI/CD, helm charts and documentations for you to generate docker images, and deploy them automatically to the Hub.
 
 ## Understanding the pieces and parts
+
+### The Kubernetes Cluster
+
+Kast is deployed on top of a google managed kubernetes (GKE). The GKE is *public* meaning that its control plane
+is exposed (but protected of course) to the internet. The rationale is to provide all developpers with direct access to the cluster using their local kubectl/kastctl. If you work with the Hub you will work with a plain
+Kubernetes cluster; using familiar kubectl commands. 
+
+### The role of Kast
+
+Why Kast then ? Kast provides us with two major goodies. First it allows us to easily deploy many components using the [kastctl](https://kast-portal.dpsc-thales.fr/static/files/kast-documentation/lts/fleche-6.4.0/kastctl.html?h=kastctl) cli. Kastctl lets you deploy your applications using helm charts or using so-called *kpacks* yaml files that provide interesting features to simplify your job of writing helm charts and values. 
+
+Kastctl also provides very useful commands to deal with tokens and secrets which makes it easy to provide the required tokens to your application. 
 
 ### Docker Images
 
@@ -28,14 +40,12 @@ To deploy an application, you first need to get in touch with the Hub admin team
 
 ### Helm Charts
 
-### DNS and Domain Name Exposure
-
-### Costs
 
 ## Contacts
 
-- dimitri.tombroff@thlesgroup.com
+- dimitri.tombroff@thalesgroup.com
 - kevin.denis@thalesgroup.com
+- olivier.jobert@thalesgroup.com
 
 
 

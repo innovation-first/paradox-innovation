@@ -5,7 +5,7 @@ summary: 'A proposal to improve our innovation efficiency'
 tags:
 - innovation
 - kubernetes
-- cloud native
+- ai
 categories: 
 - Blog
 - Draft
@@ -47,7 +47,7 @@ Technical leaders from large global companies understand the importance of consi
 {{< /quote >}}
 
 This requires, however, a well-defined strategy. What platform ? what tools ? who's in charge ? In the following we highlight our proposals.
-In the next chapter we will examine if it truly matches our business and technical strategy.
+In the next chapter we will examine how it would help to pursue our AI innovation tracks.
 
 ### Kubernetes as the Core Platform
 
@@ -65,13 +65,14 @@ According to a [recent pure storage survey](https://portworx.com/wp-content/uplo
 
 ### Leveraging Google Cloud
 
-An innovation platform is not a production platform. It does not come with stringent service level agreements. However, it must function reliably, with minimal effort from the SRE team. AWS, Azure, and Google Cloud all offer robust managed Kubernetes services. Thales also provides an
-[excellent managed Kubernetes platform](https://doc.kaas.thalesdigital.io/docs).
+An innovation platform is not a production platform. It does not come with stringent service level agreements. However, it must function reliably, with minimal effort from the SRE team. AWS, Azure, OVH, and Google Cloud all offer robust managed Kubernetes services. Thales also provides an
+[excellent managed Kubernetes platform](https://doc.kaas.thalesdigital.io/docs) and several internal ones.
 
 That said, we suggest leveraging Google GKE Kubernetes for several reasons:
 - Thales and Google jointly develop [S3NS](https://www.s3ns.io/en), so mastering GCP and GKE is a strategic direction for TSN. This complements TDP’s strong expertise in Azure services.
 - TSN is developing for the group its own [kubernetes data analytics plaform](/building-blocks/kast), which is kubernetes centric but does not need (or care) which Kubernetes it actually runs on. 
 - TSN designs and delivers solutions for its customers on GCP. Mastering each cloud platform is essential.
+- An innovation platform should come at minimal cost.
 
 ### Kast as Internal Developer Platform
 
@@ -82,7 +83,8 @@ Is Kast perfect? Can it serve as fundation for an [internal developer platform](
 ### Managed by a small but dedicated team
 
 We suggest a well-structured IDP,
-centralized and managed by a specialized team, built on top of our GKE/GCP/Kast.  This approach aligns with industry trends where 
+centralized and managed by a specialized team, built on top of our GKE/GCP/Kast. 
+This approach aligns with industry trends where 
 [platform engineering](https://learn.microsoft.com/en-us/platform-engineering/what-is-platform-engineering) centralizes key resources and tools, reducing cognitive load on developers and allowing them to focus on creating and innovating. 
 
 Today a team of one or two can provide automated deployment of complete platforms and provides standardized guidelines for developers
@@ -95,11 +97,11 @@ The combination of google cloud, thales digital gitlab, and Kast assembled in a 
 a powerful environment where developers can work autonomously but within a framework that optimizes 
 resources and maintains control over the infrastructure, reducing operational costs. 
 
-But what does it costs to build and maintain such IDP exactly ? To our view, *nothing*. If well engineered, with the right automation 
-level to scale it on demand, the costs (SRE team included) are significantly smaller than the gains resulting f
-rom optimizing the work of tenths/hundreds of developers. 
+But what does it cost to build and maintain such IDP exactly ? To our view, *nothing*. If well engineered, with the right automation 
+level to scale it on demand, the costs (SRE team included) are significantly smaller than the gains resulting from optimizing 
+the work of tenths/hundreds of developers. 
 
-Another significant colateral benefit: TSN **must** stay at the forefront of important IT and devops areas 
+Another significant colateral benefit: TSN *must* stay at the forefront of important IT and devops areas 
 like DevSecOps, FinOps and now GreenOps. Maintaining an IDP on standard cloud and open source technologies 
 will significantly enhance developers and architects expertise in these domains.
 
@@ -107,24 +109,24 @@ will significantly enhance developers and architects expertise in these domains.
 
 This topic is often and surprisingly neglected. Like many ([17](https://www.amazon.com/Accelerate-Software-Performing-Technology-Organizations-ebook/dp/B09JWS32W1), [18](https://kyleake.medium.com/mckinsey-report-on-developer-velocity-how-software-excellence-fuels-business-performance-cf566634d203), [19](https://www.forrester.com/blogs/developer-experience-is-a-key-to-organizational-success/)) we consider in contrast that it is a fundamental one.  *"Companies that are best in developer experience velocity"*: 
 
-- outperform others in the market by four to five times.
-- have 60% higher total shareholder returns and 20% higher operating margins than others in the market.
-- appear to be more innovative, scoring 55% higher on innovation than those in the bottom quartile.
-- score higher on customer satisfaction, brand perception and talent management.
-- saw revenue growth almost two times faster than other software companies in the same period.
-- utilise strong developer tools for planning, development, collaboration and continuous integration and delivery
+- *outperform others in the market by four to five times*.
+- *have 60% higher total shareholder returns and 20% higher operating margins than others in the market*.
+- *appear to be more innovative, scoring 55% higher on innovation than those in the bottom quartile*.
+- *score higher on customer satisfaction, brand perception and talent management*.
+- *saw revenue growth almost two times faster than other software companies in the same period*.
+- *utilise strong developer tools for planning, development, collaboration and continuous integration and delivery*.
 
-Today we have an excellent solution, *Thales Digital* **TNAP** laptops that provides a very good compromise between 
-security and flexibility. Similar alternatives are being designed ny other group units. 
-Together with a remote, shared and containerized IDP developers will benefit from an econcost effectiveomic and effective setup.
+Today we have an excellent solution, *Thales Digital TNAP* laptops that provide a very good compromise between 
+security and flexibility. Similar alternatives are being designed by other group units. 
+Together with a remote, shared and containerized IDP, developers will benefit from an cost effective environment.
 
-As gor GPUs, only a few need them ([10](https://www.theregister.com/2024/08/23/3090_ai_benchmark/)).
+As gor GPUs, only a few need them ([see this benchmark](https://www.theregister.com/2024/08/23/3090_ai_benchmark/)).
 
 ## Why AI innovation is hard
 
 Almost 3 out of four of our innvation tracks include or are about artificial intelligence, and with no surprise, generative AI. 
-It turns out AI applications pose a set of serious and still largely unsolved issues. Mostly related to the difficulty to deploy
-and maintain them in the mid or long term.
+AI applications pose a set of serious and still largely unsolved issues. Mostly related to the difficulty to deploy
+and maintain them in production for the mid or long term.
 
 ### Maturity of MLOps Practices
 
@@ -135,7 +137,7 @@ While there are emerging best practices for MLOps, the field is still relatively
 Subscribing to one of the top [AI services providers](https://cioinfluence.com/it-and-devops/top-20-ai-cloud-companies-to-know-in-2024/) certainly simplify some aspects of deploying and managing AI applications. This approach can be a perfect match to quickly develop MVPs or test new ideas.  
 But these services come with their own set of challenges. Besides their cost, each require a significant learning curve, configuration and tuning. 
 Vendor lock-in is, of course, an issue as well. The Kubernetes ecosystem, in this space, is a challenger that makes it simpler to benefit from the latest open-source 
-technologies (the same technologies that are often packaged and integrated by the aformentioned services providers), but brings in his own complexity.
+technologies (the same technologies that are often packaged and integrated by the aformentioned services providers), but alone, brings in his own complexity.
 
 ### Monitoring and Maintenance
 

@@ -1,5 +1,5 @@
 ---
-title: 'Driving AI Innovation. Part one : the case for IDPs'
+title: 'Driving AI Innovation. Part one : the case for internal developer platforms.'
 date: 2024-08-22T13:15:14+02:00
 summary: 'A proposal to improve our innovation efficiency'
 tags:

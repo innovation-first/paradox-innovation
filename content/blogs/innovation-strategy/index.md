@@ -1,11 +1,11 @@
 ---
 title: 'Driving an ESN Innovation'
 date: 2024-08-22T13:15:14+02:00
-summary: 'A proposal torefine our strategy to select the right innovation topics and '
+summary: 'A proposal to improve our innovation efficiency'
 tags:
-- architecture
-- data
-- Web Assembly
+- innovation
+- kubernetes
+- cloud native
 categories: 
 - Blog
 - Draft
@@ -18,7 +18,6 @@ authors:
 - Gilles Meignan
 - Mahmoud Chilali
 - Dorian Finelbacha
-- Thomas Delavallade
 ---
 
 {{< quote author="Shivam Srivastava" source="Developer Velocity: How software excellence fuels business performance" url="https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/developer-velocity-how-software-excellence-fuels-business-performance">}}
@@ -29,11 +28,11 @@ authors:
 
 As an Enterprise Services Network (ESN) company, Thales Services Numériques (*TSN*) is strongly focused on innovation and client-centric solutions, particularly in sectors like defense, space, transportation, energy, and critical infrastructures. Our key focus areas include data valuation, artificial intelligence, cloud management, and security. 
 
-Common sense tells us innovation should be driven by business use cases. During the innovation process, the (so-called) *exploration* phase should narrow down the number of selected topics to those that offer effective and measurable business consolidation.
+This paper is a first in a serie to examine the conditions that favor innovation scale up. How can we ensure that an innovation culture and practice is widely spread among the company instead of restricted to a club of innovation specialists ? 
 
-This paper examines the conditions under which this approach is effective for TSN and identifies the key factors that would make business-driven innovation more successful.
+We first defend the need of improving developer velocity, and examine next how it helps to tackle AI innovation topics.
 
-## The case for Internal Developer Platforms
+## Why Internal Developer Platforms matter
 
 Before even considering specific business use cases, or the 2025-2030 technology and business trends, 
 let us first ask ourselves how long does it take to demonstrate a promising new idea ?
@@ -121,34 +120,30 @@ Together with a remote, shared and containerized IDP developers will benefit fro
 
 As gor GPUs, only a few need them ([10](https://www.theregister.com/2024/08/23/3090_ai_benchmark/)).
 
-## The case of artificial intelligence
+## Why AI innovation is hard
 
-In this chapter we consider innovation topics related to artificial intelligence as key and illustrative examples.
-Almost 3 out of four of our innvation tracks include or is about artificial intelligence, and with no surprise, generative AI. 
+Almost 3 out of four of our innvation tracks include or are about artificial intelligence, and with no surprise, generative AI. 
+It turns out AI applications pose a set of serious and still largely unsolved issues. Mostly related to the difficulty to deploy
+and maintain them in the mid or long term.
 
-
-### Why AI is difficult 
-
-It turns out AI applications pose a set of serious and still not-well solved issues. 
-
-#### Maturity of MLOps Practices
+### Maturity of MLOps Practices
 
 While there are emerging best practices for MLOps, the field is still relatively young. Organizations often need to develop custom solutions or significantly adapt existing tools to meet their specific requirements. Most MLOps tools are designed with different assumptions and integrations in mind, making it difficult to stitch together a coherent pipeline that meets all needs (e.g., from data ingestion and preprocessing to model training, deployment, and monitoring). [MLOps Guide 2023-24: Decoding Machine Learning Ops](https://www.tredence.com/mlops-101)
 
-#### Cost and Complexity of Managed Services
+### Cost and Complexity of Managed Services
 
 Subscribing to services such as Databrick, Azure ML, or Google AI Platform ([14](https://cloud.google.com/vertex-ai?hl=en)) certainly simplify some aspects of deploying and managing AI applications. This approach can be a perfect match to quickly develop MVPs or test new ideas.  
 But these services come with their own set of challenges. Besides their cost, each require a significant learning curve, configuration and tuning. 
 Vendor lock-in is, of course, an issue as well. Kubernetes in this space is a challenger that makes it simpler to benegit from the latest open-source 
 technologies (the same technologies that are often packaged and integrated by cloud providers), but brings in his own complexity or ecosystem ([13](https://charmed-kubeflow.io/)).
 
-#### Monitoring and Maintenance
+### Monitoring and Maintenance
 
 Traditional monitoring tools are not sufficient for AI applications. Monitoring needs to cover not only the infrastructure (uptime, resource utilization) but also the models (performance, drift detection, fairness, etc.). This requires specialized tools and techniques, which are still evolving.
 
-In fact, deploying AI models into production is just the start. Maintaining them, retraining with new data, monitoring for performance degradation, and ensuring they remain secure and compliant over time is an ongoing challenge. This is not only technical problem, MLOps is more fundamentally a set of organizational and cultural practices ([A Multivocal Review of MLOps Practices, Challenges and Open Issues](https://ar5iv.labs.arxiv.org/html/2406.09737)). This whole lifecycle management is still maturing as a discipline.
+Deploying AI models into production is just the start. Maintaining them, retraining with new data, monitoring for performance degradation, and ensuring they remain secure and compliant over time is an ongoing challenge. This is not only technical problem, MLOps is more fundamentally a set of organizational and cultural practices ([A Multivocal Review of MLOps Practices, Challenges and Open Issues](https://ar5iv.labs.arxiv.org/html/2406.09737)). This whole lifecycle management is still maturing as a discipline.
 
-#### AI Security
+### AI Security
 
 AI security is a [distinct problem from traditional security](https://ar5iv.labs.arxiv.org/html/2402.12617v1).
 AI applications, particularly in sensitive domains like finance, healthcare, or defense, handle large amounts of data that must be securely stored, processed, and transmitted. Ensuring data security involves setting up encryption, access controls, auditing, and more, which can be complex and error-prone, especially when dealing with multiple tools and environments.
@@ -158,7 +153,7 @@ Implementing robust security measures across the entire MLOps pipeline is a non-
 
 Last, meeting regulatory requirements (GDPR, HIPAA, etc.) adds another layer of complexity, especially when managing data and models across different platforms and services.
 
-### Our AI strategy
+## Why IDPs will help our innovation
 
 Our focus at TSN is on developing AI solutions that are robust, easily deployable in production environments, 
 and built with the highest standards of security in mind. Here are two first observations. 
@@ -167,9 +162,13 @@ First, [Generative AI is fueling demand for Kubernetes](https://analyticsindiama
 to reduce its expertise to one specific cloud provider or editor. 
 
 Second, it is important to understand that leveraging the latest technologies is not good enough.
-Today, with a combination of three open source technologies ([langchain](https://www.langchain.com/), [langfuse](https://langfuse.com/) and [langgraph](https://langchain-ai.github.io/langgraph/)), developers can quickly setup a multi-agent, monitored generative AI application. That is not innovation. Innovation is to apply it to a useful use case, and succeed in deploying in a real production environment. In that space, open sources lacks many features. 
+Today, with a combination of three open source technologies ([langchain](https://www.langchain.com/), [langfuse](https://langfuse.com/) and [langgraph](https://langchain-ai.github.io/langgraph/)), developers can quickly setup a multi-agent, monitored generative AI application. That is not innovation. Innovation is to apply it to a useful use case, and succeed in deploying in a real production environment. In that space, open sources lacks many features.
 
-Our claim is that IDP(s) are the necessary condition to serve our AI projects and innovation.
+The TSN paradox is as follows. We have the sogtware assets, many (many) DevOps and DevSecOps specialists, and many (not as many but the right ones) Data Scientists. And yet,
+we lack efficiencies to setup and demonstrate our ideas in the expected weeks. Recent successes ([ogma](/blogs/ogma), [nyx](/blogs/nyx)) were illustrative  
+of the advocated IDP approach. In turn these projects pave the way to define shared devops practices, architectural patterns, and a cultural change
+to make small and geographically distributed teams or individuals work together. The next step is to make these practice explicitly part of our
+technical policy.
 
 ## References
 

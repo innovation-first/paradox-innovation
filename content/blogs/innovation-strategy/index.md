@@ -26,7 +26,7 @@ authors:
 
 ## Problem Statement
 
-As an Enterprise Services Network (ESN) company, Thales Services Numériques (*TSN*) is strongly focused on innovation and client-centric solutions, particularly in sectors like defense, space, transportation, energy, and critical infrastructures. Our key focus areas include data valuation, artificial intelligence, cloud management, and security. 
+As an computer service company (in french: *ESN* for *entreprise de services du numérique"), Thales Services Numériques (*TSN*) is strongly focused on innovation and client-centric solutions, particularly in sectors like defense, space, transportation, energy, and critical infrastructures. Our key focus areas include data valuation, artificial intelligence, cloud management, and security. 
 
 This paper is a first in a serie to examine the conditions that favor innovation scale up. How can we ensure that an innovation culture and practice is widely spread among the company instead of restricted to a club of innovation specialists ? 
 

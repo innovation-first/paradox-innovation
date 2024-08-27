@@ -1,5 +1,5 @@
 ---
-title: 'Driving an ESN Innovation'
+title: 'Driving AI Innovation. Part one : the case for IDPs'
 date: 2024-08-22T13:15:14+02:00
 summary: 'A proposal to improve our innovation efficiency'
 tags:
@@ -132,10 +132,10 @@ While there are emerging best practices for MLOps, the field is still relatively
 
 ### Cost and Complexity of Managed Services
 
-Subscribing to services such as Databrick, Azure ML, or Google AI Platform ([14](https://cloud.google.com/vertex-ai?hl=en)) certainly simplify some aspects of deploying and managing AI applications. This approach can be a perfect match to quickly develop MVPs or test new ideas.  
+Subscribing to one of the top [AI services providers](https://cioinfluence.com/it-and-devops/top-20-ai-cloud-companies-to-know-in-2024/) certainly simplify some aspects of deploying and managing AI applications. This approach can be a perfect match to quickly develop MVPs or test new ideas.  
 But these services come with their own set of challenges. Besides their cost, each require a significant learning curve, configuration and tuning. 
-Vendor lock-in is, of course, an issue as well. Kubernetes in this space is a challenger that makes it simpler to benegit from the latest open-source 
-technologies (the same technologies that are often packaged and integrated by cloud providers), but brings in his own complexity or ecosystem ([13](https://charmed-kubeflow.io/)).
+Vendor lock-in is, of course, an issue as well. The Kubernetes ecosystem, in this space, is a challenger that makes it simpler to benefit from the latest open-source 
+technologies (the same technologies that are often packaged and integrated by the aformentioned services providers), but brings in his own complexity.
 
 ### Monitoring and Maintenance
 
@@ -153,10 +153,10 @@ Implementing robust security measures across the entire MLOps pipeline is a non-
 
 Last, meeting regulatory requirements (GDPR, HIPAA, etc.) adds another layer of complexity, especially when managing data and models across different platforms and services.
 
-## Why IDPs will help our innovation
+## IDP help innovation
 
 Our focus at TSN is on developing AI solutions that are robust, easily deployable in production environments, 
-and built with the highest standards of security in mind. Here are two first observations. 
+and built with the highest standards of security in mind. Here are some observations. 
 
 First, [Generative AI is fueling demand for Kubernetes](https://analyticsindiamag.com/ai-origins-evolution/how-generative-ai-is-fueling-demand-for-kubernetes/). Choosing Kubernetes is a natural choice for an ESN like TSN that does not seek
 to reduce its expertise to one specific cloud provider or editor. 
@@ -164,9 +164,13 @@ to reduce its expertise to one specific cloud provider or editor.
 Second, it is important to understand that leveraging the latest technologies is not good enough.
 Today, with a combination of three open source technologies ([langchain](https://www.langchain.com/), [langfuse](https://langfuse.com/) and [langgraph](https://langchain-ai.github.io/langgraph/)), developers can quickly setup a multi-agent, monitored generative AI application. That is not innovation. Innovation is to apply it to a useful use case, and succeed in deploying in a real production environment. In that space, open sources lacks many features.
 
-The TSN paradox is as follows. We have the sogtware assets, many (many) DevOps and DevSecOps specialists, and many (not as many but the right ones) Data Scientists. And yet,
-we lack efficiencies to setup and demonstrate our ideas in the expected weeks. Recent successes ([ogma](/blogs/ogma), [nyx](/blogs/nyx)) were illustrative  
-of the advocated IDP approach. In turn these projects pave the way to define shared devops practices, architectural patterns, and a cultural change
+Last, assuming you agree by now that an IDP would help, why not a partnership with (say) [charmed kubeflow](https://charmed-kubeflow.io/) (or others). 
+Certainly such a partnership would make sense. But as already stated, with our assets and a small team, we can benefit from both aspect: building an IDP 
+does make us grow at reasonable costs on low level platform issues, and the resulting team interactions create new synergies. 
+
+The TSN paradox is as follows. We have the software assets, many (many) DevOps and DevSecOps specialists, and 
+many (not as many of coure) Data Scientists. And yet,
+we lack efficiencies to setup and demonstrate our ideas in the expected weeks. Recent successes ([ogma](/blogs/ogma), [nyx](/blogs/nyx)) were illustrative of the advocated IDP approach. In turn these projects pave the way to define shared devops practices, architectural patterns, and a cultural change
 to make small and geographically distributed teams or individuals work together. The next step is to make these practice explicitly part of our
 technical policy.
 
@@ -196,3 +200,4 @@ technical policy.
 - [22] [langchain](https://www.langchain.com/)
 - [23] [How Generative AI is Fueling Demand for Kubernetes](https://analyticsindiamag.com/ai-origins-evolution/how-generative-ai-is-fueling-demand-for-kubernetes/)
 - [24] [The Voice of Kubernetes Experts Report 2024](https://portworx.com/wp-content/uploads/2024/06/The-Voice-of-Kubernetes-Experts-Report-2024.pdf)
+- [25] [charmed kubeflow](https://charmed-kubeflow.io/) 

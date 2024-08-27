@@ -53,6 +53,16 @@ In the next chapter we will examine if it truly matches our business and technic
 ### Kubernetes as the Core Platform
 
 Kubernetes has solidified its position as a cornerstone of modern infrastructure due to its scalability, resilience, and cost-effectiveness. It is not just a tool but a foundation for innovative platforms. Companies that master Kubernetes, especially by developing their own distributions, gain a significant advantage in resource management and operational efficiency, which are critical for fostering innovation.
+According to a [recent pure storage survey](https://portworx.com/wp-content/uploads/2024/06/The-Voice-of-Kubernetes-Experts-Report-2024.pdf), among 527 seasoned entreprise experts from companies larger 500 employees:
+
+- 91% have at least two years of Kubernetes experience.
+- 56% have over 4 years.
+- 80% plan to build most of their new applications on cloud native platforms over the next 5 years; 
+- 86% build their cloud native platforms in hybrid cloud environments
+- 54% are running AI/ML workloads on Kubernetes, 72% run databases, and 67% run analytics
+- 58% will migrate some of their VMs to Kubernetes management by using technologies like KubeVirt;
+- 65% plan to migrate their VMs within the next two years
+- 96% currently have a platform engineering function  
 
 ### Leveraging Google Cloud
 
@@ -72,7 +82,7 @@ Is Kast perfect? Can it serve as fundation for an [internal developer platform](
 
 ### Managed by a small but dedicated team
 
-We suggest a well-structured IDP
+We suggest a well-structured IDP,
 centralized and managed by a specialized team, built on top of our GKE/GCP/Kast.  This approach aligns with industry trends where 
 [platform engineering](https://learn.microsoft.com/en-us/platform-engineering/what-is-platform-engineering) centralizes key resources and tools, reducing cognitive load on developers and allowing them to focus on creating and innovating. 
 
@@ -96,8 +106,7 @@ will significantly enhance developers and architects expertise in these domains.
 
 ### Developer Laptops
 
-This topic is often and surprisingly neglected. Like many we consider in contrast that it is a fundamental one ([17](https://www.amazon.com/Accelerate-Software-Performing-Technology-Organizations-ebook/dp/B09JWS32W1), [18](https://kyleake.medium.com/mckinsey-report-on-developer-velocity-how-software-excellence-fuels-business-performance-cf566634d203)). 
-Companies that are best in developer velocity: 
+This topic is often and surprisingly neglected. Like many ([17](https://www.amazon.com/Accelerate-Software-Performing-Technology-Organizations-ebook/dp/B09JWS32W1), [18](https://kyleake.medium.com/mckinsey-report-on-developer-velocity-how-software-excellence-fuels-business-performance-cf566634d203), [19](https://www.forrester.com/blogs/developer-experience-is-a-key-to-organizational-success/)) we consider in contrast that it is a fundamental one.  *"Companies that are best in developer experience velocity"*: 
 
 - outperform others in the market by four to five times.
 - have 60% higher total shareholder returns and 20% higher operating margins than others in the market.
@@ -106,33 +115,42 @@ Companies that are best in developer velocity:
 - saw revenue growth almost two times faster than other software companies in the same period.
 - utilise strong developer tools for planning, development, collaboration and continuous integration and delivery
 
-Today we have an excellent solution, *Thales Digital* **TNAP** laptops that provides the perfect compromise between 
-security and flexibility. Together with a remote shared containerized IDP,  
+Today we have an excellent solution, *Thales Digital* **TNAP** laptops that provides a very good compromise between 
+security and flexibility. Similar alternatives are being designed ny other group units. 
+Together with a remote, shared and containerized IDP developers will benefit from an econcost effectiveomic and effective setup.
 
 As gor GPUs, only a few need them ([10](https://www.theregister.com/2024/08/23/3090_ai_benchmark/)).
 
-## Artificial Intelligence
+## The case of artificial intelligence
 
-Generative AI or machine learning applications pose a set of serious and still not-well solved issues. Here are the reasons:
+In this chapter we consider innovation topics related to artificial intelligence as key and illustrative examples.
+Almost 3 out of four of our innvation tracks include or is about artificial intelligence, and with no surprise, generative AI. 
+
+
+### Why AI is difficult 
+
+It turns out AI applications pose a set of serious and still not-well solved issues. 
 
 #### Maturity of MLOps Practices
 
 While there are emerging best practices for MLOps, the field is still relatively young. Organizations often need to develop custom solutions or significantly adapt existing tools to meet their specific requirements. Most MLOps tools are designed with different assumptions and integrations in mind, making it difficult to stitch together a coherent pipeline that meets all needs (e.g., from data ingestion and preprocessing to model training, deployment, and monitoring). [MLOps Guide 2023-24: Decoding Machine Learning Ops](https://www.tredence.com/mlops-101)
 
-
 #### Cost and Complexity of Managed Services
 
-Subscribing to platforms like Databricks, Azure ML, or Google AI Platform ([14](https://cloud.google.com/vertex-ai?hl=en)) certainly simplify some aspects of deploying and managing AI applications, but these services come with their own set of challenges. Besides their cost, they require significant learning curve, configuration and tuning. Vendor Lock-In is, of course, an issue as well. Kubernetes in this space is a challenger but brings in his own complexity or ecosystem ([13](https://charmed-kubeflow.io/)).
+Subscribing to services such as Databrick, Azure ML, or Google AI Platform ([14](https://cloud.google.com/vertex-ai?hl=en)) certainly simplify some aspects of deploying and managing AI applications. This approach can be a perfect match to quickly develop MVPs or test new ideas.  
+But these services come with their own set of challenges. Besides their cost, each require a significant learning curve, configuration and tuning. 
+Vendor lock-in is, of course, an issue as well. Kubernetes in this space is a challenger that makes it simpler to benegit from the latest open-source 
+technologies (the same technologies that are often packaged and integrated by cloud providers), but brings in his own complexity or ecosystem ([13](https://charmed-kubeflow.io/)).
 
 #### Monitoring and Maintenance
 
 Traditional monitoring tools are not sufficient for AI applications. Monitoring needs to cover not only the infrastructure (uptime, resource utilization) but also the models (performance, drift detection, fairness, etc.). This requires specialized tools and techniques, which are still evolving.
 
-In fact, deploying AI models into production is just the start. Maintaining them, retraining with new data, monitoring for performance degradation, and ensuring they remain secure and compliant over time is an ongoing challenge. This is not only technical problem, MLOps is more fundamentally a set of organizational and cultural practices ([11](https://ar5iv.labs.arxiv.org/html/2406.09737)). This whole lifecycle management is still maturing as a discipline.
+In fact, deploying AI models into production is just the start. Maintaining them, retraining with new data, monitoring for performance degradation, and ensuring they remain secure and compliant over time is an ongoing challenge. This is not only technical problem, MLOps is more fundamentally a set of organizational and cultural practices ([A Multivocal Review of MLOps Practices, Challenges and Open Issues](https://ar5iv.labs.arxiv.org/html/2406.09737)). This whole lifecycle management is still maturing as a discipline.
 
 #### AI Security
 
-AI security is a [distinct Ppoblem from traditional security](https://ar5iv.labs.arxiv.org/html/2402.12617v1)
+AI security is a [distinct problem from traditional security](https://ar5iv.labs.arxiv.org/html/2402.12617v1).
 AI applications, particularly in sensitive domains like finance, healthcare, or defense, handle large amounts of data that must be securely stored, processed, and transmitted. Ensuring data security involves setting up encryption, access controls, auditing, and more, which can be complex and error-prone, especially when dealing with multiple tools and environments.
 
 Beyond data, models themselves need to be secured against threats like adversarial attacks, data poisoning, or unauthorized access. 
@@ -140,13 +158,18 @@ Implementing robust security measures across the entire MLOps pipeline is a non-
 
 Last, meeting regulatory requirements (GDPR, HIPAA, etc.) adds another layer of complexity, especially when managing data and models across different platforms and services.
 
-#### 
-### IT Optimisation and Automation
+### Our AI strategy
 
-#### True Observability
+Our focus at TSN is on developing AI solutions that are robust, easily deployable in production environments, 
+and built with the highest standards of security in mind. Here are two first observations. 
 
-### Security
+First, [Generative AI is fueling demand for Kubernetes](https://analyticsindiamag.com/ai-origins-evolution/how-generative-ai-is-fueling-demand-for-kubernetes/). Choosing Kubernetes is a natural choice for an ESN like TSN that does not seek
+to reduce its expertise to one specific cloud provider or editor. 
 
+Second, it is important to understand that leveraging the latest technologies is not good enough.
+Today, with a combination of three open source technologies ([langchain](https://www.langchain.com/), [langfuse](https://langfuse.com/) and [langgraph](https://langchain-ai.github.io/langgraph/)), developers can quickly setup a multi-agent, monitored generative AI application. That is not innovation. Innovation is to apply it to a useful use case, and succeed in deploying in a real production environment. In that space, open sources lacks many features. 
+
+Our claim is that IDP(s) are the necessary condition to serve our AI projects and innovation.
 
 ## References
 
@@ -168,3 +191,9 @@ Last, meeting regulatory requirements (GDPR, HIPAA, etc.) adds another layer of 
 - [16] [Generative AI Security: Challenges and Countermeasures](https://ar5iv.labs.arxiv.org/html/2402.12617v1)
 - [17] [Accelerate: The Science of Lean Software and DevOps: Building and Scaling High Performing Technology Organizations](https://www.amazon.com/Accelerate-Software-Performing-Technology-Organizations-ebook/dp/B09JWS32W1)
 - [18] [How Software Excellence Fuels Business Performance](https://kyleake.medium.com/mckinsey-report-on-developer-velocity-how-software-excellence-fuels-business-performance-cf566634d203)
+- [19] [Developer experience is a key to organizational success](https://www.forrester.com/blogs/developer-experience-is-a-key-to-organizational-success/)
+- [20] [langfuse](https://langfuse.com/)
+- [21] [langgraph](https://langchain-ai.github.io/langgraph/)
+- [22] [langchain](https://www.langchain.com/)
+- [23] [How Generative AI is Fueling Demand for Kubernetes](https://analyticsindiamag.com/ai-origins-evolution/how-generative-ai-is-fueling-demand-for-kubernetes/)
+- [24] [The Voice of Kubernetes Experts Report 2024](https://portworx.com/wp-content/uploads/2024/06/The-Voice-of-Kubernetes-Experts-Report-2024.pdf)

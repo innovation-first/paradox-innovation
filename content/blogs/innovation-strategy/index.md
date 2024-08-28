@@ -35,7 +35,7 @@ We first defend the need of improving developer velocity, and examine next how i
 ## Why Internal Developer Platforms matter
 
 Before even considering specific business use cases, or the 2025-2030 technology and business trends, 
-let us first ask ourselves how long does it take to demonstrate a promising new idea ?
+let us first ask ourselves how long does it take to demonstrate a promising new idea (assuming it is not about solving a complex algorithmic or theoretical issue) ?
 
 ![the area of each circle represents the effort](innovation-1.png)
 
@@ -155,9 +155,9 @@ Implementing robust security measures across the entire MLOps pipeline is a non-
 
 Last, meeting regulatory requirements (GDPR, HIPAA, etc.) adds another layer of complexity, especially when managing data and models across different platforms and services.
 
-## IDP help innovation
+## IDPs help AI innovation
 
-Our focus at TSN is on developing AI solutions that are robust, easily deployable in production environments, 
+Does it ? Our focus and strategy at TSN is mostly on developing AI solutions that are robust, easily deployable in production environments, 
 and built with the highest standards of security in mind. Here are some observations. 
 
 First, [Generative AI is fueling demand for Kubernetes](https://analyticsindiamag.com/ai-origins-evolution/how-generative-ai-is-fueling-demand-for-kubernetes/). Choosing Kubernetes is a natural choice for an ESN like TSN that does not seek
@@ -171,10 +171,10 @@ Certainly such a partnership would make sense. But as already stated, with our a
 does make us grow at reasonable costs on low level platform issues, and the resulting team interactions create new synergies. 
 
 The TSN paradox is as follows. We have the software assets, many (many) DevOps and DevSecOps specialists, and 
-many (not as many of coure) Data Scientists. And yet,
-we lack efficiencies to setup and demonstrate our ideas in the expected weeks. Recent successes ([ogma](/blogs/ogma), [nyx](/blogs/nyx)) were illustrative of the advocated IDP approach. In turn these projects pave the way to define shared devops practices, architectural patterns, and a cultural change
+many (not as many of coure) Data Scientists, and some (enough) MlOps specialists. And yet,
+we lack efficiencies to setup and demonstrate our ideas in the expected weeks. Recent successes ([ogma](/blogs/ogma), [nyx](/blogs/nyx) among others) were illustrative of the advocated IDP approach. In turn these projects pave the way to define shared devops practices, architectural patterns, and a cultural change
 to make small and geographically distributed teams or individuals work together. The next step is to make these practice explicitly part of our
-technical policy.
+technical policy. We are working on it.
 
 ## References
 

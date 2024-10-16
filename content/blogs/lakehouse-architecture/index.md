@@ -1,5 +1,5 @@
 ---
-title: 'A Survey ok Kubernetes Block Storage'
+title: 'A Survey of Kubernetes Block Storage'
 date: 2024-10-14T13:48:14+02:00
 summary: 'Which distributed file system should you use on small and medium kubernetes deployments'
 categories:

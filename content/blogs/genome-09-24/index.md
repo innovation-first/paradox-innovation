@@ -23,7 +23,7 @@ By combining our technical capabilities with the researchers' expertise, we help
 
 Our collaboration extended to the design and application of AI models that assisted in identifying key genetic variants associated with ACT. One important discovery was the rs2278986 variant in the SCARB1 gene, which may serve as a marker for early detection and risk stratification of ACT in children. This finding holds great promise for future screening and preventive measures.
 
-Working closely with the research teams, including partners at a prominent Brazilian institute, we are proud of the role we played in advancing this important study. The collective effort highlights how partnerships across different domains can accelerate scientific progress, ultimately benefiting the broader healthcare community. We are honored that this work has been shared and further enriched by collaboration with the Brazilian research institute.
+Working closely with the research teams, including partners at a prominent Brazilian institute, we are proud of the role we played in advancing this important study. The collective effort highlights how partnerships across different domains can accelerate scientific progress, ultimately benefiting the broader healthcare community. 
 
 [Download the paper](Article_Genome_Lancet_PIIS2667193X2400190X.pdf) or <button onclick="togglePDF()">view it online</button>
 <div id="pdfContainer" style="display:none;">

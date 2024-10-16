@@ -1,6 +1,6 @@
 ---
 title: LLM understanding of Kubernetes applications'
-date: 2024-06-20T13:48:14+02:00
+date: 2024-10-10T13:48:14+02:00
 summary: 'Bridging the Gap: Enhancing LLM Understanding of Kubernetes Clusters for Optimized Administration'
 categories:
 - Blog

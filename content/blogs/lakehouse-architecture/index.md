@@ -12,9 +12,11 @@ authors:
 - Herve Barault
 ---
 
+> Choosing the right block storage solution is crucial for ensuring data resilience, performance, and ease of use. This blog post takes a deep dive into several distributed file system options that are available for small and medium-sized Kubernetes deployments, with a focus on open-source solutions. This is a technical blog post intended for architects, developers, and SREs who are looking to understand the pros and cons of various Kubernetes storage systems. We will cover performance benchmarks, deployment complexity, and community support in detail.
+
 ## Overview
 
-The aim of this study, originally posted on the Kast blog [blog](https://kast-portal.dpsc-thales.fr/static/files/kast-documentation/snapshot/SNAPSHOT/blog/index.html),  is to provide to clients a replicated (or distributed) file system usable through CSI in small and medium deployments.
+The aim of this study, originally posted on the [Kast blog](https://kast-portal.dpsc-thales.fr/static/files/kast-documentation/snapshot/SNAPSHOT/blog/index.html), is to provide to customers and architects a replicated (or distributed) file system usable through CSI in small and medium Kubernetes deployments. Here is what we mean by small to medium:
 
 | Size | Nodes | vCPU | RAM (GB) | DISK (GB) |
 | --- | --- | --- | --- | --- |

@@ -1,5 +1,5 @@
 ---
-title: 'can an AI understand a Kubernetes application ?'
+title: 'Exploring AI Capabilities in Understanding Kubernetes Applications'
 date: 2024-10-10T13:48:14+02:00
 summary: 'Bridging the Gap: Enhancing LLM Understanding of Kubernetes Clusters for Optimized Administration'
 categories:

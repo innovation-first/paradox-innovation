@@ -1,0 +1,53 @@
+.admonition {
+  padding: 10px 15px;
+  margin: 20px 0;
+  border-left: 5px solid;
+  border-radius: 4px;
+}
+
+.admonition.important {
+  border-left-color: #e3342f;
+  background-color: #f8d7da;  // Light mode color
+}
+
+.admonition.note {
+  border-left-color: #6cb2eb;
+  background-color: #ebf8ff;  // Light blue for light mode
+}
+
+.admonition.tip {
+  border-left-color: #48bb78;
+  background-color: #f0fff4;
+}
+
+.admonition.warning {
+  border-left-color: #f59e0b;
+  background-color: #fffaf0;
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  .admonition {
+    color: #fff;  // Ensure the text color changes to white for better visibility in dark mode
+  }
+
+  .admonition.important {
+    border-left-color: #ff6b6b;
+    background-color: #861919;  // Darker red for dark mode
+  }
+
+  .admonition.note {
+    border-left-color: #4299e1;
+    background-color: #2f72b9;  // Darker blue for dark mode
+  }
+
+  .admonition.tip {
+    border-left-color: #38a169;
+    background-color: #2e7453;  // Darker green for dark mode
+  }
+
+  .admonition.warning {
+    border-left-color: #f6ad55;
+    background-color: #9f6b0b;  // Darker yellow/orange for dark mode
+  }
+}

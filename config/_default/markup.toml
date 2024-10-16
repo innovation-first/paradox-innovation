@@ -1,6 +1,10 @@
 # Markdown renderer configuration
 [goldmark.renderer]
 unsafe = true
+[goldmark.extensions]
+admonition = true
+[goldmark.parser.attribute]
+block = true # default is false
 
 [tableOfContents]
 endLevel = 4

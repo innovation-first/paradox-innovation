@@ -140,7 +140,11 @@ consume information about the ambient energy mix and share efficiently that info
 
 ## Conclusions
 
-The frugal IT positions itself as a key player in reducing the energy footprint of cloud-native applications. Through dynamic resource management, the use of generative AI, and intelligent orchestration based on energy conditions, it offers a sustainable and energy-efficient solution, meeting the growing needs for reducing the environmental impact of IT infrastructures.
+The frugal IT positions itself as a key technology in reducing the energy footprint of cloud-native applications. Through dynamic resource management, the use of generative AI, and intelligent orchestration based on energy conditions, it offers a sustainable and energy-efficient solution, meeting the growing needs for reducing the environmental impact of IT infrastructures.
+
+{{< admonition note "Note" >}}
+This is a test note
+{{< /admonition >}}
 
 ## Contacts
 

@@ -43,9 +43,9 @@ The identified candidates are :
 
 The project does not clearly declare an original company but it seems to be [Quantum](https://www.quantum.com) according to first maintainer emails. It has been accepted as a [CNCF Project](https://www.cncf.io/projects/rook/) on January 29, 2018 and moved to the **Graduated** maturity level on october 7, 2020.
 
-{{< admonition important "Important Notice" >}}
+>
 The management of Mayastor is performed through a specific kubectl plugin as data are not stored in the Kubernetes database.
-{{< /admonition >}}
+
 
 > Rook/Ceph is already used intenally in Kast to integrate some legacy components requiring access to a POSIX file system. It is not officially supported for Kast users and must be thus considered as an incubating (non-LTS) component. For more information see: [Distributed Storage component](../../components/distributed_storage/index.md).
 
@@ -59,9 +59,9 @@ The project was originally built by SUSE Rancher and is held by the [Linux Found
 
 It has a simple architecture: ![longhorn archi](how-longhorn-works.svg).
 
-{{< admonition note "Note" >}}
+>
 At study time, we mainly focused on Data Engine v1 as Data Engine v2 is not production ready.
-{{< /admonition >}}
+
 
 The Data Engine v2 will introduce breaking changes to improve performances. It will migrate:
 
@@ -101,9 +101,9 @@ On first deployment a lot of noise appears:
 helm upgrade --install openebs --namespace openebs openebs/openebs --create-namespace --set engines.local.lvm.enabled=false --set "engines.local.zfs.enabled=false"  --set "lvm-localpv.enabled=false" --set "zfs-localpv.enabled=false" --set "openebs-crds.csi.volumeSnapshots.enabled=false" --set obs.callhome.enabled=false --set "mayastor.eventing.enabled=false" --set "mayastor.loki-stack.enabled=false"
 ```
 
-{{< admonition important "Important" >}}
+>
  The management of mayastor is performed through a specific kubectl plugin as data are not stored in kubernetes database.
-{{< /admonition >}}
+
 
 ## Communities
 
@@ -136,9 +136,9 @@ To understand this diagram it is important to note that:
 | Underlying storage | FS(v1)/Block(v2) | Block | Block/FS |
 | ARM64 support | &#9989; | &#9989; | :x: |
 
-{{< admonition note "Note" >}}
+>
 Volume Shrinking is not part of the CSI interface.
-{{< /admonition >}}     
+     
 
 ## Tests
 
@@ -180,11 +180,11 @@ A performance test with fio has been performed for a 2 replicas storage:
 | Mixed Random Read IOPS (higher is better) | 35k | 2.6k (rwx 2.5k) (v2 31k) | 10k | 18k |
 | Mixed Random Write IOPS (higher is better) | 12k | 880 (rwx 850) (v2 10k) | 3.3k | 6100 |
 
-{{< admonition note "Note" >}}
+>
 - the RWX volume has been tested with a single pod using it (to be fair with other tests).
 - Longhorn engine data v2 / Mayastor has been limited to 1Gb Huge Page to fit for small deployments.
 - Ceph as using CNI which is not the best practice for good performance/ production.
-{{< /admonition >}} 
+ 
 
 ### Resources Usage
 
@@ -202,10 +202,10 @@ With FIO we have the following usage:
 
 #### Mayastore
 
-{{< admonition important "Important" >}}
+>
 - HugePage usage is not visible in memory management.
 - The active loop leads to 2 full cpu usage all the time in monitoring.
-{{< /admonition >}}
+
  
 With FIO we have the following usage:
 ![Mayastore Resources Usage](openebs-active-node-fio.png)
@@ -239,9 +239,9 @@ After 20 minutes a manual action has been performed to force deletion of the wor
 
 An issue exists but is closed [On NodeLost, the new pod can't mount the same volume](https://github.com/rook/rook/issues/1507). An addon is required to handle part of the [automatic failover](https://rook.io/docs/rook/v1.15/Storage-Configuration/Block-Storage-RBD/block-storage/#node-loss). Specific taints shall be applied on a node to allow the "automatic failover"
 
-{{< admonition important "Important" >}}
+>
 An agent shall be developed to manage the automatic failover.
-{{< /admonition >}}    
+    
 
 ##### Disaster Recovery
 
@@ -274,9 +274,9 @@ This test has been inspired by [Potential Data loss on cluster resize with detac
 We did a simple test to confirm the criticality of this ticket.
 We create and fill a pvc with a pod and stop the pod. The volume (with two replicas) becomes detached. Then, we go on the node and remove the folder directly on the operating system. Then we attach the volume and check the result. Longhorn detect the failure, rebuild a replica and both replica becomes healthy.
 
-{{< admonition important "Important" >}}
+>
 A specific note to explain how to recycle notes should be written to take into account detached volume. A procedure should be applied but is not a blocking point.
-{{< /admonition >}}        
+        
 
 ##### One hard node failure (VM kill like powerloss) with low load
 
@@ -301,14 +301,14 @@ We created 3 consecutive backup with different contents.
 We manually copied the MinIO content between the two servers and use the longhorn UI to restore the backup.
 We restored two backup in a different PVC/PV to check the content of the disk and all was fine.
 
-{{< admonition note "Note" >}}
+>
 The procedure has been performed using the same version of longhorn on both platforms.
     Tickets show that using different versions of longhorn could fail.
-{{< /admonition >}} 
+ 
 
-{{< admonition important "Important" >}}
+>
 Accordingly to [Velero Documentation](https://velero.io/docs/main/csi-snapshot-data-movement/), you will need to use the csi snapshot data movement plugin to backup longhorn volumes ( as the snapshot remains local) or use the Longhorn backup mechanism with storage on s3 (or NFS).
-{{< /admonition >}}  
+  
     
 
 ##### Stability Tests
@@ -326,9 +326,9 @@ A [Possible disk corruption on load](https://github.com/longhorn/longhorn/issues
 
 The security contexts (and some resources) are not set in the original helm chart it should be customized at kast level.
 
-{{< admonition important "Important" >}}
+>
 The design of longhorn is based on iSCSI protocol without CHAP authentication. Any user logged in on a node can read/corrupt the disks as a node shall access to the network storage so firewall does not block it and there is no authentication in the network protocol.
-{{< /admonition >}}      
+      
 
 Sample of code with root account (but binary with correct tcp calls could do the same)
 On master node which is not a longhorn node and `10.244.4.23` is a longhorn instance manager pod ip.
@@ -359,13 +359,13 @@ A test has been performed to check volume expansion.
 A process writes continuously inside the pod after a while we see `/bin/sh: can't create /data/1721305318.txt: No space left on device`.
 We manually edited the PVC to increase the size of the claim (from 10G to 15G) after about 30 seconds the process is allowed to write in the PV without restart.
 
-{{< admonition important "Important" >}}
+>
 Volume expansion has limitations for encrypted and rwx volumes and restore of expanded volumes. See [Documentation](https://longhorn.io/docs/1.7.0/nodes-and-volumes/volumes/expansion/#corner-cases)
-{{< /admonition >}}          
+          
 
-{{< admonition note "Note" >}}
+>
 The current max size of a volume is [16TB](https://github.com/longhorn/longhorn/issues/9221).
-{{< /admonition >}} 
+ 
     
 
 ##### Data Locality
@@ -381,23 +381,23 @@ Once synchronized, one of the old replicates is destroyed.
 
 A test has been performed with fio and chaos on encrypted volume. It uses LUKS ([Linux Unified Key Setup](https://en.wikipedia.org/wiki/Linux_Unified_Key_Setup)) and works well. The key can be either a cluster wide master key or per volume. It has been identified a minor ticket about [Not accurate size](https://github.com/longhorn/longhorn/issues/9205).
 
-{{< admonition important "Important" >}}
+>
 The passphrase rotation is (not supported)[https://github.com/longhorn/longhorn/issues/9345]
-{{< /admonition >}}      
+      
 
-{{< admonition note "Note" >}}
+>
 The secret volume encryption can be [defined per PVC if required](
 https://longhorn.io/docs/1.7.1/advanced-resources/security/volume-encryption/#setting-up-kubernetes-secrets-and-storageclasses)
-{{< /admonition >}} 
+ 
 
 ##### RWX volume
 
 A very simple test has been performed for rwx volume creating two pods using the same volume. One write a file the other read it.
 
 
-{{< admonition note "Note" >}}
+>
 The NFS server (one per PV) is published on the flight when a pod starts using the volume. There is no ACL and it should not be exposed externally. It would be better to create a dedicated NFS server (as a pod) with RWO (or RWX...) volume.
-{{< /admonition >}} 
+ 
 
 We did another load charge test with only one pod to compare performance against the RWO use-case as some discussions show limitations [even with one pod](https://github.com/longhorn/longhorn/discussions/8111) :
 The performances (see global perf comparison) are not so awful, there is a decrease in performance but not so high. The memory usage can be relatively high for the share manager.
@@ -433,9 +433,9 @@ The UI is only provided for Ceph and requires knowledge to use it. An admin acco
 
 ## Synthesis
 
-{{< admonition important "Important" >}}
+>
 Ceph performances are in replication mode.
-{{< /admonition >}}      
+      
 
 | Criteria | Longhorn | Rook/Ceph | Mayastor |
 | --- | --- | --- | --- |
@@ -469,6 +469,5 @@ The main points are:
 - Exposure of disks are not fully secured.
 
 As part of the Kast Accordingly to our criteria, with no strong consistency requirement, we will select Longhorn as our LTS component.
-{{< admonition note "Important Notice" >}}
-For these reasons, and because Kast does not provide strong consistency, Longhorn is selected as part of Kast LTS distribution.
-{{< /admonition >}}
+
+> For these reasons, and because Kast does not provide strong consistency, Longhorn is selected as part of Kast LTS distribution.

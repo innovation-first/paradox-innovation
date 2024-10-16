@@ -5,10 +5,10 @@ summary: 'Bridging the Gap: Enhancing LLM Understanding of Kubernetes Clusters f
 categories:
 - Blog
 - Innovation Track
+- draft
 tags:
 - generative ai
 - kubernetes
-- draft
 authors: 
 - Tanguy Jouannic
 - Dimitri Tombroff

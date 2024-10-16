@@ -1,5 +1,5 @@
 ---
-title: LLM understanding of Kubernetes applications'
+title: 'can an AI understand a Kubernetes application ?'
 date: 2024-10-10T13:48:14+02:00
 summary: 'Bridging the Gap: Enhancing LLM Understanding of Kubernetes Clusters for Optimized Administration'
 categories:
@@ -7,14 +7,14 @@ categories:
 - Innovation Track
 tags:
 - generative ai
-- compliancy
 - kubernetes
+- draft
 authors: 
 - Tanguy Jouannic
 - Dimitri Tombroff
 - Lorenzo Girardi
 - Reyyan Tekkin
-image: 'notthere'
+image: 'shared/scott-webb-fTEFBwIELQ0-unsplash.jpg'
 ---
 
 In the ever-evolving landscape of cloud-native technologies, Kubernetes has emerged as the de facto standard for container orchestration. 

@@ -5,49 +5,53 @@
   border-radius: 4px;
 }
 
+.admonition {
+  color: #F5F5F7;  
+}
+
 .admonition.important {
-  border-left-color: #e3342f;
-  background-color: #f8d7da;  // Light mode color
+  border-left-color: #df76b1;
+  background-color: #DC59A3;  
 }
 
 .admonition.note {
-  border-left-color: #6cb2eb;
-  background-color: #ebf8ff;  // Light blue for light mode
+  border-left-color: rgb(105, 173, 228);
+  background-color: #7970D3;  
 }
 
 .admonition.tip {
-  border-left-color: #48bb78;
-  background-color: #f0fff4;
+  border-left-color: #1E9D87;
+  background-color: rgb(71, 116, 95);  
 }
 
 .admonition.warning {
-  border-left-color: #f59e0b;
-  background-color: #fffaf0;
+  border-left-color: rgb(246, 194, 131);
+  background-color: #C38547;  
 }
 
 /* Dark mode styles */
 @media (prefers-color-scheme: dark) {
   .admonition {
-    color: #fff;  // Ensure the text color changes to white for better visibility in dark mode
+    color: #F5F5F7;  
   }
 
   .admonition.important {
-    border-left-color: #ff6b6b;
-    background-color: #861919;  // Darker red for dark mode
+    border-left-color: #df76b1;
+    background-color: #DC59A3;  
   }
 
   .admonition.note {
-    border-left-color: #4299e1;
-    background-color: #2f72b9;  // Darker blue for dark mode
+    border-left-color: rgb(105, 173, 228);
+    background-color: #7970D3;  
   }
 
   .admonition.tip {
-    border-left-color: #38a169;
-    background-color: #2e7453;  // Darker green for dark mode
+    border-left-color: #1E9D87;
+    background-color: rgb(71, 116, 95);  
   }
 
   .admonition.warning {
-    border-left-color: #f6ad55;
-    background-color: #9f6b0b;  // Darker yellow/orange for dark mode
+    border-left-color: rgb(246, 194, 131);
+    background-color: #C38547;  
   }
 }

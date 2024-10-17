@@ -2,13 +2,29 @@
     You can add your own custom styles here.
 */
 @import "admonitions";
+:root[data-scheme="dark"] {
+    --body-background: #2e2a58; 
+    --card-background: #494868; 
+    --accent-color: #FFBF7F;
+}
+:root[data-scheme="dark"] .table-wrapper table tr:nth-child(odd) {
+    background-color: #413C72; 
+}
+:root[data-scheme="dark"] .table-wrapper table tr:nth-child(even) {
+    background-color: #5147a5; 
+}
+
+.site-avatar {
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: #221E49; /* Replace with your preferred color */
+    border-radius: 90%; /* Optional: make the background a circle */
+}
 
 /* Global image size limits */
-img {
-    max-width: 100%;
-    height: auto;
-    max-height: 400px; /* Adjust the max-height as needed */
-    object-fit: contain; /* Ensures the entire image fits within the container */
+.site-avatar img {
+    object-fit: cover; /* Ensure the image covers the whole container */
 }
 
 /* Responsive adjustments for images */

@@ -27,20 +27,13 @@ This is a fairly complete demonstration of the Frugal IT suite. There are severa
 sample applications, one of them an AWS EKS log management application, the Hub itself, and an on-premise
 Kast application. All are monitored using Frufal IT.
 
-The Frugal IT itself runs as part of the innovation Hub in SaaS mode, 
+The Frugal IT itself runs as part of the innovation Hub platform in SaaS mode, 
 that is on GCP/GKE. 
-
-## See the Demo
-
-[Access the live demonstration here](https://frugalit.innovation.forthales.com)
 
 ## Contacts
 
-- lorenzo.gerardi@thalesgroup.com
 - tanguy.jouannic@thalesgroup.com
-- kevin.denis@thalesgroup.com
 - reyyan.tekin@thalesgroup.com
-- jean-felix.berthiau@thalesgroup.com
 
 
 

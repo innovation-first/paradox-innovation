@@ -13,82 +13,62 @@ authors:
 - Quentin Gasparroto
 ---
 
-## Introduction
+{{< admonition warning "Important Notice" >}}
+This is a draft. We would like you to contribute and help us refining what are the conditions to innovation success. And this
+requires the innovation and development teams to precisely express their views, the challenges they encounter. Our goal it 
+to help ensuring our innovation processes are aligned with real-life retexes. 
+{{< /admonition >}}
 
-- Brief overview of the common perceptions about innovation tracks.
-- Introduction to the main thesis: the gap between expectations and reality in innovation projects.
-- Our claim: if expectations are well accepted, we can be very efficient at innovationg
+Innovation tracks are often viewed with optimism, but the reality of turning an idea into a successful project can be quite different. In this blog, we explore the gap between the common expectations of innovation projects and the realities of implementing them. Our main thesis is that, if expectations are managed effectively, innovation can become a highly efficient process.
 
 ## The Selection Process: From Idea to Funding
 
-- The motivations behind selecting innovative ideas.
-- Discussion on how funding is often granted with specific expectations.
-- Common stakeholder expectations: patents, fiscal optimization (e.g., "Crédit Impôt Recherche" in France), software products, market analysis, etc.
+When selecting innovative ideas, motivations can vary. Often, funding is granted with specific goals in mind, such as patents, fiscal optimization (like the "Crédit Impôt Recherche" in France), software products, or market analysis. However, these expectations can sometimes create pressure and shape the direction of the project before it even begins.
 
 ## The Reality of Scoping an Innovation Project
 
 ### Defining the Scope: Easier Said Than Done
 
-- Challenges in precisely defining the scope of an innovation project.
-- The ambiguity and uncertainty inherent in innovative ideas.
+Precisely defining the scope of an innovation project is one of the first challenges. Innovative ideas are inherently ambiguous and uncertain, making it difficult to outline a clear path from the start.
 
 ### The Iterative Process of Scoping
 
-- Importance of iterative scoping: refining the idea and understanding the problem.
-- Examples of how initial ideas often shift during the scoping process.
-- Explain why a team full-time, focused is not necesserally adequate for initial phases
+Scoping an innovation project often involves an iterative process, where ideas are continuously refined and adjusted. Initial concepts can shift significantly as the team gains a deeper understanding of the problem. Interestingly, having a full-time, dedicated team for the initial phases may not always be the most effective approach, as flexibility is key during this stage.
 
 ## Setting Up the Right Team
 
 ### Building a Multidisciplinary Team
 
-- Importance of having a diverse team (technical, business, devops, etc.).
-- Challenges in finding the right mix of skills and expertise in TSN
-- Ensuring that the team understands and is aligned with the innovation objectives.
-- The difficulty of maintaining alignment throughout the project’s lifecycle.
+Building a diverse team with a range of skills (technical, business, DevOps, etc.) is crucial for innovation. However, finding the right mix of expertise is not always easy, particularly in environments like Thales Services Numériques. It's important to ensure that the team stays aligned with the innovation goals throughout the project’s lifecycle, though maintaining this alignment can be a challenge.
 
 ## Navigating the Innovation Process
 
 ### Managing Expectations Throughout the Project
 
-- How to manage stakeholder expectations as the project evolves.
-- Communication strategies for keeping stakeholders informed without overpromising.
+Managing stakeholder expectations is a continuous process as innovation projects evolve. It's important to keep stakeholders informed while avoiding overpromising, as the project’s direction may change along the way.
 
 ### Balancing Creativity and Deliverables
 
-- The tension between fostering creativity and meeting tangible deliverables.
-- Strategies for keeping the innovation process on track within time and budget constraints.
+Innovation requires a balance between fostering creativity and delivering tangible outcomes. Keeping the project on track within time and budget constraints can be challenging, but there are strategies to maintain this balance.
 
 ### Dealing with Uncertainty and Failure
 
-- The inevitability of setbacks in innovation.
-- How to pivot or adapt or stop when initial plans don’t pan out.
+Setbacks and uncertainty are inevitable in any innovation process. It's important to be flexible and ready to pivot or even stop if initial plans don’t work out.
 
 ## The Outcome: What Does Success Look Like?
 
 ### Redefining Success in Innovation
 
-- Discussion on what success really looks like in an innovation track.
-
-Case studies or examples of projects where success was different from initial expectations.
+Success in innovation often looks different from the initial expectations. Sometimes, success might mean learning from failures or achieving a different outcome than originally planned. Case studies from projects like Swich, FImet, and Omega highlight how success can be redefined.
 
 ### Lessons Learned and Moving Forward
 
-- Key takeaways from conducting an innovation track.
-- How to apply lessons learned to future innovation projects.
-
-## Case Studies
-
-### Swich, FImet, Omega
-
-### Frugal It
+Each innovation track offers valuable lessons. Applying these lessons to future projects is key to continuous improvement in the innovation process.
 
 ## Conclusion
 
-- Recap of the realities versus expectations in conducting an innovation track.
-- Final thoughts on how to better align expectations with the inherent challenges of innovation.
+In conclusion, the gap between expectations and reality is a common theme in innovation tracks. By better aligning expectations with the inherent challenges of innovation, teams can work more effectively towards successful outcomes.
 
 {{< quote author="Mike Skinner" source="Eurpac CIO" url="https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/developer-velocity-how-software-excellence-fuels-business-performance">}}
-*“Let’s say you envision software that makes you five times more efficient. But if you encourage the group to launch at the time when you’re two times more effective, then you’re living it. Then from there, decide next steps,”*
+*"Let’s say you envision software that makes you five times more efficient. But if you encourage the group to launch at the time when you’re two times more effective, then you’re living it. Then from there, decide next steps."*
 {{< /quote >}}
-

@@ -11,11 +11,14 @@ tags:
 - kubernetes
 authors: 
 - Tanguy Jouannic
-- Dimitri Tombroff
 - Lorenzo Girardi
 - Reyyan Tekkin
 image: 'shared/scott-webb-fTEFBwIELQ0-unsplash.jpg'
 ---
+
+{{< admonition warning "Important Notice" >}}
+This draft synthetises our current ideas, methodology and development progresses as part of the Rift and Frufal IT innovation tracks. We plan to review and improve it to make it a paper.  We hope it is already an interesting read. 
+{{< /admonition >}}
 
 In the ever-evolving landscape of cloud-native technologies, Kubernetes has emerged as the de facto standard for container orchestration. 
 Administrators grapple with the complexities of managing large-scale Kubernetes clusters, especially when it comes to optimizing for carbon footprint, security and cost efficiency. 

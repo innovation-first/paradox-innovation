@@ -6,8 +6,7 @@ tags:
 - innovation
 - process
 categories: 
-- Idea
-- Draft
+- Blog
 image: 'monkeys.png'
 authors: 
 - Nicolas Bonnet
@@ -36,3 +35,7 @@ Too often, the goal of an innovation track is to .. generate another innovation 
 There is work to be done to provide a view of the available and alternative paths.
 
 What do you think ?
+
+## Contact
+
+- nicolas.bonnet@thalesgroup.com

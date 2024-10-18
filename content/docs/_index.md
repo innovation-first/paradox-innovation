@@ -1,6 +1,6 @@
 ---
-title: "Documentation"
-description: "Welcome to the Thales Services Numériques Innovation Blog site. This site is an open minded site that welcome contribution from Thales and non Thales enthusiasts. The doculentation below provides additional information regarding our innovation and development stratefy/ Feel free to contribute !"
+title: "About the Innovation First Hub"
+description: "At Thales Services Numériques, we believe innovation thrives through collaboration. This blog is a space for sharing insights, research, and groundbreaking developments in cloud-native technologies, serverless computing, and beyond. Whether you're part of Thales or an external enthusiast, we welcome contributions and ideas from all corners of the tech community. Dive into articles that explore our strategic approach and attempts to sustainable, impactful innovation. The information below provides you with staring pointers and information."
 menu:
   main:
     name: About

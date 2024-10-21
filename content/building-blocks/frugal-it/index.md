@@ -19,6 +19,12 @@ Managing cloud-native applications efficiently is critical for staying competiti
 
 Our AI-powered Kubernetes optimization platform is designed to simplify and enhance how enterprises manage their Kubernetes applications. By combining advanced generative AI with human expertise, our platform goes beyond simple monitoring. We offer automated insights, scoring, and actionable recommendations to optimize applications for cost, carbon footprint, and performance.
 
+What sets us apart is our dual focus on sustainability and business optimization. By incorporating external data, such as real-time electricity mix, and capturing business usage patterns from users, we enable smarter, greener decision-making. This approach helps businesses not only reduce costs but also minimize their carbon footprint, all while aligning infrastructure with actual business demands.
+
+<div style="text-align: center;">
+	<img src="./frugal-it-cycle.png" alt="User experience and vertuous cycle" style="width:50%;" />
+</div>
+
 ## Key Benefits
 
 ### Automated Documentation & Scoring
@@ -42,7 +48,7 @@ We help companies reduce their carbon footprint by identifying resource-hungry w
 Frugal IT proposes three main functions: the **inspector**, the **optimizer** and the **adviser**.
 
 <div style="text-align: center;">
-	<img src="./frugal-it.png" alt="Frugal IT Overview" style="width:30%;" />
+	<img src="./frugal-it.png" alt="Frugal IT Overview" style="width:50%;" />
 </div>
 
 ### Inspector : Understand your Costs
@@ -64,13 +70,105 @@ Generate comprehensive audit reports to evaluate the financial and environmental
 
 Obtain a "frugality score" to benchmark and improve your infrastructure’s efficiency and sustainability.
 
-## Value Proposition
+## State of the Art
 
-Frugal IT is your partner in navigating the complexities of FinOps and GreenOps. By providing deep insights, actionable optimizations, and robust reporting, it helps you build cost-effective, sustainable, and compliant cloud solutions.
+In this chapter, we explore existing solutions in the market that address these challenges and position **Frugal IT** within this competitive landscape.
 
-<div style="text-align: center;">
-	<img src="./frugal-it-cycle.png" alt="User experience and vertuous cycle" style="width:50%;" />
-</div>
+###  Commercial Platforms
+
+#### [CAST AI](https://cast.ai/)
+
+CAST AI focuses on **cost optimization** and automated scaling for Kubernetes clusters. It provides multi-cloud management, real-time optimization, and AI-powered automation to reduce cloud costs.
+
+- **Key Features:**
+  - Automatic rightsizing of workloads
+  - AI-driven autoscaling
+  - Multi-cloud management with cost comparisons
+  - Real-time cloud cost optimization and insights
+
+#### [Kubecost](https://kubecost.com/)
+
+Kubecost offers **real-time cost monitoring** and optimization for Kubernetes clusters. It tracks spending, identifies inefficiencies, and provides recommendations to reduce costs.
+
+- **Key Features:**
+  - Real-time cost monitoring for Kubernetes workloads
+  - Visibility into resource usage (CPU, memory, storage)
+  - Recommendations for reducing cloud costs
+  - Integration with Prometheus and Grafana
+
+#### [StormForge](https://www.stormforge.io/)
+
+StormForge uses **machine learning** to optimize Kubernetes application performance and cost, focusing on resource tuning and efficiency.
+
+- **Key Features:**
+  - Automatic Kubernetes workload optimization
+  - ML-driven recommendations for resource tuning
+  - Cost and performance optimization
+  - Integration with DevOps workflows for CI/CD
+
+#### [Karpenter](https://karpenter.sh/)
+
+Karpenter is an **open-source autoscaler** developed by AWS for Kubernetes clusters. It dynamically provisions resources based on application demands.
+
+- **Key Features:**
+  - Dynamic scaling of clusters based on real-time workload needs
+  - Just-in-time provisioning for cost efficiency
+  - Native Kubernetes integration for autoscaling
+  - Reduces overprovisioning of resources
+
+### Open-Source Solutions
+
+#### [Keptn](https://keptn.sh/)
+
+Keptn is an open-source project for **cloud-native application lifecycle orchestration**, including automated performance and cost optimization for Kubernetes environments.
+
+- **Key Features:**
+  - Automation for application deployment and operations
+  - Continuous delivery and performance monitoring
+  - Integration with Prometheus and Grafana
+  - Enforces SLOs for Kubernetes deployments
+
+#### [Loft Labs](https://loft.sh/)
+Loft Labs focuses on **multi-tenancy** and resource efficiency in Kubernetes clusters through virtual clusters, enabling isolation and optimized resource usage.
+
+- **Key Features:**
+  - Virtual Kubernetes clusters for multi-tenant environments
+  - Resource optimization through isolation and self-service
+  - Cost allocation and billing for multi-tenant usage
+
+### Specialized Kubernetes Tools
+
+#### [OptScale by Hystax](https://hystax.com/optscale/)
+OptScale provides **FinOps** and cloud cost optimization for Kubernetes clusters, offering insights into resource usage and cost savings opportunities.
+
+- **Key Features:**
+  - Advanced cost management and FinOps insights
+  - Resource optimization recommendations
+  - Cloud provider integration for detailed cost analysis
+
+#### [BotKube](https://www.botkube.io/)
+
+BotKube is an open-source tool that integrates with **Slack** and other communication platforms to provide real-time Kubernetes monitoring and optimization suggestions.
+
+- **Key Features:**
+  - Automated alerts and optimization suggestions via Slack or MS Teams
+  - Real-time monitoring of cluster health and performance
+  - Recommendations for scaling and improving efficiency
+
+#### [Komodor](https://komodor.com/)
+
+Komodor is a Kubernetes troubleshooting platform that focuses on diagnosing issues in clusters and optimizing performance.
+
+- **Key Features:**
+  - Automated insights into Kubernetes incidents and issues
+  - Troubleshooting guides and suggestions
+  - Integration with observability and monitoring tools
+
+### Frugal IT’s Position
+
+**Frugal IT** builds upon these existing solutions by offering a unique combination of **AI-powered documentation**, **human-in-the-loop optimization**, and **scalability recommendations** via tools like KEDA or Karpenter. 
+
+Our focus on **sustainability** and **cost-efficiency** sets us apart from other platforms, with the goal of reducing the environmental impact of cloud-native applications. Through a proactive approach to resource management, **Frugal IT** provides detailed insights and actionable recommendations to help businesses optimize Kubernetes clusters for both performance and sustainability.
 
 ## References
 

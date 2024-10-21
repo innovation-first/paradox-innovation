@@ -1,7 +1,7 @@
 ---
-title: 'Frugal IT'
-date: 2024-07-12T13:48:14+02:00
-summary: 'Frugal It Building Block'
+title: 'Frugal IT : Intelligent Automation for Kubernetes Applications'
+date: 2024-10-18T13:48:14+02:00
+summary: 'Unlock Intelligent Automation and Optimization for Kubernetes Applications'
 categories: 
 - Building Block
 tags:
@@ -13,19 +13,37 @@ authors:
 - Dimitri Tombroff
 ---
 
-# Frugal IT Software Suite
+## Unlock Intelligent Automation and Optimization for Kubernetes Applications
 
-In today's fast-paced digital landscape, managing cloud native applications is a significant challenge, often leading to expenses far exceeding initial projections. As we move towards a future where environmental sustainability and legislative compliance are paramount, designing frugal and efficient cloud solutions becomes essential.
+Managing cloud-native applications efficiently is critical for staying competitive. Kubernetes, the backbone of modern application orchestration, presents immense power but also complexity. Businesses struggle to balance performance, cost-efficiency, and sustainability when running large-scale Kubernetes clusters.
 
-Frugal IT is an innovative software suite designed to optimize Kubernetes applications, with a roadmap to extend support across all cloud-native architectures. 
+Our AI-powered Kubernetes optimization platform is designed to simplify and enhance how enterprises manage their Kubernetes applications. By combining advanced generative AI with human expertise, our platform goes beyond simple monitoring. We offer automated insights, scoring, and actionable recommendations to optimize applications for cost, carbon footprint, and performance.
 
-Our goal is to empower solution architects and platform administrators with the tools they need to manage costs, optimize resource utilization, and ensure sustainable operations.
+## Key Benefits
+
+### Automated Documentation & Scoring
+
+Our system leverages AI to analyze your Kubernetes applications, automatically generating detailed documentation and performance scores.
+
+### Human-in-the-Loop Optimization
+
+We capture insights from users to improve the AI’s understanding, ensuring that optimization suggestions align with business objectives.
+
+### Proactive Scaling & Cost Reduction
+
+Our AI recommends scaling actions to optimize resource usage, reducing costs and improving sustainability.
+
+### Sustainability Focus
+
+We help companies reduce their carbon footprint by identifying resource-hungry workloads and suggesting greener alternatives.
 
 ## Key Features
 
 Frugal IT proposes three main functions: the **inspector**, the **optimizer** and the **adviser**.
 
-![Frugal It Overview](frugal-it.png)
+<div style="text-align: center;">
+	<img src="./frugal-it.png" alt="Frugal IT Overview" style="width:30%;" />
+</div>
 
 ### Inspector : Understand your Costs
 
@@ -50,27 +68,21 @@ Obtain a "frugality score" to benchmark and improve your infrastructure’s effi
 
 Frugal IT is your partner in navigating the complexities of FinOps and GreenOps. By providing deep insights, actionable optimizations, and robust reporting, it helps you build cost-effective, sustainable, and compliant cloud solutions.
 
-![User experience and vertuous cycle](frugal-it-cycle.png)
+<div style="text-align: center;">
+	<img src="./frugal-it-cycle.png" alt="User experience and vertuous cycle" style="width:50%;" />
+</div>
 
-## How it works
+## References
 
-Frugal-It works using simple but innnovative principles. 
+Visit the in depth overview of frugal IT components:
 
-1. Your architecture is first discovered and understood by the frugal It AI-powewered assistant. You immediately benefit from a solid description and understanding of your architecture. This alleviates the need to rely on separate design and implementation 
-documents. What Frugal It describes is what has been deployed and run. 
-2. Frugal-It lets you provide additional information to describe timportant functional, contextual orthe expected service level agreements expected by the application. 
-3. Frugal-It collect real-time monitoring KPIs: costs, energy, carbon consumption estimations, and performance.
-4. That global knowledge is finally used to provide you with optimisation recommandation. 
-
-Ultimately Frugal-It helps you leveraging the best of cloud native elasticity, scaling on demand andpossibly up to completely shutting down parts or all your application  to stick to the expected usage. As you can expect, the costs and carbon footprint 
-can be dramatically reduced.  
-
-Refer to the [frugal-it inspector](/blogs/frugalit-inspector) and [frugal-it optimiser](/blogs/frugalit-optimiser) for a deeper technological overview. 
-
+- [frugal-it inspector](/blogs/frugalit-inspector)
+- [frugal-it optimiser](/blogs/frugalit-optimiser)
+- [frugal-it adviser](/blogs/frugalit-adviser)
 
 ## Contacts
 
-- lorenzo.gerardi@thalesgroup.com
+- dimitri.tombroff@thalesgroup.com
 - tanguy.jouannic@thalesgroup.com
 - jean-felix.berthiau@thalesgroup.com
 - gilles.poirot@thalesgroup.com

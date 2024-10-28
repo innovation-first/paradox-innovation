@@ -10,7 +10,7 @@ image: 'shared/ivan-liu-hu-pgSG9d2iNFc-unsplash.jpg'
 authors: 
 - Chanattan Sok
 - Laurent D'Orazio
-- Reyyan Tekkin
+- Reyyan Tekin
 - Dimitri Tombroff
 
 ---

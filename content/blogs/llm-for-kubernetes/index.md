@@ -12,7 +12,7 @@ tags:
 authors: 
 - Tanguy Jouannic
 - Lorenzo Girardi
-- Reyyan Tekkin
+- Reyyan Tekin
 image: 'shared/scott-webb-fTEFBwIELQ0-unsplash.jpg'
 ---
 

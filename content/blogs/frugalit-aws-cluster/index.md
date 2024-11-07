@@ -19,7 +19,7 @@ Before diving into this blog, let us introduce Fred. Fred isn’t your average w
 
 ![](Fred.png)
 
-Today, we asked Fred to provide a short synthetic blog to describe a real K8s clustered application running on AWS. The rest of this blog is Fred's content. He achieved this without any a priori knowledge.
+Today, we asked Fred to provide a short synthetic blog to describe a real K8s clustered application named 'Rift' running on AWS. The rest of this blog is Fred's content. He achieved this without any a priori knowledge.
 
 Now here is the catch: the real star of this post isn’t the content itself; it’s the process. Fred works tirelessly to extract, analyze, and summarize information so you don’t have to. Fred takes into account auto-dicovered data, external data (like environmental data should it advise you about electricity consumption), and interact with you to complete its knowledge with the essential business and usage facts required to fully grasp what your application is about. Fred is simple to use on any Kubernetes application.
 

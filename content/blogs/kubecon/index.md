@@ -14,34 +14,44 @@ authors:
 - Tanguy Jouannic
 ---
 
-This article explores how we have designed an AI assistant to address the complexities of Kubernetes, enhancing operational efficiency, security, compliance, and environmental sustainability.
-
 ## Introduction
 
-Kubernetes is a strategic technology for Thales group and Thales Services Numériques in particular. We maintain, like many, our own distribution (Kubernetes together with a number of key cloud-native technologies) to serve as common platform/sdk for our many data processing use cases. 
+Kubernetes is a strategic technology for Thales group and Thales Services Numériques in particular. 
+We maintain, like many, our own distribution (Kubernetes together with a number of key cloud-native technologies) 
+to serve as common platform/sdk for our many data processing use cases. 
 
-As part of an internal innovation project, we decided to tackle the issue of Kubernetes applications operational complexity, with a focus on a particular use case: frugality. How can we efficiently design, maintain, or improve kubernetes applications while ensuring their overall costs (both finops and greenops) are both understood and hopefully reduced, without sacrifying the expected functional requirements. 
+As part of an internal innovation project, we decided to tackle the issue of Kubernetes applications operational complexity, with a focus on a particular use case: frugality. How can we efficiently design, maintain, or improve kubernetes applications while ensuring their overall costs are understood and hopefully reduced, without sacrifying the expected functional requirements. These are tough questions. Despite all the well-known benefits of Kubernetes (standardization, declarative orchestration patterns, open communities etc.), mastering the exploding CNCF eco-system requires a multi-domain expertise that is out of reach or expensive for many companies.
+Worst, what is smart today is obsolete the year after. Architects are asked to produce frugal, scalable, secured, easy-to-maintain and easy-to-modernize solutions. 
+Needless to say, they need help.    
 
-These are tough questions. Despite all the well-known benefits of Kubernetes (standardization, declarative orchestration patterns, open communities etc.), mastering the exploding CNCF eco-system requires a multi-domain expertise that is out of reach or expensive for many companies.
-Worst, what is smart today is obsolete the year after. Architects are asked today to produce frugal, scalable, secured, easy-to-maintain and easy-to-modernize solutions. Needless to say, they need help.    
+Recognizing these challenges, we decided to leverage generative AI to develop an AI assistant, called *Fred*, to help our architects and administrators to manage their Kubernetes applications. In contrast to the many generative AI initiatives ([KoPylot](https://github.com/avsthiago/kopylot), [Kubert](https://mykubert.com/), [cast.ai](https://cast.ai/) to name a few), our focus is to tackle higher-level architectural considerations:  does my architecture conform to best practice eco-design recommandations ? how could I reduce my energy consumption ? Can you help me assess the data flow of my entire application ?
 
-Recognizing these challenges, we decided to leverage generative AI to develop an AI assistant, called *Fred*, to help our architects and administrators to manage their Kubernetes applications. 
-In contrast to the many generative AI initiatives (KoPylot, Kubert, cast.ai etc..), our focus is not to tackle devops operations such as diagnostic or troubleshooting but to tackle instead higher-level considerations:  does my architecture conform to best practice eco-design recommandations ? how could I reduce my energy consumption ? Can you help me assess the data flow of my entire application ?
+For this purpose, Fred features a modular multi-agent architecture that is well suited for building *domain-specific* experts. 
+By customizing this architecture, we have created an assistant capable of deep analysis, management, and optimization of Kubernetes clusters.
 
-Fred features a modular multi-agent architecture that is ideally suited for building domain-specific experts. By customizing this architecture, we have created an assistant capable of deep analysis, management, and optimization of Kubernetes clusters.
+<div style="text-align: center;">
+    <img src="Fred.png" alt="Fred Overview" width="90%">
+</div>
 
-This article presents an in-depth look at Fred's architecture and details how we have adapted it to meet the specific needs of Kubernetes management. In its current status, Fred provides automatic documentation and explanations of an application, 
-generate so-called eco-score reports for each components, and goes up to  provide actionable insights and optimizations. 
+Fred is a now an open source project composed of a python backend and a companion UI, highlighed next. 
+<div style="text-align: center;">
+    <img src="dialog1.png" alt="Fred Overview" style="width: 50%; margin-right: 10px;">
+</div>
 
-Our development process includes extensive data engineering focused on Kubernetes components, enabling Fred to perform in-context learning and adapt to various operational scenarios. Importantly, Fred emphasizes identifying and implementing optimizations to reduce operational costs, energy consumption, and carbon footprint. By concentrating on these aspects, Fred not only enhances efficiency but also contributes to sustainable practices in multiple environments, including cloud and edge computing.
+This article presents an in-depth look at Fred's architecture and details how we have adapted it to meet the specific needs of Kubernetes management. 
+In its current status, Fred provides automatic documentation and explanations of an kubernetes application, 
+generate so-called eco-score reports for each components, and goes up to provide actionable insights and optimizations. 
 
-Moreover, certain expert agents within Fred have been customized to address specific use cases within Thales, ensuring that our solution is both technologically advanced and highly relevant to real-world industrial contexts.
+Our development process includes extensive data engineering focused on Kubernetes components, enabling Fred to perform in-context learning and adapt to various operational scenarios. Importantly, Fred emphasizes identifying and implementing optimizations to reduce operational costs, energy consumption, and carbon footprint. 
 
 ## Fred's Novel Architecture
 
-Drawing from contemporary AI literature, Fred leverages a modular multi-agent system that integrates planning, chain-of-thought reasoning, specialized expertise, and secure tool usage to provide comprehensive solutions. This architecture is engineered to address intricate tasks by decomposing them into manageable steps, assigning them to domain-specific experts, and ensuring that the outcomes meet the user's objectives. This approach aligns with the [Plan-and-Solve Prompting](https://arxiv.org/pdf/2305.04091) prompting method, which emphasizes creating structured plans followed by step-by-step solutions to enhance reasoning capabilities in large language models [Wang et al., 2023].
+Drawing from contemporary AI literature, Fred leverages a modular multi-agent system that integrates planning, chain-of-thought reasoning, specialized expertise, and secure tool usage to provide comprehensive solutions. This architecture is engineered to address intricate tasks by decomposing them into manageable steps, assigning them to domain-specific experts, and ensuring that the outcomes meet the user's objectives. This approach aligns with the [Plan-and-Solve Prompting](https://arxiv.org/pdf/2305.04091) prompting method, which emphasizes creating structured plans followed by step-by-step solutions to enhance reasoning capabilities in large language models.
 
-![workflow](fred_workflow.png)
+<div style="text-align: center;">
+    <img src="fred_workflow.png" alt="Fred Workflow" width="90%">
+</div>
+
 
 ### Planning Agent: Crafting Tailored Strategies
 
@@ -79,20 +89,20 @@ Implementing Fred within Kubernetes environments presents a series of significan
 
 ### Data Volume and Complexity
 
-Kubernetes clusters involve an large amount of data, primarily YAML configuration files that define the state and behavior of every component within the system. These YAML files are not only extensive but also highly intricate, encompassing detailed specifications for deployments, services, configurations, and policies. The sheer volume and complexity of this data pose a substantial challenge for large language models (LLMs) that power Fred's expert agents.
-
-The extensive data can overwhelm LLMs, leading to several issues:
+Kubernetes clusters involve an large amount of data, primarily YAML configuration files that define the state and behavior of every component within the system. These YAML files are not only extensive but also highly intricate, encompassing detailed specifications for deployments, services, configurations, and policies. The sheer volume and complexity of this data pose a substantial challenge for large language models (LLMs) that power Fred's expert agents. Without a refined strategy Fred would suffer from:
 
 - **Decreased Accuracy**: The model may struggle to maintain precision when processing large datasets.
 - **Loss of Specificity**: Important details might be overlooked or generalized, reducing the effectiveness of analyses.
 - **Hallucinations**: The model might generate information that is not present in the input data, leading to unreliable outputs.
 - **Context Window Limitations**: The vast amount of information exceeds the context window of LLMs, making it difficult to process raw data effectively.
 
-These factors collectively hinder Fred's ability to accurately analyze and interpret Kubernetes configurations, thereby limiting its effectiveness in managing and optimizing Kubernetes environments.
+These factors collectively hinder Fred's ability to accurately analyze and interpret Kubernetes configurations, 
+thereby limiting its effectiveness in managing and optimizing Kubernetes environments.
 
 ### Diversity of Domains to Explore
 
-Kubernetes management is inherently multidisciplinary, spanning a vast array of domains that require specialized knowledge and expertise. While the following are key examples, they represent only a subset of the broader spectrum of considerations involved in effectively managing Kubernetes environments:
+Kubernetes management is inherently multidisciplinary, spanning a vast array of domains that require specialized knowledge and expertise. 
+While the following are key examples, they represent only a subset of the broader spectrum of considerations involved in effectively managing Kubernetes environments:
 
 - **Kubernetes System Internals**: Understanding the core functionalities, components, and operational mechanics of Kubernetes.
 - **Scaling and Performance Optimization**: Ensuring workloads and clusters can scale efficiently to meet demand while maintaining performance.
@@ -106,7 +116,8 @@ The breadth of these domains makes it challenging for a single AI model or agent
 
 ### Lack of Contextual Information
 
-Optimizing Kubernetes operations requires more than technical proficiency; it necessitates a deep understanding of the organization's unique business context and how users interact with the system. Without this contextual insight, even advanced AI models may offer recommendations that miss the mark. Critical contextual elements include:
+Optimizing Kubernetes operations requires more than technical proficiency; it necessitates a deep understanding of the organization's unique business 
+context and how users interact with the system. Without this contextual insight, even advanced AI models may offer recommendations that miss the mark. Critical contextual elements include:
 
 - **Service Level Agreements (SLAs)**: Defined performance and availability metrics that must be met to ensure contractual compliance.
 - **Enterprise Requirements and Best Practices**: Organizations often establish internal guidelines dictating how systems should be managed. These might include recommendations for cost management, energy conservation, or performance benchmarks specific to their business priorities.
@@ -119,38 +130,28 @@ AI models, including large language models, typically lack access to this propri
 ## Starting with Data Engineering
 
 As always in solving complex data problems, a careful and initial data engineering effort is the way to go.
-We started by constructing a foundational knowledge model of our target kubernetes application, provided in turn to Fred. 
-This model helps each expert in using its specialized tools effectively, to gather specific, detailed information as needed.
+We started by making Fred construct a foundational knowledge model of our target kubernetes application. This first phase is automatic. 
+This model helps each expert in using its specialized tools effectively, to gather additional specific, detailed information as needed.
 
 Note that studies like Li et al. (2023) have highlighted that while LLMs are capable of handling extensive token sequences, they often struggle to maintain high performance in complex, context-rich scenarios. This is why the focus of our data engineering effort consists mostly in *reducing* the information volume and focusing on critical content. We then mitigate issues related to context window limitations and maintain the models' accuracy and relevance. This overall approach ensures that Fred's expert agents can process complex information without being hindered by the limitations of current LLM technology.
 
-Here is how it works: Kubernetes clusters relies extensively on intricate YAML configuration files that define every component and behavior within the system. 
-Fred first collects and transform it into a high-level overview of the cluster's architecture and workloads. 
+Here is how it works in practice: Fred first collects by kubernetes API calls a sound understanding of the application. It then transforms it into a high-level overview of the cluster's architecture and workloads. By presenting its experts with this global topology, Fred enable them to comprehend the relationships and dependencies between different components. 
 
-By presenting the experts with this global topology, we enable them to comprehend the relationships and dependencies between different components. This holistic view is critical for effective analysis, as it allows the agents to identify areas of interest and potential issues within the cluster.
+Fred then iteratively condense and improve its topology model and focuses on essential information. Sometimes by gathering information 
+using specific API points (config maps, kubernetes operators API, external sources). In turn this further reduces the cognitive load on each expert agents. 
 
-### Reduce; Improve; Repeat
-
-Directly processing the full scope of Kubernetes data with Large Language Models (LLMs) would overwhelm these models, leading to decreased accuracy and potential errors such as hallucinations or loss of specificity. Fred iteratively condense and
-improve its topology model and focuses on essential information.  In turn this reduces the cognitive load on each expert agents. 
-
-We collaborate closely with our Kubernetes experts and support teams to identify key data points, such as container images, software versions, scaling parameters like replica counts, ingress configurations, etc. Extracting and summarizing this critical information provides the agents with a concise yet comprehensive snapshot of the system's operational state. We proceed with the same approach for the key cloud-native components we heavily rely on in our projects. For example Kafka, Opensearch, Minio, Clickouse, kKycloack (ato name a few) are often used. We provide Fred with insights for each to help our users to focus on their most important and critical characteristics.  
-
-### Enabling Targeted Information Gathering with Specialized Tools
-
-With this solid initial understanding of the cluster's topology, Fred's expert agents are now better positioned to leverage their domain-specific tools to gather additional, detailed information on-demand. This two-step approach—first obtaining a global overview, then drilling down into specifics—allows the agents to operate efficiently and effectively. They can focus their tools on areas that require deeper analysis, avoiding unnecessary data processing and ensuring that the information gathered is relevant and actionable.
+To implement this strategy, we collaborate closely with our company Kubernetes experts and support teams to identify key data points, such as container images, software versions, scaling parameters like replica counts, ingress configurations, etc. Extracting and summarizing this critical information provides the agents with a concise yet comprehensive snapshot of the system's operational state. We proceed with the same approach for the key cloud-native components we heavily rely upon in our projects. For example Kafka, Opensearch, Minio, Clickouse, kKKeycloackycloack (to name just a few) are often used. We provide Fred with insights for each so that it can further complete its knowledge.  
 
 ### Hierarchical Summarization for Multi-Level Insights
 
-To facilitate this process, we implemented a hierarchical, or pyramidal, summarization strategy. Through advanced LLM engineering techniques, we generate natural language overviews at multiple levels of abstraction. We start by creating summaries for individual workloads, then aggregate these into summaries for namespaces, and finally compile a cluster-wide overview. This multi-tiered representation enables Fred's specialized expert agents to navigate from broad overviews to specific details seamlessly. It enhances their ability to identify patterns, anomalies, and areas of concern within the cluster.
-
-### Aligning with Contemporary AI Research
-
-Our data engineering strategies are informed by recent findings in AI research. Studies like Li et al. (2023) have highlighted that while LLMs are capable of handling extensive token sequences, they often struggle to maintain high performance in complex, context-rich scenarios. By strategically reducing the data volume and focusing on critical content, we mitigate issues related to context window limitations and maintain the models' accuracy and relevance. This approach ensures that Fred's expert agents can process complex information without being hindered by the limitations of current LLM technology.
+To facilitate this process, we implemented a hierarchical, or pyramidal, summarization strategy. Through advanced LLM engineering techniques, 
+we generate natural language overviews at multiple levels of abstraction. We start by creating summaries for individual workloads (deployments, statefulsets, jobs etc..), 
+then aggregate these into summaries for namespaces, and finally compile a cluster-wide overview. This multi-tiered representation enables Fred's specialized expert agents to navigate from broad overviews to specific details seamlessly. It enhances their ability to identify patterns, anomalies, and areas of concern within the cluster.
 
 ## Fred Specialized Expert Agents
 
-Fred's modular architecture includes specialized agents, each designed to address specific domains within Kubernetes management. By leveraging tailored tools and knowledge bases, these agents deliver detailed insights and actionable recommendations. This section introduces the current agents and their unique capabilities.
+We just described the overall logic of Fred internal workflow. Let us now describe the current specialized agents, 
+each designed to address specific domains within Kubernetes management. Fred is of course designed to facilitate the plugin of additional experts.
 
 ### Kubernetes Technical Expert
 
@@ -198,7 +199,7 @@ This agent supports both environmental goals and cost savings by optimizing ener
 
 The **Scaling Expert** optimizes workload scalability and resource efficiency within Kubernetes environments.
 
-- **Dynamic Scaling Strategies**: Leverages KEDA (Kubernetes Event-Driven Autoscaling) to adjust resources based on workload demand.
+- **Dynamic Scaling Strategies**: Leverages [Keda](https://keda.sh/) Kubernetes Event-Driven Autoscaling to adjust resources based on workload demand.
 - **Human-in-the-Loop Validation**: Ensures administrators can review and approve scaling actions before execution.
 - **Collaborative Optimization**: Works alongside other agents to balance scalability with sustainability.
 
@@ -208,14 +209,24 @@ The **Scaling Expert** optimizes workload scalability and resource efficiency wi
 
 This agent enhances system responsiveness and operational efficiency by aligning resource allocation with demand.
 
+{{< admonition note "Important Notice" >}}
+This topic is our current hot implementation topic. Our goal is to have Fred generate precise scale up and own configuration leveraging technologies such as [Keda](https://keda.sh/) and [Karpenter](https://karpenter.sh/).
+Configuring a kubernetes application with these technologies can yield to significant costs and energy reductions. Yet it is rarely put in place, to our view simply because of the
+overall complexity and expertise level required. 
+{{< /admonition >}}
+
 ### Collaborative Expertise
 
-Fred’s agents collaborate through the Supervisor Agent to address complex, multi-domain challenges. For example, the GreenOps Expert and Scaling Expert might jointly optimize resource usage while minimizing energy consumption, delivering solutions that are both efficient and sustainable.
+Last, Fred’s agents collaborate through the Supervisor Agent to address complex, multi-domain challenges. 
+For example, the GreenOps Expert and Scaling Expert might jointly optimize resource usage while minimizing 
+energy consumption, delivering solutions that are both efficient and sustainable.
 
 ## Incorporating Contextual Facts for Enhanced Decision-Making
 
 Technical data often falls short in capturing the full spectrum of considerations necessary for optimal decision-making. 
-To bridge this gap, we have implemented a mechanism that allows users, developers, and architects to input **Facts**—natural language annotations linked to specific components within the system, such as workloads, namespaces, or the entire cluster. These Facts provide crucial contextual information that enhances Fred's ability to deliver tailored and accurate recommendations.
+To bridge this gap, we have implemented a mechanism that allows users, developers, and architects to input **Facts**—natural 
+language annotations linked to specific components within the system, such as workloads, namespaces, or the entire cluster. 
+These Facts provide crucial contextual information that enhances Fred's ability to deliver tailored and accurate recommendations.
 
 These Facts encompass a wide range of contextual information:
 
@@ -227,13 +238,16 @@ These Facts encompass a wide range of contextual information:
 
 ### Enhancing Expert Agents' Reasoning Capabilities
 
-By integrating these Facts into Fred's reasoning process, the expert agents gain a deeper understanding of the operational environment. This additional layer of context enables them to make more informed and precise recommendations, ensuring that optimization strategies are not only technically sound but also aligned with organizational objectives.
+By integrating these Facts into Fred's reasoning process, the expert agents gain a deeper understanding of the operational environment. 
+This additional layer of context enables them to make more informed and precise recommendations, ensuring that optimization strategies are not only technically sound but also aligned with organizational objectives.
 
-For example, if a workload is annotated with a Fact indicating that it handles sensitive financial data subject to stringent compliance regulations, the Security Expert Agent will prioritize recommendations that enhance data protection and regulatory compliance over purely performance-based optimizations.
+For example, if a workload is annotated with a Fact indicating that it handles sensitive financial data subject to stringent compliance regulations, 
+the Security Expert Agent will prioritize recommendations that enhance data protection and regulatory compliance over purely performance-based optimizations.
 
 ### Improving Accuracy and Personalization
 
-The inclusion of Facts helps to prevent generic or irrelevant suggestions that might arise from a lack of contextual awareness. By tailoring advice to the specific needs and constraints of different components, Fred ensures that optimizations are aligned with the organization's priorities.
+The inclusion of Facts helps to prevent generic or irrelevant suggestions that might arise from a lack of contextual awareness. 
+By tailoring advice to the specific needs and constraints of different components, Fred ensures that optimizations are aligned with the organization's priorities.
 
 This approach offers several benefits:
 
@@ -243,9 +257,11 @@ This approach offers several benefits:
 
 ### Aligning AI with Human Expertise
 
-Our approach aligns with contemporary AI research emphasizing the importance of contextual information in effective decision-making. By enabling users to provide natural language Facts, we create a collaborative environment where human expertise complements AI capabilities. Users contribute their domain knowledge and strategic insights, while Fred processes this information alongside technical data to generate holistic recommendations.
+Our approach aligns with contemporary AI research emphasizing the importance of contextual information in effective decision-making. 
+By enabling users to provide natural language Facts, we create a collaborative environment where human expertise complements AI capabilities. Users contribute their domain knowledge and strategic insights, while Fred processes this information alongside technical data to generate holistic recommendations.
 
 This synergy between human input and AI processing enhances the overall effectiveness of Kubernetes management, ensuring that both technical and non-technical considerations are accounted for.
+We believe it is one of our work original contribution.
 
 ## Case Study: Fact-Driven Optimization
 
@@ -271,19 +287,67 @@ This informs the Security Expert Agent to:
 
 ## Conclusions
 
-Fred simplifies Kubernetes management through a modular multi-agent architecture designed for specialized analysis, optimization, and decision-making. By addressing technical, theoretical, sustainability, and scalability challenges, Fred delivers actionable insights tailored to the complexities of Kubernetes environments.
+Fred simplifies Kubernetes management through a modular multi-agent architecture designed for specialized analysis, optimization, and decision-making. 
+By addressing technical, theoretical, sustainability, and scalability challenges, Fred delivers actionable insights tailored to the complexities of Kubernetes environments.
 
-Its collaborative framework, supported by human-in-the-loop interactions and enriched with contextual Facts, ensures that recommendations align with both operational and strategic goals. As Kubernetes continues to evolve, Fred’s adaptability and modularity position it as a valuable tool for improving efficiency, sustainability, and innovation in cloud computing.
+Its collaborative framework, supported by human-in-the-loop interactions and enriched with contextual Facts, ensures that recommendations align with both operational 
+and strategic goals. As Kubernetes continues to evolve, Fred’s adaptability and modularity position it as a valuable tool for improving efficiency, sustainability, 
+and innovation in cloud computing.
 
 The integration of Facts not only improves immediate decision-making but also contributes to continuous improvement over time. As more contextual information is added, Fred's expert agents refine their understanding of the operational environment, leading to progressively better recommendations. This mechanism allows for dynamic updates to the system's context as business priorities, regulatory environments, or technical constraints evolve, ensuring that Fred's guidance remains relevant and up-to-date.
 
-Moreover, this mechanism allows for dynamic updates to the system's context as business priorities, regulatory environments, or technical constraints evolve, ensuring that Fred's guidance remains relevant and up-to-date.
+Moreover, this mechanism allows for dynamic updates to the system's context as business priorities, regulatory environments, 
+or technical constraints evolve, ensuring that Fred's guidance remains relevant and up-to-date.
 
 Fred exemplifies how generative AI can transform Kubernetes management, offering a scalable, future-ready solution for modern IT infrastructures.
 
-After one year of development, Fred is now used internally on real application. We decided to open source it, together with a UI. This brings us two
+After one year of development, Fred is now used internally on real applications. We decided to open source it, together with a companion UI. This brings us two
 benefits. First it allows us to 
-focus on dedicated Thales experts yet welcome third-party contributions. Second, the current python langchain langraph frameworks are valuable yet
-lack some flexibility. The innovative design of Fred's architecture—comprising the Planning Agent, Supervisor Agent, specialized expert agents, and the Validation Agent—ensures a collaborative and iterative approach to problem-solving. Such a design pattern allows for tasks to be decomposed into manageable steps, assigned to the most suitable experts, and refined through feedback loops until the user's objectives are fully met. Making it easy to incorporate human in the loop is also a key design driver. 
+focus on dedicated Thales specific experts yet welcome third-party contributions. Second, our view is that the current python langchain langraph frameworks are valuable yet
+lack some flexibility in designing such complete agentic solution. The modern design of Fred's architecture—comprising the Planning Agent, Supervisor Agent, specialized expert agents, and the Validation Agent—ensures a collaborative and iterative approach to problem-solving. Although our goal is not to develop yet another generative AI framework, we woud welcome 
+external collborations on such a real use case to in turn, help identifying potential improvments in the open source communities 
 
-Fred, both the python backend and tue UI components are in the process of being outsourced as open source components.
+## Annex: State-of-the-Art
+
+In this chapter, we cite the papers we and briefly explain why we followed or did not follow their findings:
+
+- **An LLM Compiler for Parallel Function Calling**  
+  [05/06/2024 - [Paper Link](https://arxiv.org/pdf/2312.04511)]  
+  Summary: The recent advancements in large language models (LLMs) have enabled the authors to call external functions to overcome limitations like knowledge cutoffs and poor arithmetic skills, allowing them to handle more complex tasks. Current methods, however, rely on sequential function calls, which can lead to high latency, increased costs, and potential inaccuracies. LLMCompiler addresses these issues by enabling parallel function execution through a three-component system: a Function Calling Planner for execution strategy, a Task Fetching Unit for dispatching tasks, and an Executor for parallel execution. Testing shows that LLMCompiler significantly reduces latency (up to 3.7× faster), lowers costs (up to 6.7×), and improves accuracy (by up to 9%) compared to sequential methods like ReAct.
+
+- **Language Agent Tree Search (LATS): Unifying Reasoning, Acting, and Planning in Language Models**  
+  [06/10/2023 - [Paper Link](https://arxiv.org/pdf/2310.04406)]  
+  Summary: This paper presents Language Agent Tree Search (LATS), a novel framework that enhances language models (LMs) for decision-making by integrating Monte Carlo Tree Search with LM-driven value functions and self-reflection. Unlike traditional LM-based agents limited by basic acting processes, LATS enables more effective reasoning, planning, and adaptive problem-solving through external feedback. Experimental results demonstrate LATS’s versatility and efficacy across various tasks, including programming, interactive question-answering, web navigation, and math, where it achieves high accuracy and competitive performance, notably surpassing state-of-the-art benchmarks on HumanEval for programming with GPT-4 and performing effectively in web navigation tasks with GPT-3.5.
+
+- **Plan-and-Solve Prompting: Improving Zero-Shot Chain-of-Thought Reasoning by Large Language Models**  
+  [26/05/2023 - [Paper Link](https://arxiv.org/pdf/2305.04091)]  
+  Summary: This study explores enhancements to zero-shot prompting for large language models (LLMs) in tackling multi-step reasoning tasks. While Zero-shot Chain-of-Thought (CoT) prompting has demonstrated effectiveness by encouraging models to “think step by step,” it still struggles with calculation, missing-step, and semantic misunderstanding errors. To address these issues, the authors introduce Plan-and-Solve (PS) prompting, a method that first creates a structured plan dividing tasks into smaller steps, followed by a step-by-step solution process. An improved version, PS+ prompting, adds further detailed instructions to reduce errors and improve reasoning quality.
+
+- **ReWOO: Decoupling Reasoning from Observations for Efficient Augmented Language Models**  
+  [23/05/2023 - [Paper Link](https://arxiv.org/pdf/2305.18323)]  
+  Summary: This study introduces ReWOO (Reasoning WithOut Observation), a modular paradigm for Augmented Language Models (ALMs) that separates the reasoning process from external observations, significantly enhancing computational efficiency. Unlike traditional ALMs, which interleave reasoning with tool-based observations and suffer from redundant prompts, ReWOO reduces token usage, achieving 5× token efficiency and a 4% accuracy boost on multi-step reasoning tasks like HotpotQA. It also enhances robustness in cases of tool failure and supports offloading reasoning from large models (e.g., GPT-3.5) to smaller models (e.g., 7B LLaMA), promoting scalable and efficient ALM systems. The study provides code and data for replication.
+
+- **ReAct: Synergizing Reasoning and Acting in Language Models**  
+  [10/03/2023 - [Paper Link](https://arxiv.org/pdf/2210.03629)]  
+  Summary: This paper introduces ReAct, a method using large language models (LLMs) to generate interleaved reasoning and actions, enhancing task performance and interpretability. By combining reasoning traces with task-specific actions, ReAct improves over traditional methods in tasks like question answering and decision making, reducing hallucinations and error propagation, and outperforming baseline models in both success rate and human interpretability.
+
+- **Large Language Models are Zero-Shot Reasoners**  
+  [29/01/2023 - [Paper Link](https://arxiv.org/pdf/2205.11916)]  
+  Summary: This study demonstrates that large language models (LLMs) can achieve high performance in complex reasoning tasks using zero-shot prompting, simply by adding “Let’s think step by step” before responses. This approach, called Zero-shot-CoT, significantly improves accuracy across diverse reasoning benchmarks without using task-specific examples. Results show marked performance gains on arithmetic, symbolic, and logical reasoning tasks, highlighting LLMs’ potential for broad zero-shot reasoning capabilities and suggesting the need to explore these abilities before relying on fine-tuning or few-shot learning.
+
+- **Chain-of-Thought Prompting Elicits Reasoning in Large Language Models**  
+  [10/01/2023 - [Paper Link](https://arxiv.org/pdf/2201.11903)]  
+  Summary: This study demonstrates that using “chain-of-thought” prompting—providing examples of intermediate reasoning steps—significantly enhances large language models’ reasoning abilities. Testing on three models showed marked improvements in arithmetic, commonsense, and symbolic tasks, with notable gains, such as state-of-the-art performance on the GSM8K math benchmark when using only a few exemplars.
+
+- **Inner Monologue: Embodied Reasoning through Planning with Language Models**  
+  [12/07/2022 - [Paper Link](https://arxiv.org/abs/2207.05608)]  
+  Summary: Recent studies show that Large Language Models (LLMs) can enhance robot planning and interaction by using natural language feedback to improve reasoning in embodied tasks. This research demonstrates that LLMs, without additional training, can leverage feedback sources like success detection and scene descriptions to form an “inner monologue”, enhancing their ability to complete complex tasks in both simulated and real-world environments.
+
+- **Language Models as Zero-Shot Planners: Extracting Actionable Knowledge for Embodied Agents**  
+  [08/03/2022 - [Paper Link](https://arxiv.org/pdf/2201.07207)]  
+  Summary: This paper explores whether large language models (LLMs) can generate actionable steps for high-level tasks in interactive environments. While previous methods relied on explicit, step-by-step training, the authors find that sufficiently large, pre-trained LLMs can break down complex tasks into intermediate plans when prompted correctly. However, these plans often don’t translate directly to executable actions. The authors propose a solution that refines these plans based on demonstrations, improving action execution in the VirtualHome environment. Human evaluations highlight a balance between execution accuracy and task correctness, indicating potential for LLMs in practical task planning.
+
+- **GPT3-to-plan: Extracting plans from text using GPT-3**  
+  [14/06/2021 - [Paper Link](https://arxiv.org/pdf/2106.07131)]  
+  Summary: This paper examines using GPT-3 for extracting structured workflows from natural language descriptions in industries like finance. Initial results indicate that GPT-3 performs comparably to existing plan extraction methods, suggesting its potential for automating repetitive procedural tasks.
+

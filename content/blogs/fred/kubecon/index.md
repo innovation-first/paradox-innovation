@@ -143,8 +143,6 @@ using specific API points (config maps, kubernetes operators API, external sourc
 
 To implement this strategy, we collaborate closely with our company Kubernetes experts and support teams to identify key data points, such as container images, software versions, scaling parameters like replica counts, ingress configurations, etc. Extracting and summarizing this critical information provides the agents with a concise yet comprehensive snapshot of the system's operational state. We proceed with the same approach for the key cloud-native components we heavily rely upon in our projects. For example Kafka, Opensearch, Minio, Clickouse, kKKeycloackycloack (to name just a few) are often used. We provide Fred with insights for each so that it can further complete its knowledge.  
 
-### Hierarchical Summarization for Multi-Level Insights
-
 To facilitate this process, we implemented a hierarchical, or pyramidal, summarization strategy. Through advanced LLM engineering techniques, 
 we generate natural language overviews at multiple levels of abstraction. We start by creating summaries for individual workloads (deployments, statefulsets, jobs etc..), 
 then aggregate these into summaries for namespaces, and finally compile a cluster-wide overview. This multi-tiered representation enables Fred's specialized expert agents to navigate from broad overviews to specific details seamlessly. It enhances their ability to identify patterns, anomalies, and areas of concern within the cluster.

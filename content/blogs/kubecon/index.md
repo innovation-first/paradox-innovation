@@ -150,65 +150,67 @@ Our data engineering strategies are informed by recent findings in AI research. 
 
 ## Fred Specialized Expert Agents
 
-Each Fred expert agent is designed to tackle specific domains, leveraging tailored tools and knowledge bases to provide in-depth analysis and actionable recommendations. 
-This chapter briefly presents our four current agents. 
+Fred's modular architecture includes specialized agents, each designed to address specific domains within Kubernetes management. By leveraging tailored tools and knowledge bases, these agents deliver detailed insights and actionable recommendations. This section introduces the current agents and their unique capabilities.
 
 ### Kubernetes Technical Expert
 
-The **Kubernetes Technical Expert** is in charge of providing deep technical insights into the Kubernetes cluster. This expert is typically the one you expect from
-any generative AI K8 assistant.
+The **Kubernetes Technical Expert** focuses on providing precise diagnostics and troubleshooting within Kubernetes clusters. 
 
-![technical expert](technical_expert.png)
+- **Simplified Kubernetes API Access**: Queries Kubernetes APIs to retrieve raw YAML object definitions for deployments, services, and configurations.
+- **Current Knowledge Integration**: References up-to-date documentation and community resources for accurate recommendations.
+- **ReAct Framework**: Utilizes structured reasoning to assess misconfigurations, deprecated API usage, and optimization opportunities.
 
-- **ReAct Architecture**: Utilizing the Reasoning and Acting framework, the expert systematically approaches problem-solving by reasoning about the cluster's state and taking appropriate actions.
-- **Simplified Kubernetes API Access**: Through specialized tools, it can query a simplified version of the Kubernetes API, allowing it to retrieve full definitions of Kubernetes objects in their raw YAML format. This access enables the expert to delve into the specifics of deployments, services, configurations, and more.
-- **Web Browsing**: The expert can also browse the web to reference the latest documentation, community discussions, or known issues, ensuring that its recommendations are up-to-date with current best practices.
+<div style="text-align: center;">
+    <img src="technical_expert.png" alt="Technical Expert" width="70%">
+</div>
 
-The Kubernetes Technical Expert provides technical diagnostics and troubleshooting. By analyzing the raw configurations and current state of the cluster, it can identify misconfigurations, deprecated API usages, or potential areas for optimization. Its ability to access detailed object definitions allows for a granular examination of the cluster, making it a useful tool for administrators.
+This agent delivers granular analyses of cluster components, aiding administrators in identifying and addressing technical issues efficiently.
 
 ### Theoretical Kubernetes Expert
 
-Complementing the technical expertise, the **Theoretical Kubernetes Expert** focuses on aligning the cluster's configuration with established best practices 
-and theoretical guidelines. This expert brings a wealth of knowledge from official documentation and theoretical frameworks to inform its analyses.
+The **Theoretical Kubernetes Expert** ensures cluster configurations align with best practices and theoretical guidelines.
 
-![theoretical expert](theoretical_expert.png)
+- **Cluster Topology Insight**: Builds on a high-level understanding of the cluster’s architecture to evaluate design adherence.
+- **Guideline-Driven Analysis**: Employs Kubernetes documentation and best practices as a knowledge base, using Retrieval Augmented Generation (RAG) for precise recommendations.
+- **Context-Aware Reasoning**: Identifies deviations from standards and provides actionable guidance.
 
-- **Cluster Topology In-Context**: Similar to the technical expert, it begins with a comprehensive understanding of the cluster's topology.
-- **Retrieval Augmented Generation (RAG)**: It leverages a RAG approach with the Kubernetes documentation serving as its knowledge base. This integration enables the expert to provide informed recommendations grounded in official guidelines and best practices.
-- **ReAct Architecture and Web Search**: Utilizing the ReAct framework, the expert can reason through complex scenarios and perform web searches to gather additional information or clarify ambiguities.
+<div style="text-align: center;">
+    <img src="theoretical_expert.png" alt="Theoretical Expert" width="70%">
+</div>
 
-The Theoretical Kubernetes Expert excels in ensuring that the cluster adheres to recommended standards and practices. It can identify deviations from guidelines, suggest improvements, and provide explanations based on authoritative sources. This expert is particularly valuable for compliance, training, and aligning operations with industry standards.
+This expert is particularly valuable for compliance and for enhancing system maintainability through alignment with theoretical frameworks.
 
 ### GreenOps Expert
 
-The **GreenOps Expert** addresses the growing need for sustainable and energy-efficient Kubernetes operations. Focusing on reducing the carbon footprint of the system, this expert provides insights and recommendations to make the cluster more environmentally friendly.
+The **GreenOps Expert** addresses sustainability by focusing on reducing the cluster's energy consumption and carbon footprint.
 
-![greenops expert](greenops_expert.png)
+- **Energy Data Analysis**: Utilizes tools like Kepler probes to access and analyze energy consumption metrics at the node and workload levels.
+- **Energy Mix Insights**: Incorporates information on renewable versus non-renewable energy sources to suggest eco-friendly optimizations.
+- **Targeted Recommendations**: Proposes workload adjustments and scheduling strategies to balance performance with sustainability.
 
-- **Energy Consumption Analysis**: Equipped with tools to access data from **Kepler probes** within the cluster, the expert can analyze detailed time-series data on energy consumption at various levels, including nodes and workloads.
-- **Energy Mix Data Access**: Through additional APIs and tooling, it can retrieve information about the energy mix (e.g., renewable vs. non-renewable sources) powering the data centers or edge locations where the cluster operates.
-- **ReAct Architecture**: The expert uses the ReAct framework to reason about energy consumption patterns and suggest actionable strategies for optimization.
+<div style="text-align: center;">
+    <img src="greenops_expert.png" alt="Greenop Expert" width="70%">
+</div>
 
-By analyzing consumption data and understanding the energy sources, the GreenOps Expert can recommend workload adjustments, scheduling changes, or configuration tweaks that reduce energy usage. This not only contributes to environmental sustainability but can also result in cost savings.
+This agent supports both environmental goals and cost savings by optimizing energy use.
 
 ### Scaling Expert
 
-The **Scaling Expert** is dedicated to optimizing the scalability and performance of workloads within the Kubernetes cluster. 
-Leveraging **KEDA (Kubernetes Event-Driven Autoscaling)** technology, this expert ensures that applications can efficiently scale in response to demand while minimizing resource waste.
+The **Scaling Expert** optimizes workload scalability and resource efficiency within Kubernetes environments.
 
-![scaling expert](scaling_expert.png)
+- **Dynamic Scaling Strategies**: Leverages KEDA (Kubernetes Event-Driven Autoscaling) to adjust resources based on workload demand.
+- **Human-in-the-Loop Validation**: Ensures administrators can review and approve scaling actions before execution.
+- **Collaborative Optimization**: Works alongside other agents to balance scalability with sustainability.
 
+<div style="text-align: center;">
+    <img src="scaling_expert.png" alt="Scaling Expert" width="70%">
+</div>
 
-- **Cluster Topology and KEDA Knowledge Base**: The expert takes the cluster topology in-context and utilizes a RAG approach with the KEDA documentation to inform its scaling strategies.
-- **Simplified KEDA Functions**: Through a set of simplified KEDA functions, it can implement scaling actions, adjusting the number of replicas or resources allocated to workloads based on defined metrics or events.
-- **Human-in-the-Loop Interaction**: Before executing any scaling actions, the expert incorporates a human-in-the-loop process. This ensures that administrators have the opportunity to review and approve changes, maintaining control over critical operations.
-- **ReAct Architecture**: Utilizing the ReAct framework, the expert can reason about current workload demands and predict scaling needs.
+This agent enhances system responsiveness and operational efficiency by aligning resource allocation with demand.
 
-The Scaling Expert enhances the cluster's ability to respond dynamically to changing workloads. By efficiently scaling applications up or down, it helps maintain performance during peak demand while reducing resource usage during low-traffic periods. This expert contributes to both operational efficiency and cost-effectiveness, aligning resource allocation with actual needs.
+### Collaborative Expertise
 
-### Enhancing Collaboration Among Experts
-
-An essential aspect of Fred's architecture is the ability of these specialized experts to collaborate. By sharing insights and findings through the Supervisor Agent, they can collectively address complex issues that span multiple domains. For example, the Scaling Expert and the GreenOps Expert might work together to optimize resource usage while minimizing energy consumption, providing solutions that are both efficient and sustainable.
+Fred’s agents collaborate through the Supervisor Agent to address complex, multi-domain challenges. For example, the GreenOps Expert and Scaling Expert might jointly optimize resource usage while minimizing energy consumption, delivering solutions that are both efficient and sustainable.
 
 ## Incorporating Contextual Facts for Enhanced Decision-Making
 
@@ -245,7 +247,7 @@ Our approach aligns with contemporary AI research emphasizing the importance of 
 
 This synergy between human input and AI processing enhances the overall effectiveness of Kubernetes management, ensuring that both technical and non-technical considerations are accounted for.
 
-### Case Study: Fact-Driven Optimization
+## Case Study: Fact-Driven Optimization
 
 Consider a scenario where a namespace is annotated with the following Fact:
 
@@ -257,8 +259,6 @@ With this context, the Scaling Expert Agent can:
 - Schedule maintenance and updates during off-peak hours to minimize impact on users.
 - Coordinate with the GreenOps Expert to optimize energy consumption without compromising service quality.
 
-### Enhancing Security and Compliance
-
 Similarly, Facts related to legal and compliance requirements enable Fred to align its recommendations with regulatory mandates. For instance, annotating a workload with a Fact such as:
 
 *"This application processes personal health information and must comply with HIPAA regulations."*
@@ -269,24 +269,21 @@ This informs the Security Expert Agent to:
 - Verify that access controls and audit logs meet HIPAA standards.
 - Recommend configurations that enhance data privacy and security compliance.
 
-### Facilitating Continuous Improvement
+## Conclusions
 
-The integration of Facts not only improves immediate decision-making but also contributes to continuous improvement over time. As more contextual information is added, Fred's expert agents refine their understanding of the operational environment, leading to progressively better recommendations.
+Fred simplifies Kubernetes management through a modular multi-agent architecture designed for specialized analysis, optimization, and decision-making. By addressing technical, theoretical, sustainability, and scalability challenges, Fred delivers actionable insights tailored to the complexities of Kubernetes environments.
+
+Its collaborative framework, supported by human-in-the-loop interactions and enriched with contextual Facts, ensures that recommendations align with both operational and strategic goals. As Kubernetes continues to evolve, Fred’s adaptability and modularity position it as a valuable tool for improving efficiency, sustainability, and innovation in cloud computing.
+
+The integration of Facts not only improves immediate decision-making but also contributes to continuous improvement over time. As more contextual information is added, Fred's expert agents refine their understanding of the operational environment, leading to progressively better recommendations. This mechanism allows for dynamic updates to the system's context as business priorities, regulatory environments, or technical constraints evolve, ensuring that Fred's guidance remains relevant and up-to-date.
 
 Moreover, this mechanism allows for dynamic updates to the system's context as business priorities, regulatory environments, or technical constraints evolve, ensuring that Fred's guidance remains relevant and up-to-date.
 
-## Conclusion
+Fred exemplifies how generative AI can transform Kubernetes management, offering a scalable, future-ready solution for modern IT infrastructures.
 
-Fred represents a significant advancement in the management and optimization of Kubernetes environments, addressing the intricate challenges that organizations face in deploying and maintaining containerized applications at scale. By leveraging a modular multi-agent architecture, Fred brings together specialized expert agents, each equipped with domain-specific knowledge and tools, to provide comprehensive solutions tailored to the complexities of Kubernetes operations.
+After one year of development, Fred is now used internally on real application. We decided to open source it, together with a UI. This brings us two
+benefits. First it allows us to 
+focus on dedicated Thales experts yet welcome third-party contributions. Second, the current python langchain langraph frameworks are valuable yet
+lack some flexibility. The innovative design of Fred's architecture—comprising the Planning Agent, Supervisor Agent, specialized expert agents, and the Validation Agent—ensures a collaborative and iterative approach to problem-solving. Such a design pattern allows for tasks to be decomposed into manageable steps, assigned to the most suitable experts, and refined through feedback loops until the user's objectives are fully met. Making it easy to incorporate human in the loop is also a key design driver. 
 
-The innovative design of Fred's architecture—comprising the Planning Agent, Supervisor Agent, specialized expert agents, and the Validation Agent—ensures a collaborative and iterative approach to problem-solving. This framework allows for tasks to be decomposed into manageable steps, assigned to the most suitable experts, and refined through feedback loops until the user's objectives are fully met. The inclusion of human-in-the-loop interactions further enhances the system's reliability and security, particularly when executing critical actions that modify system states.
-
-Addressing the challenges of data volume and complexity inherent in Kubernetes environments, Fred employs strategic data engineering to provide experts with a global cluster topology. This approach streamlines the vast amounts of configuration data into hierarchical summaries, enabling expert agents to process information effectively within the limitations of large language models. By doing so, Fred maintains high performance and accuracy in its analyses, avoiding common pitfalls such as decreased specificity and hallucinations.
-
-The deployment of specialized expert agents—including the Kubernetes Technical Expert, Theoretical Kubernetes Expert, GreenOps Expert, and Scaling Expert—demonstrates Fred's capacity to cover a diverse range of domains critical to Kubernetes management. Each expert brings unique capabilities, from deep technical diagnostics and adherence to best practices to sustainability-focused optimizations and dynamic scaling strategies. Their ability to collaborate ensures that complex, multidimensional challenges are addressed holistically, resulting in solutions that are both efficient and aligned with organizational objectives.
-
-Furthermore, the incorporation of contextual Facts enhances Fred's decision-making process by embedding user-provided annotations into its knowledge base. This integration ensures that recommendations are not only technically sound but also cognizant of business constraints, compliance requirements, and strategic priorities. By aligning AI-driven insights with human expertise, Fred delivers personalized and accurate guidance that respects the nuances of each operational environment.
-
-In summary, Fred stands as a powerful tool for organizations seeking to harness the full potential of Kubernetes while mitigating its complexities. Its modular multi-agent architecture, combined with strategic data engineering and contextual awareness, enables it to deliver deep analysis, effective management, and optimization that is both technologically advanced and pragmatically relevant. As cloud computing and container orchestration continue to evolve, Fred offers a scalable and adaptable solution poised to meet the growing demands of modern IT infrastructures.
-
-Looking forward, the flexibility of Fred's architecture allows for the continuous integration of new expert agents, further expanding its capabilities to cover additional domains and emerging challenges. By staying attuned to technological advancements and organizational needs, Fred is well-positioned to remain at the forefront of AI-assisted Kubernetes management, driving efficiency, sustainability, and innovation in the cloud computing landscape.
+Fred, both the python backend and tue UI components are in the process of being outsourced as open source components.

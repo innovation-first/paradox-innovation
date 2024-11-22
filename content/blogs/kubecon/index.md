@@ -25,7 +25,7 @@ As part of an internal innovation project, we decided to tackle the issue of Kub
 Worst, what is smart today is obsolete the year after. Architects are asked to produce frugal, scalable, secured, easy-to-maintain and easy-to-modernize solutions. 
 Needless to say, they need help.    
 
-Recognizing these challenges, we decided to leverage generative AI to develop an AI assistant, called *Fred*, to help our architects and administrators to manage their Kubernetes applications. In contrast to the many generative AI initiatives ([KoPylot](https://github.com/avsthiago/kopylot), [Kubert](https://mykubert.com/), [cast.ai](https://cast.ai/) to name a few), our focus is to tackle higher-level architectural considerations:  does my architecture conform to best practice eco-design recommandations ? how could I reduce my energy consumption ? Can you help me assess the data flow of my entire application ?
+Recognizing these challenges, we decided to leverage generative AI to develop an open source AI assistant, called *Fred*, to help our architects and administrators to manage their Kubernetes applications. In contrast to the many generative AI initiatives ([KoPylot](https://github.com/avsthiago/kopylot), [Kubert](https://mykubert.com/), [cast.ai](https://cast.ai/) to name a few), our focus is to tackle higher-level architectural considerations:  does my architecture conform to best practice eco-design recommandations ? how could I reduce my energy consumption ? Can you help me assess the data flow of my entire application ?
 
 For this purpose, Fred features a modular multi-agent architecture that is well suited for building *domain-specific* experts. 
 By customizing this architecture, we have created an assistant capable of deep analysis, management, and optimization of Kubernetes clusters.
@@ -47,7 +47,7 @@ Our development process includes extensive data engineering focused on Kubernete
 
 ## Fred's Novel Architecture
 
-Drawing from contemporary AI literature, Fred leverages a modular multi-agent system that integrates planning, chain-of-thought reasoning, specialized expertise, and secure tool usage to provide comprehensive solutions. This architecture is engineered to address intricate tasks by decomposing them into manageable steps, assigning them to domain-specific experts, and ensuring that the outcomes meet the user's objectives. This approach aligns with the [Plan-and-Solve Prompting](https://arxiv.org/pdf/2305.04091) prompting method, which emphasizes creating structured plans followed by step-by-step solutions to enhance reasoning capabilities in large language models.
+Drawing from contemporary AI literature, Fred leverages a modular multi-agent system that integrates planning, chain-of-thought reasoning, specialized expertise, and secure tool usage to provide comprehensive solutions. This architecture is engineered to address intricate tasks by decomposing them into manageable steps, assigning them to domain-specific experts, and ensuring that the outcomes meet the user's objectives. This approach aligns with the [Plan-and-Solve Prompting](https://arxiv.org/pdf/2305.04091) method, which emphasizes creating structured plans followed by step-by-step solutions to enhance reasoning capabilities in large language models.
 
 <div style="text-align: center;">
     <img src="fred_workflow.png" alt="Fred Workflow" width="90%">
@@ -141,7 +141,7 @@ Here is how it works in practice: Fred first collects by kubernetes API calls a 
 Fred then iteratively condense and improve its topology model and focuses on essential information. Sometimes by gathering information 
 using specific API points (config maps, kubernetes operators API, external sources). In turn this further reduces the cognitive load on each expert agents. 
 
-To implement this strategy, we collaborate closely with our company Kubernetes experts and support teams to identify key data points, such as container images, software versions, scaling parameters like replica counts, ingress configurations, etc. Extracting and summarizing this critical information provides the agents with a concise yet comprehensive snapshot of the system's operational state. We proceed with the same approach for the key cloud-native components we heavily rely upon in our projects. For example Kafka, Opensearch, Minio, Clickouse, kKKeycloackycloack (to name just a few) are often used. We provide Fred with insights for each so that it can further complete its knowledge.  
+To implement this strategy, we collaborate closely with our company Kubernetes experts and support teams to identify key data points, such as container images, software versions, scaling parameters like replica counts, ingress configurations, etc. Extracting and summarizing this critical information provides the agents with a concise yet comprehensive snapshot of the system's operational state. We proceed with the same approach for the key cloud-native components we heavily rely upon in our projects. For example Kafka, Opensearch, Minio, Clickouse, Keycloack (to name just a few) are often used. We provide Fred with insights for each so that it can further complete its knowledge.  
 
 To facilitate this process, we implemented a hierarchical, or pyramidal, summarization strategy. Through advanced LLM engineering techniques, 
 we generate natural language overviews at multiple levels of abstraction. We start by creating summaries for individual workloads (deployments, statefulsets, jobs etc..), 
@@ -151,6 +151,7 @@ then aggregate these into summaries for namespaces, and finally compile a cluste
 
 We just described the overall logic of Fred internal workflow. Let us now describe the current specialized agents, 
 each designed to address specific domains within Kubernetes management. Fred is of course designed to facilitate the plugin of additional experts.
+
 
 ### Kubernetes Technical Expert
 
@@ -295,16 +296,8 @@ and innovation in cloud computing.
 
 The integration of Facts not only improves immediate decision-making but also contributes to continuous improvement over time. As more contextual information is added, Fred's expert agents refine their understanding of the operational environment, leading to progressively better recommendations. This mechanism allows for dynamic updates to the system's context as business priorities, regulatory environments, or technical constraints evolve, ensuring that Fred's guidance remains relevant and up-to-date.
 
-Moreover, this mechanism allows for dynamic updates to the system's context as business priorities, regulatory environments, 
-or technical constraints evolve, ensuring that Fred's guidance remains relevant and up-to-date.
-
 Fred exemplifies how generative AI can transform Kubernetes management, offering a scalable, future-ready solution for modern IT infrastructures.
-
-After one year of development, Fred is now used internally on real applications. We decided to open source it, together with a companion UI. This brings us two
-benefits. First it allows us to 
-focus on dedicated Thales specific experts yet welcome third-party contributions. Second, our view is that the current python langchain langraph frameworks are valuable yet
-lack some flexibility in designing such complete agentic solution. The modern design of Fred's architecture—comprising the Planning Agent, Supervisor Agent, specialized expert agents, and the Validation Agent—ensures a collaborative and iterative approach to problem-solving. Although our goal is not to develop yet another generative AI framework, we woud welcome 
-external collborations on such a real use case to in turn, help identifying potential improvments in the open source communities 
+After a first year of development, Fred is now used internally on real applications. 
 
 ## Annex: State-of-the-Art
 

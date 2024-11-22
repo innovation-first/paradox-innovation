@@ -14,6 +14,9 @@ authors:
 - Tanguy Jouannic
 - Dimitri Tombroff
 ---
+{{< admonition note "Important Notice" >}}
+This work is also available as a [report](Fred.pdf).
+{{< /admonition >}}
 
 ## Introduction
 
@@ -31,7 +34,7 @@ For this purpose, Fred features a modular multi-agent architecture that is well 
 By customizing this architecture, we have created an assistant capable of deep analysis, management, and optimization of Kubernetes clusters.
 
 <div style="text-align: center;">
-    <img src="Fred.png" alt="Fred Overview" width="90%">
+    <img src="fred_role.png" alt="Fred Overview" width="90%">
 </div>
 
 Fred is a now an open source project composed of a python backend and a companion UI, highlighed next. 

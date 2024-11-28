@@ -145,7 +145,7 @@ The frugal IT positions itself as a key technology in reducing the energy footpr
 ## Contacts
 
 - lorenzo.gerardi@thalesgroup.com
-- reyyan.tekkin@thalesgroup.com
+- reyyan.tekin@thalesgroup.com
 - tanguy.jouannic@thalesgroup.com
 
 ## References

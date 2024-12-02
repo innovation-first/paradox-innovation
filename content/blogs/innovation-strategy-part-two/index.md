@@ -12,7 +12,6 @@ categories:
 image: 'shared/abstract-white-2.jpg'
 authors: 
 - Dimitri Tombroff
-- Thomas Delavallade
 ---
 
 In [Driving AI Innovation. Part one : the case for internal developer platforms.](/driving-innovation-strategy-part-one) we explained why providing a lightweight yet modern development environment was key to improve innovation. We explained in particular that this was particlarly true for AI research and development projects. We also explained why we choose to build our development platform, called **innovation lab**, on GCP. 

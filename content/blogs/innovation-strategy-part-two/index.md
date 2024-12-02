@@ -1,5 +1,5 @@
 ---
-title: 'Driving AI Innovation. Part two : the case for sharing vision and organisaton.'
+title: 'Driving AI Innovation. Part two : the case for a shared vision'
 date: 2024-12-01T13:15:14+02:00
 summary: 'A proposal to improve our innovation efficiency'
 tags:

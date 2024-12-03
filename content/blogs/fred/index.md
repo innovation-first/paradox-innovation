@@ -337,6 +337,10 @@ The following papers have strongly inspired the design or Fred.
   [14/06/2021 - [Paper Link](https://arxiv.org/pdf/2106.07131)]  
   Summary: This paper examines using GPT-3 for extracting structured workflows from natural language descriptions in industries like finance. Initial results indicate that GPT-3 performs comparably to existing plan extraction methods, suggesting its potential for automating repetitive procedural tasks. This was one of the first papers to show that LLMs can be used to generate plans. It provided us wit some initial motivation.
 
+- **LightRag: simple and fast retrieval-augmented generation**
+  [07/11/2024 - [Paper Link](https://arxiv.org/pdf/2410.05779)]  
+  Summary: graph structures with vector representations facilitates efficient retrieval of related entities and their relationships, significantly improving response times while maintaining contextual relevance. This very recent paper is promising and the described approach is perfectly adapted to Fred. In fact Fred is performing the same sort of graph-based strategy when extracting the target Kubernetes application knowledge. Howver it performs this in an ad-hoc manner, in a way to benefit from a well-defined tree of relationships, in order to describe the dependencies of the various application components the ones with each others. This is what makes Fred capable of infering the data flow for example. We plan to re-visit this graph-based strategy using a sounder approach as described in this paper. 
+
 ### Evaluated Papers
 
 The following papers were evaluated but judged less directly pertinent for Fred’s current architecture:

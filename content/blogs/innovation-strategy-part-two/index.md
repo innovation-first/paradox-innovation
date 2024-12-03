@@ -14,7 +14,9 @@ authors:
 - Dimitri Tombroff
 ---
 
-In [Driving AI Innovation. Part one : the case for internal developer platforms.](/driving-innovation-strategy-part-one) we explained why providing a lightweight yet modern development environment was key to improve innovation. We explained in particular that this was particlarly true for AI research and development projects. We also explained why we choose to build our development platform, called **innovation lab**, on GCP. 
+In [Driving AI Innovation. Part one : the case for internal developer platforms.](/driving-innovation-strategy-part-one) we explained why providing a lightweight yet modern development environment was key to improve innovation, in particular
+for AI research and development projects. We also explained why we choose to build our development platform, 
+called **innovation lab**, on GCP. 
 
 In this second part, we defend the case for ensuring that innovation teams *really* work together. 
 In fact, we do not defend it, we show it simply work significantly better.
@@ -81,34 +83,40 @@ Do not misunderstand our point here, the technical strategy of an ESN like Thale
 
 Having a shared vision and shared practices relieves each team to deal with secondary technical issues. That is expected. But
 the best is that it also helps other thales teams that can provide their help and assets, and in return benefit from
-visibility and use-case retexes. The typical example here is the use of [Kast](/assets/kast) that we deploy on top of
-GCP/GKE and that provides us with security and data components. 
+visibility and use-case retexes. The typical example here is the use of [Kast](/assets/kast). We deploy kast on top of
+GCP/GKE, it that provides us with security and data components. In turn customers and internal projects now benefit from a
+one-click install of managed Kast instances. Do not ask for C3 security, that is not the point. Simply work with Kast, see what you can do with that mix of cloud-native kubernetes and GCP services. At the end you'll migrate to a secured on-premise platform if you need that.  
 
-### Straightforward Management
+### Straightforward Team Management
 
-Our french devise is: "Pas de daily, pas de chocolat". I guess you guess what it means. Avoid at all costs unecessary weekly or monthly meetings, and obscure agile methodologies. These are useless (an extensive literature shows this). 
-Daily meetings are 15 or 20 minutes shorts, and ensure the next day is on track. These are the one that will make a project successful. One year is a very short time period. If you expect result do not waste a week to realize it goes wrong.
+Our french devise is: "Pas de daily, pas de chocolat". We assume you guess what it means: avoid at all costs unecessary weekly or monthly meetings, and obscure agile methodologies. These are useless (an extensive literature explain this). 
+Daily meetings are 15 or 20 minutes shorts, and ensure the next day is on track. Dailys are the one that will make a project successful. 
+One year is a very short time period. If you expect good results, do not waste a week to realize it goes wrong.
 
-An important benefit of such organisation is to help identifying the right person for solving the right problem. 
-A significant number of projects failed because a data scientist failed to accomplish devops tasks, or vice-versa.  
-
-At the end, with such a smoother organizaton, it is easier to focus on fewer meetings with the key stakeholders (customers, business teams).
+Focusing on developers instead of management organization has two benefits. First it reduces costs. Second it helps identifying 
+the right person required for solving the right problem. 
+A *significant* number of projects failed because a data scientist was asked to accomplish devops tasks, or vice-versa.  
 
 ### Open Innovation
 
-Having a lightweight yet efficient organisation and tooling immediately attracts new initiatives. [Ogma](/blogs/ogma/) and [Nyx](/blogs/nyx/) are very interesting and unplanned 2024 initiatives that provided a lot of useful feedbacks for the development platforms. Since then several projects joined the development platforms to demonstrated ideas and solutions to customers.
+Having a lightweight yet efficient organisation and tooling immediately attracts new initiatives. 
+[Ogma](/blogs/ogma/) and [Nyx](/blogs/nyx/) are very interesting and unplanned 2024 initiatives that provided, in turn,
+a lot of useful tips and tricks for the development platforms. 
+Since then, several projects joined the development platforms to demonstrated ideas and solutions to customers.
 
 ### Unexpected Outcomes
 
-2024 is soon terminated. We end the year with a promising open source project born from the various retexes from 
-the generative AI projects, with a double focus on Kubernetes and multi-agent software architecture. BidGpt is now developped on top of it, in addition to the Frugal-IT demonstration suite that incorporate the inital Fmt, Thalc and Rift.  
+2024 is soon terminated. We end the year with a promising open source project born from the various generative AI projects retexes, 
+with a double focus on Kubernetes and multi-agent software architecture. BidGpt is now developped on top of it, 
+in addition to the Frugal-IT demonstration suite that incorporates the inital Fmt, Thalc and Rift tracks.  
 
-More importantly, our engineers from all sites now share a better defined and stronger perspective of our generative AI offering.
+More importantly, our engineers from all sites now share a well-defined vision of our generative AI strategy. 
 
 ## Conclusions
 
-Join us on the 2024 innovation day. You will see the effect of these benefits by yourselves. A big thanks to all teams for their
-hard work, continuous and creative efforts. 
+Join us on the December 19th 2024 innovation day and innovation by night. 
+You will see the effect of these benefits by yourselves. 
+A big thanks to all teams for their hard work, continuous and creative efforts. 
 
 
 

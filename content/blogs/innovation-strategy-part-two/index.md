@@ -22,18 +22,18 @@ This second part demonstrates the case for ensuring that innovation teams *truly
 
 ### Six Teams, Six Locations, Six Topics
 
-Consider six innovation tracks from our 2024 campaign, including one internally funded project (**BidGpt**):
+Consider five innovation tracks from our 2024 campaign, and one internally funded project (**BidGpt**):
 
-- **Rift**: Explores optimization strategies for complex Kubernetes applications.
-- **Thalc**: Monitors the carbon and energy impact of software applications.
-- **Fmt**: Provides architects with eco-score data to guide solution design.
-- **BidGpt**: A generative AI assistant supporting our BID and RAO colleagues.
-- **Marto**: Examines compliance with the AI Act through a real generative AI use case.
-- **Sara**: Tackles the challenges of designing and delivering industrial-grade AI solutions.
+- **RIFT**: Explores optimization strategies for complex Kubernetes applications.
+- **THALC**: Monitors the carbon and energy impact of software applications.
+- **FMT**: Provides architects with eco-score reports to guide their solution design.
+- **BIDGPT**: A generative AI assistant supporting our colleagues in charge of customer offerings.
+- **MARTO**: Examines compliance with the AI Act through a real generative AI use case.
+- **SARA**: Tackles the overall challenges of designing and delivering industrial-grade AI solutions.
 
 These projects were conducted by teams based in Rennes, Vélizy, Bordeaux, Toulouse, Sofia, and Nantes.
 
-### The Old Way
+### The Standard Way
 
 Under a standard innovation process, each team operates independently, working on their topic and facing common challenges:
 
@@ -44,32 +44,36 @@ Under a standard innovation process, each team operates independently, working o
 - Identifying potential customers.
 - Deciding on the best delivery model (inner source, open source, or internal use).
 - Delivering a POC or MVP with an acceptable TLR (technology readiness level).
+- Favor as much as possible co-innovation with real customers and use cases.
 
-This fragmented approach often results in inefficiencies, resource struggles, and delays due to unrelated obstacles. It does not foster innovation.
+This fragmented approach often results in inefficiencies, resource struggles, and delays due to unrelated obstacles. 
+All in all, it does not foster innovation.
 
 ## The *Innovation First* Recipe
 
-We streamlined the six projects with the following approach:
+As part of the *Innovation first* initiative, we tried to improve the process and strenghten the following aspects:
 
 - **Focus on a common ground:**
-  - **Fmt** demonstrates use cases on Kubernetes applications.
-  - **Thalc** monitors Kubernetes applications.
-  - **Rift** aligns with generative AI strategies derived from **Sara**'s findings.
+  - **FMT** is demonstrated on Kubernetes applications.
+  - **THALC** monitors Kubernetes applications.
+  - **RIFT** aligns with generative AI strategies derived from **SARA**'s findings.
 - **Encourage customer and business-oriented feedback** wherever possible.
+  - we decided to package the three *FMT*, **THALC** and **RIFT** as one demonstrated Frugal-IT suite.
 - **Standardize technical practices:**
   - Use the same CI/CD pipelines, GitLab, inner source strategy, and security architecture.
   - Adopt cloud-native principles with Kubernetes-centric packaging.
-  - Rely on the **Innovation Lab** as the primary development platform.
-  - Share development challenges and solutions, especially for generative AI.
-- **Promote collaboration and knowledge sharing:** Teams share successes and failures with the widest possible audience.
+  - Rely on the **Innovation Lab platform** as the primary development platform.
+- **Promote collaboration and knowledge sharing:** Teams share successes and failures with the *widest* possible audience.
 
 ## Impact and Benefits
 
-### A Clear Technical Policy
+After a first year of prototyping these improvments here we are at the end of the year. 
 
-The alignment of all 2024 projects with a cohesive technical strategy underscores our focus on cloud-native, Kubernetes-centric architectures. Despite the complexities of our ESN model, we have demonstrated industrial robustness, scalability, and security.
+### A Clearer Technical Strategy
 
-Do not misunderstand our point here, the technical strategy of an ESN like Thales Services Numériques is clearly not as simple as the one of a product vendor. Yet, we demonstrated through the six projects at play here our focus on cloud-native, kubernetes centric architectures, with no compromise on industrial robustness and security.
+As a Digital Service Company (Entreprise de Services Numériques or "ESN" in French) like Thales Services Numériques, we have a broad scope of expertise and services. This breadth makes our technical strategy inherently richer and more diverse compared to that of a typical software product company. Yet, all the innovation projects referenced here share a unified vision and emphasize robust, secure development. Most of our solutions handle critical and sensitive data, whether deployed on-premise or in sovereign cloud environments.
+
+This was significantly strengthened by teams working closely together and with a deeper alignment of goals.
 
 ### A Win-Win Strategy
 
@@ -79,15 +83,21 @@ Shared practices reduce technical hurdles for teams while enabling other Thales 
 
 Our motto: **"Pas de daily, pas de chocolat"** (No daily, no progress). Short daily meetings (15–20 minutes) keep projects on track without unnecessary bureaucracy. By focusing on developers rather than hierarchical structures, we reduce costs and ensure that the right expertise is applied to the right tasks.
 
+Another benefit results from encouraging teams to publish their finding and issues to a wider audience, for example as part of blogs or 
+as part of live presentations open to all colleagues. This simply diminishes the risk to have several teams explore similar topics 
+and challenges. And in turn this alleviates the required number of technical referees and reviewers to help detecting these inneficient
+work duplication. 
+
+
 ### Open Innovation
 
 Lightweight, effective organization and tooling attract new initiatives. Projects like [Ogma](/blogs/ogma/) and [Nyx](/blogs/nyx/) emerged unexpectedly, bringing valuable insights and contributions to the development platform.
 
 ### Unexpected Outcomes
 
-2024 concludes with a promising open-source project born from generative AI learnings, emphasizing Kubernetes and multi-agent software architecture. **BidGpt** now builds upon this foundation, alongside the **Frugal IT** suite, which integrates **Fmt**, **Thalc**, and **Rift** tracks. 
+2024 concludes with a promising open-source project born from generative AI learnings, emphasizing Kubernetes and multi-agent software architecture. **BidGpt** now builds upon this foundation, alongside the **Frugal IT** suite, which integrates **FMT**, **THALC**, and **RIFT** tracks. 
 
-More importantly, our engineers across all sites now share a unified vision for our generative AI strategy.
+More importantly, our engineers across all sites now share a more unified vision for our generative AI strategy.
 
 ## Conclusion
 

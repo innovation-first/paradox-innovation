@@ -1,15 +1,17 @@
 # Change baseurl before deploy
-# baseURL = "https://storage.googleapis.com/innovation-hub-blog/public/"
+baseURL = "https://storage.googleapis.com/innovation-hub-blog/public/"
 relativeURLs = false
 canonifyURLs = true
 languageCode = "en-us"
-paginate = 5
 title = "IHub Blog"
 
 # Theme i18n support
 # Available values: en, fr, id, ja, ko, pt-br, zh-cn, zh-tw, es, de, nl, it, th, el, uk, ar
 defaultContentLanguage = "en"
 default_mode = "dark"
+
+[pagination]
+  pagerSize = 10
 
 # Set hasCJKLanguage to true if DefaultContentLanguage is in [zh-cn ja ko]
 # This will make .Summary and .WordCount behave correctly for CJK languages.

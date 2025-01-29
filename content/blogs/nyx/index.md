@@ -12,14 +12,14 @@ authors:
 ---
 
 
-{{< quote author="Jake Bengtson" source="Weighing the Open-Source, Hybrid Option for Adopting Generative AI, Harvard Business Review" url="https://www.cloudera.com/campaign/weighing-the-open-source-hybrid-option-for-adopting-generative-ai.html">}}
+{{< quote author="Jake Bengtson" source="Weighing the Open-Source, Hybrid Option for Adopting Generative AI, Harvard Business Review" url="<https://www.cloudera.com/campaign/weighing-the-open-source-hybrid-option-for-adopting-generative-ai.html">}}>
 Nearly 70% of the 11,700 professionals who
 responded to the survey on the Fishbowl app say they are
 using those AI tools without their boss’s knowledge.
 {{< /quote >}}
 
 
-A R&D team from Thales Services Numériques Nantes, (tanguy.jouannic@thalesgroup.com, pierre.doumenc@thalesgroup.com and olivier.jobert@thalesgroup.com) designed and deployed an effective coding assistant to demonstrate how even the most secured air gap development environment can benefit from a powerful and feature rich coding assistsant. 
+A R&D team from our company Nantes office, (Tanguy Jouannic, Pierre Doumenc and Olivier Jobert) designed and deployed an effective coding assistant to demonstrate how even the most secured air gap development environment can benefit from a powerful and feature rich coding assistsant. 
 
 In this blog we briefly review the importance of coding assistant, and present that new assistant called **Nyx**.
 
@@ -42,7 +42,7 @@ whose knowledge can be increased via proprietary data sources provided as pdf, d
 
 ### Benefits
 
-Thales experience in the field of Generative AI for coding is based on studies, experiments within innovation projects in use on some development projects, and its use on customer projects.
+Our company experience in the field of Generative AI for coding is based on studies, experiments within innovation projects in use on some development projects, and its use on customer projects.
 
 From this experience comes our assessment of the expected gains. They are not far from what can be found in the literature.
 The first effect induced by the use is obviously the increase in the performance of teams of developers depending on their profile (and level of seniority in particular) and the uses that are carried out with an assistant.
@@ -57,14 +57,14 @@ The use of Generative AI helps accelerate time to market with higher quality pro
 
 ## Nyx
 
-Nyx is an innovative initiative from Thales Services Numériques to provide our projects with a development assistant based on generative AI to optimize development activity in dimensions such as those explained above.
+Nyx is an innovative initiative from our company to provide our projects with a development assistant based on generative AI to optimize development activity in dimensions such as those explained above.
 
-Several initiatives exist within Thales. This makes it possible to address in particular the needs related to security and confidentiality. Its architecture which can be deployed in a highly secure environment on On Premise infrastructures within our clients' information systems, or even on Air Gap and Offline infrastructures (without internet connection), without any access to equipment accessible from an external network. However, it can be deployed with Cloud Service Providers such as Google Cloud Platform, Amazon AWS, Microsoft Azure, to name a few.
+Several initiatives exist within our division. This makes it possible to address in particular the needs related to security and confidentiality. Its architecture which can be deployed in a highly secure environment on On Premise infrastructures within our clients' information systems, or even on Air Gap and Offline infrastructures (without internet connection), without any access to equipment accessible from an external network. However, it can be deployed with Cloud Service Providers such as Google Cloud Platform, Amazon AWS, Microsoft Azure, to name a few.
 
 Nyx relies, for the part assisting in the extension of IDEs, among other things, on the Open Source project of 
 [continue.dev](https://www.continue.dev/) and in this sense makes it possible to control the maintenance of the security condition of the solution. It also makes it possible to control the underlying infrastructure and thereby rely on existing infrastructures such as HPC.
 This also allows you to benefit from the functionality contributions of the community, which makes it robust over time.
-It should be noted that under no circumstances is the client blocked by any Intellectual Property of Thales since these are open-source components assembled and implemented by project teams.
+It should be noted that under no circumstances is the client blocked by any Intellectual Property of our company since these are open-source components assembled and implemented by project teams.
 
 Nyx can be completed with the [Ogma](/blogs/ogma) module allowing access to a corpus of company documents. 
 
@@ -91,14 +91,8 @@ Nyx is demonstrated on the [Hub google cloud platform](/docs/hub-overview/). It 
 of internal and secured development environment, which requires precise costs estimates: hom many GPUs,
 how mny servers.  The nyx team is benchmarking what it takes, stay tuned for the reports.
 
-
 ## Contacts
 
-- olivier.jobert@thalesgroup.com
-- pierre.doumenc@thalesgroup.com
-- tanguy.jouannic@thalsgroup.com
-
-
-
-
-
+- Olivier Jobert
+- Pierre Doumenc
+- Tanguy Jouannic

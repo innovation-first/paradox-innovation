@@ -32,8 +32,8 @@ that is on GCP/GKE.
 
 ## Contacts
 
-- tanguy.jouannic@thalesgroup.com
-- reyyan.tekin@thalesgroup.com
+- Tanguy Jouannic
+- Reyyan Tekin
 
 
 

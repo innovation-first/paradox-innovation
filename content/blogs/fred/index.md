@@ -19,7 +19,7 @@ This work is also available as a [report](Fred.pdf).
 
 ## Introduction
 
-Kubernetes is a strategic technology for Thales group and Thales Services Numériques in particular. 
+Kubernetes is a strategic technology for defense and critical civilian industries. 
 We maintain, like many, our own distribution (Kubernetes together with a number of key cloud-native technologies) 
 to serve as common platform/sdk for our many data processing use cases. 
 

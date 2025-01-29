@@ -1,7 +1,7 @@
 ---
 title: 'Marto: Model Assessment and Robustness TOolkit'
 date: 2024-06-20T13:48:14+02:00
-summary: 'Virtual Reality as a new immersive training tool within Thales Group'
+summary: 'Virtual Reality as a new immersive training tool'
 categories:
 - Innovation Track
 tags:
@@ -25,7 +25,7 @@ The MARTO (Model Assessment and Robustness TOolkit) innovation track aims to pro
 
 ## Business Case
 
-To achieve this objective, we rely on a use case of our business partner: the corporate startup [Thales DATX](https://portal.datx.eu/guild/none/welcome) which offers a solution, hosted on the Azure Cloud, for managing data relating to components of various types (electronic components, hardware, etc.) throughout their life cycle and for the benefit of all the professions supplying the key tools of the THALES group (engineering workshop, PLM and ERP). In the long term, DATX wishes to develop by monetizing this data catalog to other manufacturers.
+To achieve this objective, we rely on a use case of our business partner: the corporate startup [DATX](https://portal.datx.eu/guild/none/welcome) which offers a solution, hosted on the Azure Cloud, for managing data relating to components of various types (electronic components, hardware, etc.) throughout their life cycle and for the benefit of all the professions supplying the key tools of the our group (engineering workshop, PLM and ERP). In the long term, DATX wishes to develop by monetizing this data catalog to other manufacturers.
 
 Through a user portal, DATX offers its users a multi-criteria search engine for the components it lists. In order to expand the range of services that DATX offers, we have developed a chatbot called Compass (Components assistant) allowing users to more easily search for components by submitting questions in natural language. This chatbot is based on the "LLM Agent" paradigm, which consists of giving an LLM (Large Language Model) the possibility of orchestrating calls to tools in order to answer a user question. In this case, the tools mainly rely on APIs developed by DATX. It is up to the LLM to call these APIs in a timely manner with the right input parameters in order to collect information of interest within the DATX information system that will allow the question to be answered directly or to guide the continuation of calls to other APIs. This process is repeated iteratively until a relevant answer is obtained.
 
@@ -56,7 +56,7 @@ We set ourselves the objective of conducting several test campaigns in order to 
 
 ## Conclusions
 
-By developing a robust methodology to assess and validate the compliance of generative AI systems like the LLM Agent, we not only address accuracy, robustness, and transparency issues but also provide a comprehensive framework for continuous improvement. This initiative not only enhances user trust and safety but also sets a precedent for future AI deployments within the Thales Group. Through rigorous testing and user feedback, we aim to ensure that AI systems operate ethically and effectively in high-stakes environments.
+By developing a robust methodology to assess and validate the compliance of generative AI systems like the LLM Agent, we not only address accuracy, robustness, and transparency issues but also provide a comprehensive framework for continuous improvement. This initiative not only enhances user trust and safety but also sets a precedent for future AI deployments within our company. Through rigorous testing and user feedback, we aim to ensure that AI systems operate ethically and effectively in high-stakes environments.
 
 ## References
 
@@ -64,4 +64,4 @@ By developing a robust methodology to assess and validate the compliance of gene
 
 ## Contacts
 
-- julien.meynard@thalesgroup.com
+- Julien Meynard

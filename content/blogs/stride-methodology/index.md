@@ -88,5 +88,5 @@ The benefits compared to other methods are the following:
 
 ## Contacts
 
-- mahmoud.chilali@thalesgroup.com
-- hadrien.leclerc@thalesgroup.com
+- Mahmoud Chilali
+- Hadrien Leclerc

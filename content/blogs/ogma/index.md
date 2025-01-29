@@ -49,16 +49,16 @@ Ogma's features are those inherited from the open-source AnythingLLM project. Na
   * Application user management
   * Monitoring of interactions
 
-Thales Services Numériques contributions to the Open Source solution concern the implementation of the infrastructure accompanied by the platform which hosts the inference server and its LLM, the embedding server and its embedding model, as well as the database vector. 
+Our contributions to the Open Source solution concern the implementation of the infrastructure accompanied by the platform which hosts the inference server and its LLM, the embedding server and its embedding model, as well as the database vector.
 
 Ogma is deployed on the innovation hub, and protected using Keycloack.
 
 ## Contacts
 
-- olivier.jobert@thalesgroup.com
-- pierre.doumenc@thalesgroup.com
-- hugues.deghorain@thalesgroup.com
-- tanguy.jouannic@thalsgroup.com
+- Olivier Jobert
+- Pierre Doumenc
+- Hugues Deghorain
+- Tanguy Jouannic
 
 
 

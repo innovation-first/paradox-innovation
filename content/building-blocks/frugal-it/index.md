@@ -180,10 +180,10 @@ Visit the in depth overview of frugal IT components:
 
 ## Contacts
 
-- dimitri.tombroff@thalesgroup.com
-- tanguy.jouannic@thalesgroup.com
-- jean-felix.berthiau@thalesgroup.com
-- gilles.poirot@thalesgroup.com
+- Dimitri Tombroff
+- Tanguy Jouannic
+- jean-Felix Berthiau
+- Gilles Poirot
 
 
 

@@ -7,20 +7,22 @@ summary: 'This real live demonstration illustrates the Finops and Greenops monit
 
 ## How to Write a Blog Post
 
-You need an access to the Thales Digital Platform Gitlab. First clone the Gitlab repository 
+As of today you need an access to the the our company shared Gitlab. First clone the Gitlab repository:
+
 ```sh
 git clone https://gitlab.thalesdigital.io/tsn/innovation/projects/blog.git
 cd blog
 ```
 
 Then create a new folder.
+
 ```sh
 mkdir -p content/blogs/yourblog
 ```
 
 1. **Create a New Markdown File**: Create a new Markdown file in the `content/blogs/yourblog` directory. Name it appropriately, for example, `my-new-post.md`.
 2. **Add Front Matter**: Add the necessary front matter at the top of the file. Here is an example:
-   
+
 ```markdown
    ---
    title: 'My New Post'

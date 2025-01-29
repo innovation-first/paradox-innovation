@@ -21,17 +21,17 @@ author:
 
 The effectiveness of condition monitoring & maintenance teams depends on qualified expert’s diagnosis; reactive, preventive and predictive maintenance skills.
 
-Thales provides considerable cost-savings involved in travel expenses by providing maintenance teams with mobile solutions which allow effective communication with remote experts.
+Our company provides considerable cost-savings involved in travel expenses by providing maintenance teams with mobile solutions which allow effective communication with remote experts.
 
 ![Usecases](the_usecases.png)
 
-### Thales & Industry 4.0: the Human factor
+### Industry 4.0: the Human factor
 
-- As part of the digital manufacturing transformation of production systems, Thales takes the lead in helping companies through the Industry 4.0 transformation, increasing productivity and competitiveness, making respect for: **market, product, production** and considering the **human factor**. 
+- As part of the digital manufacturing transformation of production systems, our company takes the lead in helping companies through the Industry 4.0 transformation, increasing productivity and competitiveness, making respect for: **market, product, production** and considering the **human factor**.
 
 - Integrating the Industry 4.0 principles : augmented reality solutions to improve **efficiency** and **competiveness**.
 
-- Thales designed an innovative augmented reality solution to assist its activities involving **machine condition monitoring** and **maintenance management systems**.
+- Our company designed an innovative augmented reality solution to assist its activities involving **machine condition monitoring** and **maintenance management systems**.
 
 ## ThEye: Remote Assistance solution
 
@@ -101,9 +101,7 @@ Thales provides considerable cost-savings involved in travel expenses by providi
 
 ![Front and Back technologies](the_technos.png)
 
-*State of the art technologies and assets. From the Microsoft .NET ecosystem to the Thales world.*
-
 ## Contacts
 
-- aude.chenet@thalesgroup.com
-- eric-e.lefevre@thalesgroup.com
+- Aude Chenet
+- Eric Lefevre

@@ -14,7 +14,7 @@ authors:
 - Kevin Denis 
 ---
 
-> This blog describes one of the [Frugal IT](/building-blocks/frugal-it) component called **Inspector**, the Thales carbon monitoring and assement tool.
+> This blog describes one of the [Frugal IT](/building-blocks/frugal-it) component called **Inspector**.
 
 ## Introduction
 
@@ -26,7 +26,7 @@ The evolution of the consideration of the impacts of human activities on the env
 * The [ISO 14001 environmental management](https://www.iso.org/standards/popular/iso-14000-family)
 * The [ISO 5001 Energy management](https://www.iso.org/iso-50001-energy-management.html)
 
-At European level, the Green Pact for Europe and, in particular, [Directive 2009/125/EC](https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:32009L0125) of October 21, 2009, have led to the introduction of *carbon footprint assessment* standards. This assessment dynamic has been present in the Thales Group for many years in its industrial activities for the production of goods and equipment, and is gradually taking hold in the digital sector. 
+At European level, the Green Pact for Europe and, in particular, [Directive 2009/125/EC](https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:32009L0125) of October 21, 2009, have led to the introduction of *carbon footprint assessment* standards. This assessment dynamic has been present in the our industrial group for many years in its industrial activities for the production of goods and equipment, and is gradually taking hold in the digital sector. 
 
 The frugal-IT inspector component, born from the 2023 THALC innovation track, is participating with the ambition of helping to define and achieve carbon footprint reduction targets by providing effective measurement and assesment tools. 
 
@@ -60,9 +60,9 @@ From the outset, the inspector has been designed to be cloud-native and eco-frie
 ![Inspector As A Service](inspector-saas.png)
 
 Of course, the inspector can be also installed on your private cloud or platform. It has been specifically
-packaged to run on the [Kast thales containerized platform](/building-blocks/kast).
+packaged to run on the [Kast containerized platform](/building-blocks/kast).
 
 ## Contacts
 
-- jean-felix.berthiau@thalesgroup.com
-- thomas.heusse@thalesgroup.com
+- jean-Felix Berthiau
+- Thomas Heusse

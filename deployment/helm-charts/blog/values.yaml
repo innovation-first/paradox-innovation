@@ -1,5 +1,0 @@
-image:
-  registryCredentials:
-    registry: registry.thalesdigital.io/tsn/innovation/projects/blog
-    username: bot-kube-pull-image
-    password: # Your token

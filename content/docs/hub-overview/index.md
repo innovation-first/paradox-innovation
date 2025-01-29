@@ -8,10 +8,9 @@ summary: 'The hub is both a simple portal and a sandboxed demonstration and work
 ## Benefits
 
 The hub is an online platform that provides two main features. The first is to expose a simple portal (you are reading it now)
-to help us all (including customers) to easily and quickly understand our innovation, expertise and offerings. 
+to help us all (including customers) to easily and quickly understand our innovation, expertise and offerings.
 
-Second it provides thales developpers and architects with a sandboxed, ready-to-use platform to prototype and deploy
-new projects. 
+Second it provides developpers and architects with a sandboxed, ready-to-use platform to prototype and deploy new projects.
 
 This has several benefits.
 
@@ -19,20 +18,19 @@ This has several benefits.
 
 The hub is a simple lightweight platform that is designed using good will and collaborative effort. 
 It was quickly implemented because of our expertise in cloud native development,
-our involvement in designing Thales on-premise data containerized platforms, 
-our pragmatic secured-by-design approach. Not to forget our internal engineering services 
-such as the [Thales Digital Platform Gitlab](https://gitlab.thalesdigital.io), registries, security tools. 
+our involvement in designing on-premise data containerized platforms,
+our pragmatic secured-by-design approach. Not to forget our internal engineering services. 
 
-This is illustrative of Thales Services Numériques competitive offerings,
+This is illustrative of our competitive offerings,
 on time delivery and our focus on designing simple and effective solutions, easy to be operated and maintained.
 
 Note that simple does not mean it is a toy. Advanced features make it possible to scale up or down
 the required ressources. Our goal is to demonstrate how cost effective yet powerful a well-designed 
 cloud native platform can be.
 
-### Go experiment 
+### Go experiment
 
-With The Hub, designing smart data applications becomes astonishingly straightforward and rapid. 
+With The Hub, designing smart data applications becomes astonishingly straightforward and rapid.
 In just a few hours, you can move from concept to creation.
 
 Deploying standard containerized applications is simplicity itself. All it takes is designing 
@@ -62,7 +60,7 @@ Why GKE ? because if your application runs on GKE, it runs everywhere.
 
 Why Kast ? because it provides us with ready-to-use patterns and data components and is supported on all managed kubernetes and of course on premise platforms. That is, any application you run on the Hub is guaranteed to run seamlessly on another kubernetes provider or on your on premise platform. 
 
-Why not on Azure, Aws, Ovh or the thales digital platform managed Kubernetes services ? Because it matters to us to master and
+Why not on Azure, Aws, Ovh or others ? Because it matters to us to master and
 demonstrate GCP and GKE usages. The other platforms are excellent too, but our strategy is to anticipate for the arrival of [S3NS](https://www.s3ns.io/en). Last, our goal is to benefit from an innovation platform, not exactly the same scope than our friends.
 
 ### Your Apps
@@ -86,16 +84,12 @@ So why not joining ?
 
 ## Contact
 
-- olivier.jobert@thalesgroup.com: hub contributor
-- kevin.denis@thalesgroup.com: hub contributor
-- hadrien.leclerc@thalesgroup.com: hub (cybersecurity) contributor
-- mahmoud.chilali@thalesgroup.com: cybersecurity authority
-- dimitri.tombroff@thlesgroup.com: hub contributor
+- Olivier Jobert: hub contributor
+- Kevin Denis: hub contributor
+- Hadrien Leclerc: hub (cybersecurity) contributor
+- Mahmoud Chilali: cybersecurity authority
+- Dimitri Tombroff: hub contributor
 
 References:
 
 - [Everything is on the Gitlab](https://gitlab.thalesdigital.io/tsn/innovation)
-
-
-
-

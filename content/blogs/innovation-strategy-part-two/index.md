@@ -71,13 +71,13 @@ After a first year of prototyping these improvments here we are at the end of th
 
 ### A Clearer Technical Strategy
 
-As a Digital Service Company (Entreprise de Services Numériques or "ESN" in French) like Thales Services Numériques, we have a broad scope of expertise and services. This breadth makes our technical strategy inherently richer and more diverse compared to that of a typical software product company. Yet, all the innovation projects referenced here share a unified vision and emphasize robust, secure development. Most of our solutions handle critical and sensitive data, whether deployed on-premise or in sovereign cloud environments.
+As a Digital Service Company (Entreprise de Services Numériques or "ESN" in French), we have a broad scope of expertise and services. This breadth makes our technical strategy inherently richer and more diverse compared to that of a typical software product company. Yet, all the innovation projects referenced here share a unified vision and emphasize robust, secure development. Most of our solutions handle critical and sensitive data, whether deployed on-premise or in sovereign cloud environments.
 
 This was significantly strengthened by teams working closely together and with a deeper alignment of goals.
 
 ### A Win-Win Strategy
 
-Shared practices reduce technical hurdles for teams while enabling other Thales teams to contribute and benefit. For example, deploying [Kast](/assets/kast) on GCP/GKE provided both security and data components while offering customers a one-click managed Kast instance deployment.
+Shared practices reduce technical hurdles for teams while enabling other teams to contribute and benefit. For example, deploying [Kast](/assets/kast) on GCP/GKE provided both security and data components while offering customers a one-click managed Kast instance deployment.
 
 ### Simplified Team Management
 

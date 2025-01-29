@@ -197,7 +197,7 @@ Thank you for reading, and happy quacking with DuckDB!
 
 ## Contacts
 
-- dorian.finelbacha.e@thalesdigitale.io
+- Dorian Dinelbacha
 
 ## References
 

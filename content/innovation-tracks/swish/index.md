@@ -38,7 +38,7 @@ Each of these points is crucial to guaranteeing an optimal user experience, whil
 ## A co-innovation track
 
 IoT technologies are generally used to supervise industrial parks with substantial infrastructures.
-In the case of mobile systems, Thales Services Numériques does not currently have a sufficiently representative infrastructure to demonstrate an industrial use that meets the needs of its customers.
+In the case of mobile systems, our company does not currently have a sufficiently representative infrastructure to demonstrate an industrial use that meets the needs of its customers.
 
 This is why we are developing this project in co-innovation with the La Poste group, and more specifically the mail-package branch, in order to reuse the infrastructures and operational needs of the Colissimo brand to develop and test our technologies in a logistics transport environment.
 
@@ -101,5 +101,5 @@ The ability to add networks of connected intelligent sensors to existing or futu
 
 ## Contacts
 
-- quentin.gasparrotto@thalesgroup.com
+- Quentin Gasparrotto
 

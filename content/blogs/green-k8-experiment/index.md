@@ -38,7 +38,7 @@ to reduce significantly the resources usage of their Kubernetes solutions. We pl
 
 ### Why is it important
 
-* Kubernetes is the de-facto standard service orchestrator platform. It is available on all clouds and on premise. It is in particular strategic to Thales defense and critical systems products and projects.
+* Kubernetes is the de-facto standard service orchestrator platform. It is available on all clouds and on premise. It is in particular strategic to defense and critical systems products and projects.
 * 80% of cloud kubernetes ressources are under-utilized, leading to high energy consumption and costs.
 * the technologies to scale down (i.e. reduce automatically) kubernetes applications exist but require a high expertise.
 * frugality and cost optimisation are secondary concern, the first concern is robustess and continuous service.
@@ -58,7 +58,7 @@ It speaks for itself, as the iterations to a successful attempts require many co
 * A number of technical components such as Queuing systems (i.e. [Kafka](https://kafka.apache.org/)), document stores (i.e. [Elasticsearch](https://www.elastic.co/)), storage components ([Minio]((https://min.io/), [Cloud storage](https://aws.amazon.com/s3/)), and
 dashboarding ([Kibana](https://www.elastic.co/kibana), [Grafana](https://grafana.com/), [Superset](https://superset.apache.org/)) to ultimately present the data products to the customers. 
 
-Such popular architecture is interesting because is is commonly used in various cybersecurity, IoT, Scada (civilian or military) solution. These are typically the applications we deal with in Thales. 
+Such popular architecture is interesting because is is commonly used in various cybersecurity, IoT, Scada (civilian or military) solution. These are typically the applications we deal with. 
 Besides, it is particularly easy to implement on top of the [Kast](/building-blocks/kast) distribution. 
 
 ### Input Data Selection

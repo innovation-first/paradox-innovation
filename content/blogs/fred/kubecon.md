@@ -1,20 +1,20 @@
 # Fred: A Modular Multi-Agent AI Assistant for Kubernetes Deep Analysis, Management, and Optimization
 
 
-Fred is Thales' AI-powered chatbot assistant product, featuring a modular multi-agent architecture that enables the development of specialized experts across various domains. Leveraging this flexible design, we have developed a version of Fred tailored for Kubernetes environments, focusing on deep analysis, management, and optimization. This article presents Fred's architecture and explores how we have customized it to address the complexities of Kubernetes, enhancing operational efficiency, security, compliance, and environmental sustainability.
+Fred is a AI-powered chatbot assistant product, featuring a modular multi-agent architecture that enables the development of specialized experts across various domains. Leveraging this flexible design, we have developed a version of Fred tailored for Kubernetes environments, focusing on deep analysis, management, and optimization. This article presents Fred's architecture and explores how we have customized it to address the complexities of Kubernetes, enhancing operational efficiency, security, compliance, and environmental sustainability.
 
 
 ## Introduction
 
 In the rapidly evolving landscape of cloud computing and container orchestration, Kubernetes has emerged as a powerful solution for deploying and managing applications at scale. Its robust feature set offers unparalleled flexibility and scalability, making it the go-to choice for organizations worldwide. However, this power comes with inherent complexity that can pose significant challenges, regardless of the cluster size. Efficiently navigating Kubernetes requires a deep understanding of its intricate components, and misconfigurations can lead to inefficiencies or critical lapses in areas such as security, compliance, and cost management.
 
-Recognizing these challenges, Thales has leveraged its AI-powered chatbot assistant product, Fred, to develop a specialized version tailored for Kubernetes environments. Fred features a modular multi-agent architecture that is ideally suited for building domain-specific experts. By customizing this architecture, we have created an assistant capable of deep analysis, management, and optimization of Kubernetes clusters.
+Recognizing these challenges, we have developped a specialized AI assistant version tailored for Kubernetes environments. Fred features a modular multi-agent architecture that is ideally suited for building domain-specific experts. By customizing this architecture, we have created an assistant capable of deep analysis, management, and optimization of Kubernetes clusters.
 
 This article presents an in-depth look at Fred's architecture and details how we have adapted it to meet the specific needs of Kubernetes management. Employing a system of dedicated expert agents empowered by specialized tools and rich knowledge bases, Fred addresses the complexities of Kubernetes by providing actionable insights and optimizations. Our development process includes extensive data engineering focused on Kubernetes components, enabling Fred to perform in-context learning and adapt to various operational scenarios.
 
 Importantly, Fred's Kubernetes-focused version emphasizes identifying and implementing optimizations to reduce operational costs, energy consumption, and carbon footprint. By concentrating on these aspects, Fred not only enhances efficiency but also contributes to sustainable practices in multiple environments, including cloud and edge computing.
 
-Moreover, certain expert agents within Fred have been customized to address specific use cases within Thales, ensuring that our solution is both technologically advanced and highly relevant to real-world industrial contexts. This article offers a comprehensive review of our innovation, exploring how Fred's modular multi-agent architecture has been harnessed to create a powerful tool for Kubernetes deep analysis, management, and optimization.
+Moreover, certain expert agents within Fred have been customized to address specific use cases, ensuring that our solution is both technologically advanced and highly relevant to real-world industrial contexts. This article offers a comprehensive review of our innovation, exploring how Fred's modular multi-agent architecture has been harnessed to create a powerful tool for Kubernetes deep analysis, management, and optimization.
 
 
 ## 1 Fred's Novel Architecture

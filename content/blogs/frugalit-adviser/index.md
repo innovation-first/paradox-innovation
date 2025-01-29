@@ -66,7 +66,7 @@ willn whenever possible, provide such recommandations.
 
 ### Inform
 
-Achieving a green architecture should not come at the expense of other crucial pillars, such as security, which remains vital for Thales and many of our clients. Therefore, we provide information on how our solutions impact performance, security, resilience, and, to a lesser degree, cost. 
+Achieving a green architecture should not come at the expense of other crucial pillars, such as security. Therefore, we provide information on how our solutions impact performance, security, resilience, and, to a lesser degree, cost. 
 
 Interestingly, some choices made to enhance sustainability might inadvertently reduce efficiency in other parts of the architecture. For example, compressing data to reduce transmission volumes is a good practice, but it can lead to increased energy consumption during compression and decompression. Thus, it is essential to consider multiple parameters and their interdependencies before making such decisions.
 
@@ -81,4 +81,4 @@ Kuvernetes application. It will next be demonstrated from a drawio architecture 
 
 ## Contacts
 
-- gilles.poirot@thalesgroup.com
+- Gilles Poirot

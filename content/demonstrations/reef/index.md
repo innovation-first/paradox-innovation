@@ -14,7 +14,7 @@ authors:
 ---
 
 The [Reef project](https://www.thalesgroup.com/en/group/responsability/magazine/thales-contest-sparks-new-ways-make-technology-more-frugal), 
-winner of the 2023 Frugal By Design Thales contest, resulted in delivering inner source components to design smart serverless architectures
+winner of the 2023 Frugal By Design contest organised by Thales SIX division, resulted in delivering inner source components to design smart serverless architectures
 using Rust and WebAssembly. Here is a quick video to understand the potential of such component when deployed on top of a serverless platform, in this case the [punch](https://punchplatform.com).
 
 <div style="max-width: 600px; margin: 0 auto;">
@@ -25,8 +25,7 @@ Rust and Web Assembly are important and promising technologies. Contact us to wo
 
 ## Contacts
 
-- reyyan.tekin@thalesgroup.com
-- dimitri.tombroff.e@thalesdigital.io
-
+- Reyyan Tekin
+- Dimitri Tombroff
 
 

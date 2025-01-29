@@ -270,4 +270,4 @@ As for DuckDB, it is already used in production by many companies. It is a "Swis
 
 ## Contact
 
-- dominique.devito@thalesgroup.com
+- Dominique Devito

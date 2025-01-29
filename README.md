@@ -5,9 +5,8 @@
 
 This project allows the speedy creation of blog articles using markdown for the innovation hub.
 
-The blog is publicly exposed here: https://blog.innovation.forthales.com, and is visible to
-thales employees only.
-
+The blog is publicly exposed here: https:/paradox-innovation.com, and is publicly visible.
+s
 In the rest of this guide we explain how to submit a new post. As you will see
 it is crystal simple.
 

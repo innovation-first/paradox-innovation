@@ -1,7 +1,7 @@
 ---
 title: 'vTraining: Virtual Reality as a Service'
 date: 2024-07-16T13:48:14+02:00
-summary: 'Virtual Reality as a new immersive training tool within Thales Group'
+summary: 'Virtual Reality as a new immersive training tool'
 categories:
 - Innovation Track
 tags:
@@ -33,9 +33,9 @@ Despite the innovative aspect and the acceptance of end users, today, Virtual Re
 
 ![Virtual Reality training](vtr_training.png)
 
-> Let's take an example. Imagine a famous car manufacturer, THALESLA, which would market a new range of innovative cars. Due to its Premium positioning, this company would even offer its customers the possibility of learning the first technical maintenance procedures with a Virtual Reality application. I'm learning to change my wheel in Virtual Reality! Very good idea: even if it may seem simple, having done the operation at least once helps reduce stress and makes the operation safer when it occurs in a real situation.
+> Let's take an example. Imagine a famous car manufacturer, which would market a new range of innovative cars. Due to its Premium positioning, this company would even offer its customers the possibility of learning the first technical maintenance procedures with a Virtual Reality application. I'm learning to change my wheel in Virtual Reality! Very good idea: even if it may seem simple, having done the operation at least once helps reduce stress and makes the operation safer when it occurs in a real situation.
 
-> Unfortunately, the first customer orders a car with a new accessory: rims. Barely released, the Virtual Reality application is already obsolete... vTraining directly responds to this need by allowing THALESLA to update its application itself and personalize it for each client.
+> Unfortunately, the first customer orders a car with a new accessory: rims. Barely released, the Virtual Reality application is already obsolete... vTraining directly responds to this need by allowing our manufacturer to update its application itself and personalize it for each client.
 
 ![](vtr_thalesla.png)
 
@@ -47,12 +47,12 @@ Engineers can now imagine and create Virtual Reality training on their own; dire
 ![Scalability through trainers autonomy](vtr_pipeline.png)
 
 This project is part of the 3D-as-a-Service ambition supported by the TSN teams. Its achievement requires multidisciplinary skills and a real mastery of industrial issues, in several technological areas of expertise: Web front, micro-services backend, CI/CD pipelines and specialized 3D developments. Fortunately, two assets secure the development of vTraining:
--	Capitalizing on experiences acquired on Virtual Reality projects for many years
--	The instantiation of the ThEye asset. Several software components are reused to build the base of vTraining. And yes, even if ThEye uses Augmented Reality, it is mainly a subject of “connected 3D” and therefore we find many similarities with this Virtual Reality platform project.
+- Capitalizing on experiences acquired on Virtual Reality projects for many years
+- The instantiation of the ThEye asset. Several software components are reused to build the base of vTraining. And yes, even if ThEye uses Augmented Reality, it is mainly a subject of “connected 3D” and therefore we find many similarities with this Virtual Reality platform project.
 
 ![Solution overview](vtr_overview.png)
 
 ## Contacts
 
-- guillaume.blaise@thalesgroup.com
-- aude.chenet@thalesgroup.com
+- Guillaume Blaise
+- Aude Chenet

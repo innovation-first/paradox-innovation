@@ -1,32 +1,31 @@
 stages:
   - build
+  - deploy
 
-build-docker:
-  stage: build
-  image: gcr.io/kaniko-project/executor:v1.14.0-debug
-  script:
-    - echo $DOCKER_AUTH_CONFIG > /kaniko/.docker/config.json
-    - /kaniko/executor
-      --context $CI_PROJECT_DIR
-      --dockerfile ${CI_PROJECT_DIR}/Dockerfile
-      --build-arg base_image_registry=artifactory.thalesdigital.io/docker
-      --build-arg HUGO_PARAMS_GITLAB_TOKEN=${GITLAB_TOKEN}
-      --destination ${CI_REGISTRY_IMAGE}/blog:latest
+.rules: &rules
   rules:
-    # Trigger of CI when there is a push event on the main branch
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    - if: $CI_PIPELINE_SOURCE == "push" && $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    - if: $CI_PIPELINE_SOURCE == "web"
 
-
-helm-build:
+build-blog:
+  <<: *rules
   stage: build
-  image: artifactory.thalesdigital.io/docker/alpine/helm:latest
+  image: hugomods/hugo:exts
   script:
-  - helm package deployment/helm-charts/blog
-  - mv blog-*.tgz blog.tgz
-  - curl --fail-with-body --request POST
-      --form "chart=@blog.tgz"
-      --user gitlab-ci-token:${CI_JOB_TOKEN}
-    ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/helm/api/dev/charts
-  rules:
-    # Trigger of CI when there is a push event on the main branch
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    - hugo --minify --enableGitInfo
+    - tar czf public.tar.gz public/*
+  artifacts:
+    paths:
+      - public.tar.gz
+    expire_in: 1 minute
+
+deploy-blog:
+  <<: *rules
+  stage: deploy
+  image: google/cloud-sdk:502.0.0-stable
+  script:
+    - tar xzf public.tar.gz
+    - gcloud auth activate-service-account --key-file $GCP_SA_KEY
+    - gcloud storage rsync --recursive --delete-unmatched-destination-objects public gs://innovation-hub-blog
+  dependencies:
+    - build-blog

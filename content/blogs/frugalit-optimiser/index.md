@@ -130,9 +130,9 @@ This provides the AI assistant with a small number of deterministic *functions*.
 
 A dedicated blog follows explainingf how we implement this part.
 
-## SaaS or ir gapped
+## SaaS or Air gapped
 
-As required by Thales, the frugal-It components are naturally designed to work completely on-premise, alongside Kubernetes solutions deployed on offline and secure infrastructures. However, it will be deployed and demonstrated as an online cloud Service. Its multi-tenant design makes it possible 
+As required by our use cases, the frugal-It components are naturally designed to work completely on-premise, alongside Kubernetes solutions deployed on offline and secure infrastructures. However, it will be deployed and demonstrated as an online cloud Service. Its multi-tenant design makes it possible 
 for customers to benefit from a SaaS frugal-it companion capable of monitoring their (Aws|Gcp|Azure|On-Premise) kubernetes application.
 
 This architecture is not only useful for offering a competitive service to a larger audience but also to 
@@ -144,9 +144,9 @@ The frugal IT positions itself as a key technology in reducing the energy footpr
 
 ## Contacts
 
-- lorenzo.gerardi@thalesgroup.com
-- reyyan.tekin@thalesgroup.com
-- tanguy.jouannic@thalesgroup.com
+- Lorenzo Gerardi
+- Reyyan Tekin
+- Tanguy Jouannic
 
 ## References
 

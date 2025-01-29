@@ -26,7 +26,7 @@ authors:
 
 ## Problem Statement
 
-As an computer service company (in french: *ESN* for *entreprise de services du numérique"), Thales Services Numériques (*TSN*) is strongly focused on innovation and client-centric solutions, particularly in sectors like defense, space, transportation, energy, and critical infrastructures. Our key focus areas include data valuation, artificial intelligence, cloud management, and security. 
+As an computer service company (in french: *ESN* for *entreprise de services du numérique"), we are strongly focused on innovation and client-centric solutions, particularly in sectors like defense, space, transportation, energy, and critical infrastructures. Our key focus areas include data valuation, artificial intelligence, cloud management, and security. 
 
 This paper is a first in a serie to examine the conditions that favor innovation scale up. How can we ensure that an innovation culture and practice is widely spread among the company instead of restricted to a club of innovation specialists ? 
 
@@ -65,11 +65,12 @@ According to a [recent pure storage survey](https://portworx.com/wp-content/uplo
 
 ### Leveraging Google Cloud
 
-An innovation platform is not a production platform. It does not come with stringent service level agreements. However, it must function reliably, with minimal effort from the SRE team. AWS, Azure, OVH, and Google Cloud all offer robust managed Kubernetes services. Thales also provides an
+An innovation platform is not a production platform. It does not come with stringent service level agreements. However, it must function reliably, with minimal effort from the SRE team. AWS, Azure, OVH, and Google Cloud all offer robust managed Kubernetes services. Our company also provides an
 [excellent managed Kubernetes platform](https://doc.kaas.thalesdigital.io/docs) and several internal ones.
 
 That said, we suggest leveraging Google GKE Kubernetes for several reasons:
-- Thales and Google jointly develop [S3NS](https://www.s3ns.io/en), so mastering GCP and GKE is a strategic direction for TSN. This complements TDP’s strong expertise in Azure services.
+
+- Our company and Google jointly develop [S3NS](https://www.s3ns.io/en), so mastering GCP and GKE is a strategic direction.
 - TSN is developing for the group its own [kubernetes data analytics plaform](/building-blocks/kast), which is kubernetes centric but does not need (or care) which Kubernetes it actually runs on. 
 - TSN designs and delivers solutions for its customers on GCP. Mastering each cloud platform is essential.
 - An innovation platform should come at minimal cost.
@@ -89,11 +90,11 @@ This approach aligns with industry trends where
 
 Today a team of one or two can provide automated deployment of complete platforms and provides standardized guidelines for developers
 to deploy their application in matter of a few hours.  These set of guidelines must further be explicitly defined, reviewed and imposed as part of
-TSN technical policy. 
+TSN technical policy.
 
 ### Cost Efficiency and Developer Autonomy
 
-The combination of google cloud, thales digital gitlab, and Kast assembled in a centralized IDP provides 
+The combination of google cloud, a shared gitlab, and Kast assembled in a centralized IDP provides
 a powerful environment where developers can work autonomously but within a framework that optimizes 
 resources and maintains control over the infrastructure, reducing operational costs. 
 
@@ -115,10 +116,6 @@ This topic is often and surprisingly neglected. Like many ([17](https://www.amaz
 - *score higher on customer satisfaction, brand perception and talent management*.
 - *saw revenue growth almost two times faster than other software companies in the same period*.
 - *utilise strong developer tools for planning, development, collaboration and continuous integration and delivery*.
-
-Today we have an excellent solution, *Thales Digital TNAP* laptops that provide a very good compromise between 
-security and flexibility. Similar alternatives are being designed by other group units. 
-Together with a remote, shared and containerized IDP, developers will benefit from an cost effective environment.
 
 As gor GPUs, only a few need them ([see this benchmark](https://www.theregister.com/2024/08/23/3090_ai_benchmark/)).
 

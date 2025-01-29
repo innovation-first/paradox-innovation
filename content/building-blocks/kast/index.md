@@ -12,7 +12,7 @@ authors:
 - Gilles Meignan
 ---
 
-## Thales Data and AI project Enabler
+## A Cloud Native Data and AI project Enabler
 
   > KAST is an inner source development accelerator designed to streamline the initiation of containerized projects across various domains, including data analytics and defense, even under stringent security constraints. It offers a lightweight, flexible, and comprehensive containerized stack that integrates essential services and open-source data analytics components.
 
@@ -27,26 +27,11 @@ authors:
   - **Efficiency:** Accelerate the development process with a ready-to-use, fully integrated containerized stack.
   - **Flexibility:** Customize your deployment with additional services as needed.
   - **Scalability:** Adapt to different scales of deployment, from small-scale testing on a single laptop to large-scale production across multiple clusters.
-  - **Kast Support:** KAST is supported by a Thales team with a long expertise with K8S ecosystem and a technical support, ensuring reliable and responsive assistance for your projects.
+  - **Kast Support:** KAST is supported by a team with a long expertise with K8S ecosystem and a technical support, ensuring reliable and responsive assistance for your projects.
   - **Long Term Support:** Up to *Flèche* all LTS versions are supported 18 months and with *Gemini* all LTS versions will be supported 3 years.
 
   KAST enables users to quickly and efficiently initiate and manage containerized projects, 
   ensuring that they meet security requirements and operational demands.
-
-## Testimonials
-
-
-{{< quote author="Boris" source="Thales LAS, La " url="https://www.thalesgroup.com/en/worldwide/news/hive-activity">}}
-*We use Kast edge as the foundation of our products. It simply works. We can now focus on our use cases almost exlusively.* 
-{{< /quote >}}
-
-{{< quote author="Cedric Deveraux" source="Thales RCP" url="https://www.thalesgroup.com/en/activities/defence/radio-communications/electronic-warfare-communications">}}
-*Together with Thales Services Numériques, we implemented an innovative data lab, completely air gapped, 
-by redeploying our key business modules to a Kast platform. 
-Acceptance by our admin and support teams was smooth and quick, they rapidly improved our
-product capabilities by leveraging state-of-the art yet standard components integrated by Kast.* 
-{{< /quote >}}
-
 
 ## Components
 
@@ -58,15 +43,6 @@ product capabilities by leveraging state-of-the art yet standard components inte
 
 ## Contacts
 
-- arnaud.bartholome@thalesgroup.com : product owner
-- gilles.meignan@thalesgroup.com : product design authority
-- clair.bazin@thalesgroup.com : head of product management
-
-## References
-
-- [Kast Portal](https://kast-portal.dpsc-thales.fr/)
-- [Kast Blogs](https://kast-portal.dpsc-thales.fr/static/files/kast-documentation/snapshot/SNAPSHOT/blog/index.html)
-
-
-
-
+- Arnaud Bartholome : product owner
+- Gilles Meignan : product design authority
+- Clair Bazin : head of product management

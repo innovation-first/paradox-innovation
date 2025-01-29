@@ -13,7 +13,7 @@ authors:
 You will find on the hub some posts tagged as 'building blocks'. What are these ? What can you expect from them ?
 This short documentation clarifies these questions. 
 
-First remember that Thales Services Numériques does not build software products. But we do, of course, maintain a clear technical strategy and policy. It may thus be relevant for us to develop, maintain or capitalize on 
+First remember that ESNs do not build software products. But we do, of course, maintain a clear technical strategy and policy. It may thus be relevant for us to develop, maintain or capitalize on 
 some (so-called) building blocks that provide us with a competitive advantage to bootstrapcustomer projects. 
 
 ## Building Block Types
@@ -25,7 +25,7 @@ even associated with a licensing strategy or in contrary be an inner or open sou
 Such building blocks look like familiar software products. They are not. Only our customers (intra or extra group) build
 products. 
  
-It may also happen however that we implement and support building blocks on demand for Thales group units. Kast is the typical example. It is very close to be a product, it has a product owner, a reviewed roadmap, and a licensing strategy. 
+It may also happen however that we implement and support building blocks on demand our company group units. Kast is the typical example. It is very close to be a product, it has a product owner, a reviewed roadmap, and a licensing strategy.
 
 ### Software Enablers
 
@@ -59,7 +59,7 @@ details such as maturity levels, licensing, terms of use, etc.
 
 ## Contact
 
-- claire.bazin@thalesgroup.com
+- Claire Bazin
 
 
 

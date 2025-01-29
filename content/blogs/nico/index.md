@@ -34,11 +34,11 @@ The potential applications of such an integrated system are numerous, both in th
 
 * Medical personal assistant robots
 * Assistant robots in hospitals
-* Soldier assistant robots on the battlefield (with a perspective of participating in the COHOMA challenge organized by the DGA (Human-Machine Collaboration) with Thales-PRS in 2025).
+* Soldier assistant robots on the battlefield (with a perspective of participating in the COHOMA challenge organized by the DGA (Human-Machine Collaboration) in 2025).
 
 ## Demonstrator 
 
-Nico will be demonstrated  on top of the DTV Shredder motorized platform, provided to Thales Services Numériques through a partnership with DTV Motor.
+Nico will be demonstrated  on top of the DTV Shredder motorized platform, provided to us through a partnership with DTV Motor.
 
 ![DTV Shredder](nico_dtv.png)
 
@@ -52,7 +52,7 @@ Human-machine interactions as well as environmental data collection by the syste
 
 ## Contacts
 
-- geoffrey.portelli@thalesgroup.com
-- mehdi.jendoubi@thalesgroup.com
+- Geoffrey Portelli
+- Mehdi Jendoubi
 
 

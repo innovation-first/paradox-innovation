@@ -60,7 +60,7 @@ build-binaries:
 
 ## Build modifications
 
-We use the [Thales Trusted Base Images](https://gitlab.thalesdigital.io/ThalesContainerImages/base-images), more notably Redhats Universal Base Image (UBI) in the UBI-micro flavor. This allows us to have the smallest attack surface while maintaining a full glibc.
+We use the [Trusted Base Images](https://gitlab.thalesdigital.io/ThalesContainerImages/base-images), more notably Redhats Universal Base Image (UBI) in the UBI-micro flavor. This allows us to have the smallest attack surface while maintaining a full glibc.
 
 In order for us to make of the extracted profiling data from the ephemeral container, we need to tweak the Container lifecycle management and find a place where we can store it. For this, two modifications were needed:
 
@@ -201,4 +201,4 @@ Overall, we are very happy with this approach, for increasing the confidence we 
 
 ## Contacts
 
-- <eric.muellenbach@thalesgroup.com>
+- <Eric Muellenbach>

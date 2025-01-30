@@ -28,7 +28,7 @@ Fred is a working example of a complete multi-agent AI application. It is not ju
 Fred is not a generic AI assistant. It is built with specific Kubernetes capabilities in mind. However, it provides two key advantages:
 
 1. A structured, maintainable design – If you're not an expert in LangChain or Langraph, Fred offers a solid foundation to build or prototype your AI application.
-2. A ready-to-use modern chat UI – The frontend is similar to DeepSeek, CatGPT, and other AI chat interfaces, but it is tailored for business and domain-specific customization.
+2. A ready-to-use modern chat UI – The frontend is similar to DeepSeek, ChatGPT, and other AI chat interfaces. It is convenient to have a decent implentation at hand to explore advanced innovation topics (how do you interact with a team of agent) or add business and domain-specific customization.
 
 Both the Python backend and the React frontend are fully deployable on Kubernetes, including built-in authentication and security. This means Fred is built for serious deployments—not just experiments.
 

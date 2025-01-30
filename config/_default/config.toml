@@ -1,5 +1,5 @@
 # Change baseurl before deploy
-baseURL = "https://storage.googleapis.com/innovation-hub-blog/public/"
+# baseURL = "https://localhost"
 relativeURLs = false
 canonifyURLs = true
 languageCode = "en-us"

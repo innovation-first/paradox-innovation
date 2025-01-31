@@ -17,7 +17,7 @@ If you have any questions or concerns, please contact us.
 
 ## Contact
 
-- dimitri.tombroff@thlesgroup.com
+- Dimitri Tombroff
 
 
 

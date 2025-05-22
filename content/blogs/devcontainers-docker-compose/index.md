@@ -10,7 +10,8 @@ tags:
 - docker compose
 image: '/shared/abstract-blue-2.png'
 authors: 
-- Fred team
+- Fabien Le-Solliec
+- Simon Perennes
 ---
 
 Modern development environments are complex. Configuring them consistently across machines is time-consuming and error-prone. The Fred project provides an elegant solution to this with its integration of **Dev Containers** and **Docker Compose**—two powerful tools that streamline development and onboarding.
@@ -22,7 +23,7 @@ Modern development environments are complex. Configuring them consistently acros
 
 Together, they solve a crucial problem: ensuring that developers can spin up a full development environment with a single command, regardless of their local machine setup.
 
-## Why It Matters
+## Why It Matters For Any Project
 
 Here’s why this setup stands out:
 
@@ -37,6 +38,16 @@ Services are decoupled. Need to debug OpenSearch? Just restart that container. W
 
 ### 🔐 4. Real-World Simulation
 The inclusion of MinIO and Kubernetes allows developers to build and test features against real-world systems locally.
+
+## Why It Matters for Fred
+
+[Fred](https://github.com/ThalesGroup/fred) isn’t a simple monolith — it’s a multi-repository, multi-agentic platform built to support advanced use cases like document ingestion, vectorization, semantic search, and interaction with large language models (LLMs). It orchestrates multiple services: web frontends, backend APIs, storage layers, AI agents, and integrations with both internal and external LLM providers.
+
+Even developing a seemingly simple feature—like extracting content from a document—can require coordinating PostgreSQL, MinIO, OpenSearch, and multiple microservices. Testing this locally, in isolation, would typically be error-prone and time-consuming.
+
+This challenge is even greater at Thales, where most developers work on secured laptops and need to interact with on-premise GenAI services and restricted corporate environments. The Dev Containers in Fred have been carefully designed to be compatible with both personal and secured corporate laptops, allowing developers to work effectively across setups while preserving consistency and security.
+
+By packaging all dependencies and infrastructure in a standardized, portable containerized environment, Dev Containers and Docker Compose make it possible to spin up the entire Fred stack reliably—whether you’re onboarding a new contributor or testing complex agent workflows.
 
 ## The Fred Project Setup
 

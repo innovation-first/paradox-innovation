@@ -3,8 +3,7 @@ title: 'Empowering Scientific Discoveries through Digital Support'
 date: 2024-09-30T15:00:00+02:00
 summary: 'Empowering Scientific Discoveries through Digital Support: A Collaborative Breakthrough in Cancer Research'
 tags:
-- innovation
-- process
+- ai
 - health
 categories: 
 - blog

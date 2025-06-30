@@ -6,7 +6,7 @@ categories:
 - Blog
 authors: 
     - Julien Meynard
-    - Charlottes Jacobe De Naurois 
+    - Charlottes Jacobé De Naurois 
 draft: false
 toc: true
 image: 'shared/abstract-yellow-boxes.jpg'

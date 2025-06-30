@@ -6,7 +6,7 @@ categories:
 - Blog
 authors: 
     - Julien Meynard
-    - Charlottes Jacobé De Naurois 
+    - Charlotte Jacobé De Naurois 
 draft: false
 toc: true
 image: 'shared/abstract-yellow-boxes.jpg'
@@ -19,7 +19,7 @@ outputs—to pull accurate, structured data (e.g., voltage ratings from electron
 datasheets) out of messy, non-uniform PDFs. The approach outperforms
 traditional PDF-parsing libraries in **speed**, **precision**, and **scalability**,
 while retaining human-in-the-loop safeguards against hallucination and data-
-sensitivity issues.:contentReference[oaicite:0]{index=0}
+sensitivity issues.
 {{< /admonition >}}
 
 ---

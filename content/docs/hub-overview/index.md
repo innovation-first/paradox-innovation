@@ -1,94 +1,55 @@
 ---
-title: "Hub Rationale"
-description: "Understanding the Hub architecture and value propostion."
+title: "Why We Publish: Innovation, Sharing, and Trust"
+description: "A safe and open framework for sharing ideas and showcasing innovation."
 date: 2024-07-20T13:15:14+02:00
 summary: 'The hub is both a simple portal and a sandboxed demonstration and working platform. This doc explains its architecture, and service level agreements'
 ---
 
-## Benefits
+## Why We Write
 
-The hub is an online platform that provides two main features. The first is to expose a simple portal (you are reading it now)
-to help us all (including customers) to easily and quickly understand our innovation, expertise and offerings.
+Innovation doesn’t happen in isolation. It thrives on dialogue—between colleagues, across teams and divisions, and most importantly, with our customers.
 
-Second it provides developpers and architects with a sandboxed, ready-to-use platform to prototype and deploy new projects.
+This blog exists to support that dialogue.
 
-This has several benefits.
+We want to create a space where new ideas can be shared, technical insights can circulate, and small projects can gain visibility. We believe that **open innovation**—the ability to experiment, share, and iterate across boundaries—is not just encouraged, but essential to our future.
 
-### What you see is what you get
+Whether you’re part of Thales Services Numériques, another Thales entity, or a customer working with us, this platform is here to **exchange perspectives and showcase tangible progress** on the technologies we build together.
 
-The hub is a simple lightweight platform that is designed using good will and collaborative effort. 
-It was quickly implemented because of our expertise in cloud native development,
-our involvement in designing on-premise data containerized platforms,
-our pragmatic secured-by-design approach. Not to forget our internal engineering services. 
+## A Safe and Responsible Process
 
-This is illustrative of our competitive offerings,
-on time delivery and our focus on designing simple and effective solutions, easy to be operated and maintained.
+Publishing under the Thales name comes with responsibility. That’s why we've put in place a **clear and lightweight review process** designed to protect both our teams and our company—without stifling creativity.
 
-Note that simple does not mean it is a toy. Advanced features make it possible to scale up or down
-the required ressources. Our goal is to demonstrate how cost effective yet powerful a well-designed 
-cloud native platform can be.
+Here’s how it works:
 
-### Go experiment
+- **You write**: Any contributor can propose a draft blog post—technical, conceptual, exploratory, or experience-based.
+- **We review together**: One of our **innovation leads**, **technical authorities (STAs)**, or **heads of discipline (HODs)** reviews the content.
+- **The goal is support, not gatekeeping**: The review is friendly and constructive. It’s here to make sure the content reflects our shared strategy, aligns with Thales values, and avoids risks (technical inaccuracies, confidentiality breaches, or unintentional misalignment).
+- **We publish**: Once approved, the post is published to the platform and becomes a reference—internally and externally.
 
-With The Hub, designing smart data applications becomes astonishingly straightforward and rapid.
-In just a few hours, you can move from concept to creation.
+This process is part of the broader commitment by **Thales Services Numériques Technical Direction** to foster responsible innovation. It enables us to communicate clearly and boldly—while keeping trust at the center of everything we do.
 
-Deploying standard containerized applications is simplicity itself. All it takes is designing 
-your application, adding a few deployment files to GitLab, and crafting an intuitive user interface.
-Our documentation points to several starting templates to make all that really simple.
+## Ready to Contribute?
 
-### Think forward
+We welcome your ideas, your demos, your vision.
 
-This approach not only accelerates the development cycle but also democratizes application design, 
-enabling you to focus on innovation and user experience without being bogged down by backend logistics. 
-The Hub is your gateway to deploying smart data applications with ease, speed, and reliability, 
-transforming the way applications are developed and launched.
+If you're not sure where to start, just reach out to your innovation lead or technical authority. We’re here to help.
 
-## Architecture
+Together, let’s make innovation visible—and shared.
 
-The hub architecture is quite simple. The following schema highlight the essential parts. 
+---
 
-![Architecture Overview](HubArchitecture.png)
+References:
 
-### Fundations 
-
-- It runs on [google cloud platform](https://cloud.google.com) (GCP). It uses the cloud storage and cloud SQL managed services.
-- In there we deployed a [managed kubernetes engine](https://cloud.google.com/kubernetes-engine) (GKE), 
-- and inside that GKE we deploy [Kast](/building-blocks/kast) security, monitoring and data components. 
-
-Why GKE ? because if your application runs on GKE, it runs everywhere. 
-
-Why Kast ? because it provides us with ready-to-use patterns and data components and is supported on all managed kubernetes and of course on premise platforms. That is, any application you run on the Hub is guaranteed to run seamlessly on another kubernetes provider or on your on premise platform. 
-
-Why not on Azure, Aws, Ovh or others ? Because it matters to us to master and
-demonstrate GCP and GKE usages. The other platforms are excellent too, but our strategy is to anticipate for the arrival of [S3NS](https://www.s3ns.io/en). Last, our goal is to benefit from an innovation platform, not exactly the same scope than our friends.
-
-### Your Apps
-
-A simple multi-tenant architecture provides you (Bob or Alice in the previous schema) with the ressource you need to deploy and run your project. 
-
-## Is there a Roadmap ?
-
-Yes. We are working on three main streams.
-
-1. Securing the Hub to C2 to C3* security levels. This is joint work with out technical direction cybersecurity team.
-2. Improving the multi-tenancy without sacrificing a shared kubernetes instance. 
-3. Finops and GreenOps. The Hub is meant to be extremally frugal and cheap. In fact it helps us developping our innovative tracks 
-
-Many finer grain improvements issues are defined in the Hub issue backlog. 
-
-## Who will Pay ?
-
-Our goal is to quickly end up with a pay what you use model. As of now it is still free to use. 
-So why not joining ? 
+- [TSN Innovation GitLab](https://gitlab.thalesdigital.io/tsn/innovation)
 
 ## Contact
 
-- Olivier Jobert: hub contributor
-- Kevin Denis: hub contributor
-- Hadrien Leclerc: hub (cybersecurity) contributor
-- Mahmoud Chilali: cybersecurity authority
-- Dimitri Tombroff: hub contributor
+- karim.ayadi@thalesgroup.com: Software Engineering Authority
+- Thomas Delavallade@thalesgroup.com: AI authority
+- Mahmoud.Chilali@thalesgroup.com: Cybersecurity authority
+- Guilhem.Grousset@thalesgroup.com: It and Cloud Authority
+- Dimitri.Tombroff.e@thalesdigital.io: innovation first
+- Maxime.Daragon@thalesgroup.com: innovation first
 
 References:
 

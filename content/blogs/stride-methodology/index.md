@@ -6,7 +6,6 @@ tags:
 - security
 categories:
 - Blog
-- Draft
 image: 'stride2.jpg'
 authors:
 - 'Hadrien Leclerc'

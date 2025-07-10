@@ -8,7 +8,6 @@ tags:
 - ai
 categories: 
 - Blog
-- Draft
 image: 'shared/abstract-white-2.jpg'
 authors: 
 - Dimitri Tombroff

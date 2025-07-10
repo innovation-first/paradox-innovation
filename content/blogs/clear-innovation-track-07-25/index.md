@@ -1,6 +1,6 @@
 ---
 title: 'CLEAR: A Methodology for Smarter Document Understanding'
-date: 2025-07-08T13:48:14+02:00
+date: 2025-05-08T13:48:14+02:00
 summary: 'Clear'
 categories:
 - Innovation Track

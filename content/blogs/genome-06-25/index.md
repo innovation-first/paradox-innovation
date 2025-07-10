@@ -12,6 +12,7 @@ image: 'shared/omar-flores-lQT_bOWtysE-unsplash.jpg'
 authors:
 - Geoffrey Portelli
 - Florent Dupont
+- Mehdi Jendoubi
 ---
 
 {{< quote >}}

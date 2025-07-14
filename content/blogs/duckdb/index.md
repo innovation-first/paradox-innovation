@@ -5,7 +5,8 @@ summary: 'Flying Through Data with the Speed and Grace of a Mallard'
 tags:
 - architecture
 - data
-- Web Assembly
+- duckdb
+- analytics
 categories: 
 - Blog
 image: 'duckDB2.webp'

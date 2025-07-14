@@ -5,6 +5,7 @@ summary: 'Understanding the impact of the arrow data processing library in the d
 tags:
 - architecture
 - data
+- duckdb
 categories: 
 - Blog
 image: 'shared/abstract-white-1.jpg'

@@ -1,0 +1,156 @@
+<!-- Mermaid init + robust rendering (Stack theme safe) -->
+<script type="module">
+(() => {
+  // Prevent accidental double init if this block is ever added twice.
+  if (window.__MERMAID_STACK_INIT__) return;
+  window.__MERMAID_STACK_INIT__ = true;
+
+  const MERMAID_URL = "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
+
+  // Debounce helper
+  let debounceTimer;
+  function scheduleRender(fn, delay = 80) {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(fn, delay);
+  }
+
+  // Toggle helpers for focus mode
+  function setFocus(wrap, on, rerender) {
+    if (!wrap) return;
+    const root = document.documentElement;
+    const btn  = wrap.querySelector(".mermaid-focus-btn");
+
+    if (on) {
+      wrap.classList.add("focused");
+      root.classList.add("mermaid-focus-open");
+    } else {
+      wrap.classList.remove("focused");
+      root.classList.remove("mermaid-focus-open");
+    }
+
+    // Accessibility + label
+    if (btn) {
+      btn.setAttribute("aria-expanded", String(on));
+      btn.textContent = on ? "✕ Close" : "🔍 Focus";
+    }
+
+    if (rerender) scheduleRender(renderMermaids, 60);
+  }
+
+  // Load Mermaid dynamically so we can guard init safely.
+  import(MERMAID_URL).then(({ default: mermaid }) => {
+    // Sync with Stack’s data-scheme (dark/light)
+    const initialScheme =
+      document.documentElement.dataset.scheme ||
+      (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+
+    mermaid.initialize({
+      startOnLoad: false,   // we control render timing
+      securityLevel: "loose",
+      theme: initialScheme === "dark" ? "dark" : "neutral"
+    });
+
+    // Theme changes at runtime
+    const schemeObserver = new MutationObserver(() => {
+      const s = document.documentElement.dataset.scheme;
+      mermaid.initialize({ startOnLoad: false, theme: s === "dark" ? "dark" : "neutral" });
+      scheduleRender(renderMermaids, 50);
+    });
+    schemeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ["data-scheme"] });
+
+    // Render (or re-render) all diagrams
+    function renderMermaids() {
+      const nodes = document.querySelectorAll(".mermaid");
+      if (!nodes.length) return;
+
+      nodes.forEach((el) => {
+        if (!el.dataset.graph) el.dataset.graph = (el.textContent || "").trim(); // keep original text
+        el.removeAttribute("data-processed"); // allow re-process
+        el.innerHTML = el.dataset.graph || el.innerHTML;
+      });
+
+      mermaid.run({ nodes });
+    }
+
+    // Re-render when diagram containers change size (fonts, sidebar, layout shifts)
+    const ro = new ResizeObserver((entries) => {
+      if (entries.some((e) => e.contentRect && e.contentRect.width > 0)) {
+        scheduleRender(renderMermaids, 120);
+      }
+    });
+
+    function observeMermaids() {
+      document.querySelectorAll(".mermaid").forEach((el) => ro.observe(el));
+    }
+
+    // Initial load after layout/FOIT settles
+    window.addEventListener("load", () => scheduleRender(renderMermaids, 120));
+
+    // Back/forward cache restore
+    window.addEventListener("pageshow", (e) => {
+      if (e.persisted) scheduleRender(renderMermaids, 80);
+    });
+
+    // Partial swaps / SPA-like events (keep if your theme doesn’t use them; harmless)
+    document.addEventListener("pjax:complete",      () => scheduleRender(renderMermaids, 80));
+    document.addEventListener("astro:after-swap",   () => scheduleRender(renderMermaids, 80));
+    document.addEventListener("swup:contentReplaced", () => scheduleRender(renderMermaids, 80));
+
+    // Start observing after content is present
+    window.addEventListener("load", observeMermaids);
+    document.addEventListener("pjax:complete", observeMermaids);
+    document.addEventListener("astro:after-swap", observeMermaids);
+    document.addEventListener("swup:contentReplaced", observeMermaids);
+
+    // If a <details> wraps a diagram, re-render after it opens
+    document.addEventListener("toggle", (e) => {
+      if (e.target.tagName === "DETAILS" && e.target.open) scheduleRender(renderMermaids, 60);
+    }, true);
+
+    /* -------- Fullscreen Focus (event delegation + toggle) -------- */
+
+    // Toggle on button click (open if closed; close if open)
+    document.addEventListener("click", (e) => {
+      const btn = e.target.closest(".mermaid-focus-btn");
+      if (!btn) return;
+      const wrap = btn.closest(".mermaid-wrapper");
+      if (!wrap) return;
+      const isFocused = wrap.classList.contains("focused");
+      setFocus(wrap, !isFocused, true);
+    });
+
+    // Close when clicking outside the diagram while focused
+    document.addEventListener("click", (e) => {
+      const wrap = document.querySelector(".mermaid-wrapper.focused");
+      if (!wrap) return;
+      const diagram = wrap.querySelector(".mermaid");
+      const clickedOutside = !diagram.contains(e.target) && !e.target.closest(".mermaid-focus-btn");
+      if (clickedOutside) setFocus(wrap, false, true);
+    });
+
+    // Close on ESC
+    document.addEventListener("keydown", (e) => {
+      if (e.key !== "Escape") return;
+      const wrap = document.querySelector(".mermaid-wrapper.focused");
+      if (!wrap) return;
+      setFocus(wrap, false, true);
+    });
+  });
+})();
+</script>
+
+<style>
+/* Make produced SVGs responsive */
+.mermaid > svg {
+  width: 100% !important;
+  height: auto !important;
+  display: block;
+}
+
+/* Ensure the container can actually expand */
+.prose .mermaid,
+.mermaid {
+  max-width: 100%;
+  overflow-x: auto; /* long graphs usable on mobile */
+}
+</style>

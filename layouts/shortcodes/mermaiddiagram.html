@@ -1,5 +1,5 @@
 <div class="mermaid-wrapper">
-  <button class="mermaid-focus-btn" type="button" aria-label="Expand diagram">🔍 Focus</button>
+  <button class="mermaid-focus-btn" type="button" aria-label="Expand diagram" aria-expanded="false">🔍 Focus</button>
   <div class="mermaid" data-graph="{{ .Inner | safeHTMLAttr }}">
     {{ .Inner | safeHTML }}
   </div>

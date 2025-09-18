@@ -29,3 +29,8 @@ disqusShortname = "hugo-theme-stack"
 [security]
     [security.funcs]
         getenv = ['^HUGO_PARAMS_GITLAB_TOKEN$']
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

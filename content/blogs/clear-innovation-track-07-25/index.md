@@ -9,6 +9,7 @@ tags:
 image: 'shared/abstract-white-4.webp'
 authors: 
 - 'Julien  Meynard'
+- 'Charlotte Jacobé de Naurois'
 
 ---
 

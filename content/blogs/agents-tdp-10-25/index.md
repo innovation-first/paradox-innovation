@@ -16,7 +16,7 @@ toc: true
 This article draws on  
 **[GenAI in 2025: The AI Agents Hype and Thales Opportunities](https://blog.mcs.thalesdigital.io/blog/2025_ai_agents/)**  
 by *Thomas Ehling*, published February 12 2025 on the *Thales Digital MCS Blog* (internal access),  
-and introduces the new **Fred Playground** recently deployed on **Thales Digitap**.
+and introduces the new **Fred Playground** recently deployed on **Thales Digital Platform (TDP)**.
 {{< /admonition >}}
 
 ---
@@ -37,7 +37,7 @@ Thomas also showcased multiple internal use cases — from Thales GPT to BidGPT 
 
 ---
 
-## 2. From Vision to Reality — The Fred Playground on Thales Digital Platform
+## From Vision to Reality — The Fred Playground on Thales Digital Platform
 
 Building on that vision, we recently deployed an instance of Fred on the TDP environment — a managed Kubernetes cluster used as a sandbox for experimentation with AI agents.
 
@@ -50,7 +50,7 @@ All these agents deployed and securely running in one consistent framework.
 
 ---
 
-## 3. A One-Day Deployment, Kubernetes-Native by Design
+## A One-Day Deployment, Kubernetes-Native by Design
 
 What made this deployment remarkable was its speed.  
 The entire playground was operational in less than a day thanks to **Fred’s Kubernetes-native Helm charts**, which automate the provisioning of all required services:
@@ -70,7 +70,7 @@ This out-of-the-box setup demonstrates Fred’s design goal:
 
 ---
 
-## 4. From Concept to Practice
+## From Concept to Practice
 
 The Fred Playground  marks a concrete step in bringing the *AI Agents vision* described by Thomas into everyday experimentation.
 
@@ -83,7 +83,7 @@ By combining open-source transparency with Thales’ managed infrastructure, the
 
 ---
 
-## 5. Reference
+## Reference
 
 > **Ehling, Thomas.**  
 > *GenAI in 2025: The AI Agents Hype and Thales Opportunities.*  

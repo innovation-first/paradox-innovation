@@ -8,7 +8,7 @@ categories:
 authors:
   - Thomas Hedan
   - Dimitri Tombroff
-image: "shared/abstract-blue-boxes.jpg"
+image: "shared/graph.svg"
 draft: false
 toc: true
 ---
@@ -25,7 +25,7 @@ This post summarizes a small and preliminary experiment: ingest a structured eng
 
 The following illustration shows the resulting graph after ingestion, as displayed in the Neo4j UI.
 
-{{< figure src="graph.svg" alt="Simplified view of the resulting graph structure (episodes, entities, communities)" class="center" >}}
+{{< figure src="shared/graph.svg" alt="Simplified view of the resulting graph structure (episodes, entities, communities)" class="center" >}}
 
 The rest of this post walks through what we observed in Neo4j: the node labels and relationship types created by Graphiti, and what that structure enables for retrieval and reasoning. Your exact nodes and edges may vary depending on the model and ingestion settings, but the overall schema and patterns are consistent.
 
